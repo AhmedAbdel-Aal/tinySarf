@@ -1,8 +1,37 @@
-import argparse, collections, gzip, json, random, shutil, sys, tarfile, urllib.request
+import argparse, collections, gzip, json, random, shutil, sys, tarfile, urllib.request, tempfile, os
 from pathlib import Path
 from .artifacts import DATA, GENERATED, ROOT, sha, read_json, write_json, provenance
 from .contract import normalize, map_analysis, LETTERS
 from .splits import split_records
+
+def extract_teacher(archive_path,destination):
+    """Portable to every supported Python 3.11 patch; do not rely on tarfile extraction filters."""
+    destination=Path(destination)
+    if destination.is_symlink(): raise ValueError('Teacher cache must not be a symlink')
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    temporary=Path(tempfile.mkdtemp(prefix='.teacher-',dir=destination.parent))
+    try:
+        with tarfile.open(archive_path) as archive:
+            for member in archive.getmembers():
+                name=Path(member.name)
+                if name.is_absolute() or '..' in name.parts: raise ValueError('Unsafe teacher archive path')
+                parts=name.parts[1:]
+                if not parts: continue
+                if member.issym() or member.islnk(): raise ValueError('Teacher archive links are unsupported')
+                target=temporary.joinpath(*parts)
+                if member.isdir(): target.mkdir(parents=True,exist_ok=True)
+                elif member.isfile():
+                    target.parent.mkdir(parents=True,exist_ok=True)
+                    source=archive.extractfile(member)
+                    if source is None: raise ValueError('Unreadable teacher archive entry')
+                    with source,target.open('wb') as output: shutil.copyfileobj(source,output)
+                else: raise ValueError('Special teacher archive entries are unsupported')
+        if not (temporary/'camel_tools/morphology/database.py').is_file(): raise ValueError('Teacher archive lacks its analyzer')
+        (temporary/'.source-sha256').write_text(sha(archive_path))
+        if destination.exists(): shutil.rmtree(destination)
+        os.replace(temporary,destination)
+    finally:
+        if temporary.exists(): shutil.rmtree(temporary)
 
 def prepare(limit=12000):
     manifest=read_json(DATA/'corpus.json'); downloads=DATA/'downloads'; downloads.mkdir(exist_ok=True)
@@ -17,13 +46,8 @@ def prepare(limit=12000):
         if source.get('sha256') and digest!=source['sha256']: raise ValueError('Teacher checksum mismatch')
         if not source.get('sha256'): raise ValueError('Pin source checksum in corpus.json before compilation')
     teacher=downloads/'camel_tools-source'
-    if not teacher.exists():
-        teacher.mkdir()
-        with tarfile.open(paths[1]) as archive:
-            for member in archive.getmembers():
-                parts=Path(member.name).parts[1:]
-                if not parts or member.issym() or member.islnk(): continue
-                member.name=str(Path(*parts)); archive.extract(member,teacher,filter='data')
+    marker=teacher/'.source-sha256'
+    if not marker.exists() or marker.read_text()!=sha(paths[1]): extract_teacher(paths[1],teacher)
     sys.path.insert(0,str(teacher))
     from camel_tools.morphology.database import MorphologyDB
     from camel_tools.morphology.analyzer import Analyzer

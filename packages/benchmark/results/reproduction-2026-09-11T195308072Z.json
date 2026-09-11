@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-09-11T195308072Z",
+  "git": {
+    "commit": "cc0b67580ba84fe195827cecc4cee9270480e294",
+    "dirty": false
+  },
+  "createdAt": "2026-09-11T19:53:08.132Z",
+  "commands": [
+    "bash scripts/setup.sh",
+    "pnpm data:prepare"
+  ],
+  "environment": {
+    "os": "darwin 23.5.0",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "ramBytes": 8589934592,
+    "node": "v22.23.0",
+    "browser": null,
+    "webgpuAdapter": null
+  },
+  "kind": "reproduction",
+  "separateCheckout": true,
+  "checkout": "/var/folders/dl/d24xg2c11gx7r5rs5b6kd_780000gn/T/tinysarf-reproduce-AXRWjy/checkout",
+  "modelSha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
+  "passed": false,
+  "error": "Error: Reproduction command failed (1): pnpm data:prepare",
+  "artifacts": {},
+  "upstreamCache": "Only pinned source archive/database bytes reused; dependencies installed from lockfiles; generated datasets reconstructed; final-test labels never evaluated"
+}

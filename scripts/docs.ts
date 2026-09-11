@@ -28,7 +28,13 @@ const batch=b.warm.find((w:any)=>w.id==='batch-128'),single=b.warm.find((w:any)=
 const roleStats=[];
 for(const role of ['train','verification']) {const rows=(await json(path.join(ROOT,'packages/training/data',split.directory,`${role}.json`))).records;roleStats.push([role,rows.length,new Set(rows.map((r:any)=>r.word)).size,rows.reduce((n:number,r:any)=>n+r.analyses.length,0),new Set(rows.flatMap((r:any)=>r.analyses.map((a:any)=>a.root)).filter(Boolean)).size,new Set(rows.flatMap((r:any)=>r.analyses.map((a:any)=>a.lemmaFamily))).size,rows.reduce((n:number,r:any)=>n+r.word.length,0)]);}
 const ambiguity=(await json(path.join(ROOT,'packages/training/data',split.directory,'train.json'))).records.reduce((h:any,r:any)=>{const key=r.analyses.length===1?'1':r.analyses.length<=3?'2–3':r.analyses.length<=10?'4–10':'11+';h[key]=(h[key]??0)+1;return h;},{});
-const comparisons=[];for(const directory of (await readdir(path.join(ROOT,'packages/training/candidates'))).sort()){const r=await json(path.join(ROOT,'packages/training/candidates',directory,'result.json'));comparisons.push([directory,num(r.model.trainingParameters),num(r.training.bestEpoch),r.training.verificationLoss.toFixed(6)]);}
+const comparisons=[],candidateDirs=(await readdir(path.join(ROOT,'packages/training/candidates'))).sort(),measuredResults=[];
+for(const file of (await readdir(results)).filter(f=>f.startsWith('correctness-')).sort().reverse())measuredResults.push({file,result:await json(path.join(results,file))});
+for(const directory of candidateDirs.filter(d=>!candidateDirs.includes(d+'-export-v2'))){
+ const dir=path.join(ROOT,'packages/training/candidates',directory),r=await json(path.join(dir,'result.json')),manifest=await json(path.join(dir,'manifest.json'));
+ const evidence=measuredResults.find(e=>e.result.model.id===manifest.id),evaluation=evidence?.result.correctness.teacherAgreement;
+ comparisons.push([evidence?`[${directory}](packages/benchmark/results/${evidence.file})`:directory,num(manifest.trainingParameters),num(r.training.bestEpoch),r.training.verificationLoss.toFixed(6),pct(evaluation?.segmentationExactMatch.value),pct(evaluation?.rootExactMatch.value),pct(evaluation?.fullAnalysisTop3.value)]);
+}
 const metrics=[['Segmentation exact match',q.segmentationExactMatch],['Root exact match',q.rootExactMatch],['Pattern exact match',q.patternExactMatch],['POS accuracy',q.posAccuracy],['Full analysis / top-1',q.fullAnalysisTop1],['Full analysis / top-3',q.fullAnalysisTop3],['Root character accuracy',q.rootCharacterAccuracy],['Coverage (no abstention)',q.coverage],['Error among covered predictions',q.risk]];
 let text=`# TinySarf model card
 
@@ -68,7 +74,9 @@ Split related forms by connected lemma families across ambiguous surfaces. Examp
 
 Character and positional embeddings feed three masked ReLU convolutions, masked mean pooling, per-character segmentation and fixed classification heads. Uniformly sample an accepted mappable analysis per word each epoch. Segmentation cross-entropy receives weight 2; the loss averages this and all head losses. AdamW, learning rate ${config.learningRate}, weight decay ${config.weightDecay}, batch ${config.batchSize}, seed ${config.seed}, gradient clipping at 1. Deterministic CPU execution with ${config.threads} threads. No curriculum or replay was used in this candidate.
 
-${table(['Run','Parameters','Selected epoch in run','Verification cross-entropy'],comparisons)}
+${table(['Run / export','Parameters','Selected epoch','Verification loss','Segmentation','Root','Full top-3'],comparisons)}
+
+The smaller models were re-exported to correct legacy metadata without changing trained tensors; the [export audit](packages/training/data/audits/legacy-exports.json) retains the reason and original manifest hashes. All comparison scores use the same frozen verification words.
 
 The selected candidate continued the initial 250K run for ${config.epochs} additional epochs and selected continuation epoch ${training.training.bestEpoch} by lowest deterministic sampled verification loss. Optimizer state resets for continuation. All later, worse epochs remain in the saved history. Selection never used the sealed final test. This small data sample has not established useful root or full-analysis quality.
 

@@ -21,8 +21,8 @@ Experimental checkpoint `20260911T191243.077466Z-250000` — **unpromoted**. [Mo
 | --- | --- | --- |
 | Reachable deployed weights | 245,667 | [size-2026-09-11T195058746Z.json](packages/benchmark/results/size-2026-09-11T195058746Z.json) |
 | Complete package Brotli | 227,706 bytes | [size-2026-09-11T195058746Z.json](packages/benchmark/results/size-2026-09-11T195058746Z.json) |
-| Teacher segmentation agreement | 87.11% (1094 verification words) | [correctness-2026-09-11T191845656Z.json](packages/benchmark/results/correctness-2026-09-11T191845656Z.json) |
-| Gold segmentation / root / top-3 | TBD — not measured; no gold samples | [correctness-2026-09-11T191845656Z.json](packages/benchmark/results/correctness-2026-09-11T191845656Z.json) |
+| Teacher segmentation agreement | 87.11% (1094 verification words) | [correctness-2026-09-11T195845117Z.json](packages/benchmark/results/correctness-2026-09-11T195845117Z.json) |
+| Gold segmentation / root / top-3 | TBD — not measured; no gold samples | [correctness-2026-09-11T195845117Z.json](packages/benchmark/results/correctness-2026-09-11T195845117Z.json) |
 | Reference batch throughput | 1,515.78 words/s at batch 128 (smoke; JS-reference comparison) | [browser-2026-09-11T193240105Z.json](packages/benchmark/results/browser-2026-09-11T193240105Z.json) |
 <!-- GENERATED:RESULTS:END -->
 

@@ -5,8 +5,8 @@
   "modelSha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
   "artifacts": {
     "correctness": {
-      "file": "packages/benchmark/results/correctness-2026-09-11T191845656Z.json",
-      "sha256": "a94452b00514ba933986c7b8853985aaf6065ea2b35b6018d12f8e9ed860f0b0"
+      "file": "packages/benchmark/results/correctness-2026-09-11T195845117Z.json",
+      "sha256": "faed5d36bb53cdcbb0a21885f992b89e07bf868727ca3fee2a4069dfa6681e6a"
     },
     "size": {
       "file": "packages/benchmark/results/size-2026-09-11T195058746Z.json",

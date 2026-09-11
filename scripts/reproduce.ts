@@ -2,11 +2,19 @@ import {execFileSync,spawn} from 'node:child_process';
 import {mkdtemp,mkdir,readFile,writeFile,copyFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import os from 'node:os';
+import {parseArgs} from 'node:util';
 import {ROOT,hash,json,provenance} from '../packages/benchmark/src/artifact';
 import {selectedModel} from '../packages/benchmark/src/selection';
 const source=provenance();if(!source.git.commit || source.git.dirty!==false)throw new Error('Commit source and evidence before clean-clone reproduction');
-const temporary=await mkdtemp(path.join(os.tmpdir(),'tinysarf-reproduce-')),checkout=path.join(temporary,'checkout');
-execFileSync('git',['clone','--no-hardlinks','--quiet',ROOT,checkout],{stdio:'inherit'});
+const {values}=parseArgs({options:{checkout:{type:'string'}}});
+const temporary=await mkdtemp(path.join(os.tmpdir(),'tinysarf-reproduce-')),checkout=values.checkout?path.resolve(values.checkout):path.join(temporary,'checkout');
+if(values.checkout){
+ const top=execFileSync('git',['rev-parse','--show-toplevel'],{cwd:checkout,encoding:'utf8'}).trim();
+ const remote=execFileSync('git',['remote','get-url','origin'],{cwd:checkout,encoding:'utf8'}).trim();
+ const dirty=execFileSync('git',['status','--porcelain'],{cwd:checkout,encoding:'utf8'}).trim();
+ if(path.resolve(top)!==checkout || path.resolve(remote)!==ROOT || dirty || checkout===ROOT)throw new Error('Reuse requires a clean separate checkout cloned from this source repository');
+ execFileSync('git',['fetch','--quiet','origin'],{cwd:checkout,stdio:'inherit'});
+}else execFileSync('git',['clone','--no-hardlinks','--quiet',ROOT,checkout],{stdio:'inherit'});
 execFileSync('git',['checkout','--detach',source.git.commit],{cwd:checkout,stdio:'inherit'});
 const logs=path.join(temporary,'logs');await mkdir(logs,{recursive:true});
 const commands:string[][]=[];
@@ -28,7 +36,7 @@ try {
  await run(['node','--import','tsx','packages/benchmark/src/correctness.ts','--local']);
  await run(['node','--import','tsx','packages/benchmark/src/size.ts','--local']);
  await run(['node','--import','tsx','packages/benchmark/src/browser.ts','--local','--parity-only']);
- await run(['npm','--prefix','apps/website','run','build']);
+ await run(['pnpm','docs:generate']);await run(['npm','--prefix','apps/website','run','build']);
  const resultDir=path.join(checkout,'packages/benchmark/local'),index=await json(path.join(ROOT,'packages/benchmark/reports/current.json'));
  for(const kind of ['correctness','size','parity']){
   const filename=(await readdir(resultDir)).filter(f=>f.startsWith(kind+'-')).sort().at(-1)!;const bytes=await readFile(path.join(resultDir,filename)),actual=JSON.parse(bytes.toString());
@@ -46,6 +54,6 @@ try {
  passed=true;
 }catch(e){error=String(e);}
 const selection=await selectedModel(),model=await json(path.join(selection.directory,'manifest.json'));
-const report={...source,kind:'reproduction',separateCheckout:true,checkout,modelSha256:model.sha256,passed,error,commands:commands.map(c=>c.join(' ')),artifacts,upstreamCache:'Only pinned source archive/database bytes reused; dependencies installed from lockfiles; generated datasets reconstructed; final-test labels never evaluated'};
+const report={...source,kind:'reproduction',separateCheckout:true,checkout,modelSha256:model.sha256,model,data:{verificationDigest:model.verificationDigest,goldDigest:null},passed,error,commands:commands.map(c=>c.join(' ')),artifacts,upstreamCache:'Only pinned source archive/database bytes reused; dependencies installed from lockfiles; generated datasets reconstructed; final-test labels never evaluated'};
 const out=path.join(ROOT,'packages/benchmark/local');await mkdir(out,{recursive:true});const file=path.join(out,`reproduction-${source.runId}.json`);await writeFile(file,JSON.stringify(report,null,2)+'\n',{flag:'wx'});
 console.log(`REPRODUCTION_ARTIFACT=${file}`);console.log(`REPRODUCTION_CHECKOUT=${checkout}`);if(!passed)throw new Error(error!);

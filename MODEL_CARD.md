@@ -46,12 +46,14 @@ Split related forms by connected lemma families across ambiguous surfaces. Examp
 
 Character and positional embeddings feed three masked ReLU convolutions, masked mean pooling, per-character segmentation and fixed classification heads. Uniformly sample an accepted mappable analysis per word each epoch. Segmentation cross-entropy receives weight 2; the loss averages this and all head losses. AdamW, learning rate 0.003, weight decay 0.0001, batch 128, seed 42, gradient clipping at 1. Deterministic CPU execution with 4 threads. No curriculum or replay was used in this candidate.
 
-| Run | Parameters | Selected epoch in run | Verification cross-entropy |
-| --- | --- | --- | --- |
-| 20260911T184527.505471Z-50000 | 51,515 | 12 | 0.955934 |
-| 20260911T184615.229470Z-100000 | 100,691 | 12 | 0.916080 |
-| 20260911T184811.803008Z-250000 | 245,699 | 12 | 0.868048 |
-| 20260911T191243.077466Z-250000 | 245,699 | 2 | 0.837367 |
+| Run / export | Parameters | Selected epoch | Verification loss | Segmentation | Root | Full top-3 |
+| --- | --- | --- | --- | --- | --- | --- |
+| [20260911T184527.505471Z-50000-export-v2](packages/benchmark/results/correctness-2026-09-11T200038267Z.json) | 51,515 | 12 | 0.955934 | 86.01% | 28.88% | 9.05% |
+| [20260911T184615.229470Z-100000-export-v2](packages/benchmark/results/correctness-2026-09-11T200038474Z.json) | 100,691 | 12 | 0.916080 | 84.19% | 31.26% | 9.69% |
+| [20260911T184811.803008Z-250000](packages/benchmark/results/correctness-2026-09-11T190649484Z.json) | 245,699 | 12 | 0.868048 | 87.48% | 42.41% | 14.72% |
+| [20260911T191243.077466Z-250000](packages/benchmark/results/correctness-2026-09-11T195845117Z.json) | 245,699 | 2 | 0.837367 | 87.11% | 45.34% | 15.17% |
+
+The smaller models were re-exported to correct legacy metadata without changing trained tensors; the [export audit](packages/training/data/audits/legacy-exports.json) retains the reason and original manifest hashes. All comparison scores use the same frozen verification words.
 
 The selected candidate continued the initial 250K run for 24 additional epochs and selected continuation epoch 2 by lowest deterministic sampled verification loss. Optimizer state resets for continuation. All later, worse epochs remain in the saved history. Selection never used the sealed final test. This small data sample has not established useful root or full-analysis quality.
 
@@ -59,7 +61,7 @@ Environment: PyTorch 2.5.1, NumPy 1.26.4; training device cpu; initial machine A
 
 ## Evaluation
 
-Contract `arabic-v1`; all valid mappable analyses are accepted. Field agreement can use different accepted analyses; full-analysis agreement requires one complete accepted analysis. Top-3 is an approximate beam, not exhaustive ambiguity recovery. Confusion diagnostics choose an allowed reference as documented in [metrics.ts](packages/benchmark/src/metrics.ts). Macro-F1 averages classes with truth or prediction support; feature diagnostics include an explicit absent class. Bootstrap: 2000 resamples, seed 42, word-level percentile 95% intervals. Per-class confusion/support and all predictions are retained in [correctness-2026-09-11T191845656Z.json](packages/benchmark/results/correctness-2026-09-11T191845656Z.json).
+Contract `arabic-v1`; all valid mappable analyses are accepted. Field agreement can use different accepted analyses; full-analysis agreement requires one complete accepted analysis. Top-3 is an approximate beam, not exhaustive ambiguity recovery. Confusion diagnostics choose an allowed reference as documented in [metrics.ts](packages/benchmark/src/metrics.ts). Macro-F1 averages classes with truth or prediction support; feature diagnostics include an explicit absent class. Bootstrap: 2000 resamples, seed 42, word-level percentile 95% intervals. Per-class confusion/support and all predictions are retained in [correctness-2026-09-11T195845117Z.json](packages/benchmark/results/correctness-2026-09-11T195845117Z.json).
 
 ### Teacher agreement
 
@@ -190,7 +192,7 @@ Experimental checkpoint: [packages/training/candidates/20260911T191243.077466Z-2
 
 | Artifact | Source commit | Dirty source | SHA-256 |
 | --- | --- | --- | --- |
-| [correctness-2026-09-11T191845656Z.json](packages/benchmark/results/correctness-2026-09-11T191845656Z.json) | Uncommitted initial experiment | null | a94452b00514ba933986c7b8853985aaf6065ea2b35b6018d12f8e9ed860f0b0 |
+| [correctness-2026-09-11T195845117Z.json](packages/benchmark/results/correctness-2026-09-11T195845117Z.json) | cc0b67580ba84fe195827cecc4cee9270480e294 | false | faed5d36bb53cdcbb0a21885f992b89e07bf868727ca3fee2a4069dfa6681e6a |
 | [size-2026-09-11T195058746Z.json](packages/benchmark/results/size-2026-09-11T195058746Z.json) | Uncommitted initial experiment | true | 73a0b498c0f63f6aa8018b9cad0b9c7ed19b12874a477dc3b1ddcb1a27eacbbb |
 | [browser-2026-09-11T193240105Z.json](packages/benchmark/results/browser-2026-09-11T193240105Z.json) | Uncommitted initial experiment | true | 997ecdfe376f2f57a270579babab69ba2485073896947d8e6ee226795684c001 |
 | [parity-2026-09-11T192818202Z.json](packages/benchmark/results/parity-2026-09-11T192818202Z.json) | Uncommitted initial experiment | true | f6dc0453958a811bf14821e07c3d2bfe0ad1b1229f55d9cf7dc317245d7e2d25 |
