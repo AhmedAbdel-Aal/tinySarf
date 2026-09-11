@@ -1,0 +1,39 @@
+{
+  "name": "tinysarf-workspace",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "pnpm test:core && pnpm test:training && pnpm test:benchmark && pnpm typecheck",
+    "test:core": "node --import tsx --test packages/core/test/*.test.ts",
+    "test:training": ".venv/bin/python -m unittest discover -s packages/training/test -v",
+    "test:benchmark": "node --import tsx --test packages/benchmark/test/*.test.ts",
+    "typecheck": "tsc --noEmit && npm --prefix apps/website run typecheck",
+    "build:core": "node --import tsx scripts/build.ts",
+    "check:package": "node --import tsx packages/core/scripts/check-package.ts",
+    "data:prepare": ".venv/bin/python -m tinysarf_training.data",
+    "train": ".venv/bin/python -m tinysarf_training.train",
+    "fine-tune": ".venv/bin/python -m tinysarf_training.failures",
+    "evaluate": "node --import tsx packages/benchmark/src/correctness.ts",
+    "model:promote": ".venv/bin/python -m tinysarf_training.promote",
+    "benchmark": "pnpm benchmark:correctness && pnpm benchmark:size && pnpm benchmark:browser",
+    "benchmark:correctness": "node --import tsx packages/benchmark/src/correctness.ts",
+    "benchmark:size": "node --import tsx packages/benchmark/src/size.ts",
+    "benchmark:browser": "node --import tsx packages/benchmark/src/browser.ts",
+    "docs:generate": "node --import tsx scripts/docs.ts",
+    "setup": "bash scripts/setup.sh",
+    "reproduce": "node --import tsx scripts/reproduce.ts",
+    "dev": "npm --prefix apps/website run dev"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.11",
+    "@webgpu/types": "0.1.69",
+    "esbuild": "0.25.12",
+    "playwright": "1.58.2",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,9 @@
+{
+ "schemaVersion":1,
+ "labelOrigin":"human-independent",
+ "role":"final-test",
+ "name":"gold-natural",
+ "source":{"name":"","version":"","license":""},
+ "annotation":{"independentOfTeacher":false,"reviewedBy":[],"completedAt":null},
+ "records":[]
+}

@@ -1,0 +1,7 @@
+packages:
+  - packages/core
+  - packages/benchmark
+allowBuilds:
+  esbuild: true
+
+storeDir: .pnpm-store

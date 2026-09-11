@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "ESNext", "moduleResolution": "Bundler",
+    "strict": true, "noUncheckedIndexedAccess": false, "skipLibCheck": true,
+    "resolveJsonModule": true, "allowImportingTsExtensions": true,
+    "lib": ["ES2022", "DOM"], "types": ["node", "@webgpu/types"]
+  },
+  "include": ["packages/**/*.ts", "scripts/**/*.ts"],
+  "exclude": ["**/dist", "**/node_modules"]
+}

@@ -1,0 +1,1372 @@
+[
+  {
+    "id": "contract-001",
+    "word": "كتاب",
+    "lemmaFamily": "كتاب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "root": "كتب",
+        "pattern": "فعال",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-002",
+    "word": "كاتب",
+    "lemmaFamily": "كاتب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "root": "كتب",
+        "pattern": "فاعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-003",
+    "word": "مكتوب",
+    "lemmaFamily": "مكتوب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        "root": "كتب",
+        "pattern": "مفعول",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-004",
+    "word": "مدرسة",
+    "lemmaFamily": "مدرسة",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        "root": "درس",
+        "pattern": "مفعلة",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-005",
+    "word": "طالب",
+    "lemmaFamily": "طالب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "root": "طلب",
+        "pattern": "فاعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-006",
+    "word": "علم",
+    "lemmaFamily": "علم",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "علم",
+        "pattern": null,
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-007",
+    "word": "قلم",
+    "lemmaFamily": "قلم",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "قلم",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-008",
+    "word": "باب",
+    "lemmaFamily": "باب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "بوب",
+        "pattern": null,
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-009",
+    "word": "بيت",
+    "lemmaFamily": "بيت",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "بيت",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-010",
+    "word": "شمس",
+    "lemmaFamily": "شمس",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "شمس",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-011",
+    "word": "قمر",
+    "lemmaFamily": "قمر",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "قمر",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-012",
+    "word": "رجل",
+    "lemmaFamily": "رجل",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "رجل",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-013",
+    "word": "امرأة",
+    "lemmaFamily": "امرأة",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        "root": null,
+        "pattern": null,
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-014",
+    "word": "طفل",
+    "lemmaFamily": "طفل",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "طفل",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-015",
+    "word": "طريق",
+    "lemmaFamily": "طريق",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "root": "طرق",
+        "pattern": "فعيل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-016",
+    "word": "مدينة",
+    "lemmaFamily": "مدينة",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        "root": "مدن",
+        "pattern": null,
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-017",
+    "word": "جميل",
+    "lemmaFamily": "جميل",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "root": "جمل",
+        "pattern": "فعيل",
+        "pos": "adjective",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-018",
+    "word": "كبير",
+    "lemmaFamily": "كبير",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "root": "كبر",
+        "pattern": "فعيل",
+        "pos": "adjective",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-019",
+    "word": "صغير",
+    "lemmaFamily": "صغير",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "root": "صغر",
+        "pattern": "فعيل",
+        "pos": "adjective",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-020",
+    "word": "سريع",
+    "lemmaFamily": "سريع",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ],
+        "root": "سرع",
+        "pattern": "فعيل",
+        "pos": "adjective",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-021",
+    "word": "كتب",
+    "lemmaFamily": "كتب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "كتب",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-022",
+    "word": "درس",
+    "lemmaFamily": "درس",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "درس",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-023",
+    "word": "ذهب",
+    "lemmaFamily": "ذهب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "ذهب",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-024",
+    "word": "قرأ",
+    "lemmaFamily": "قرأ",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "قرأ",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-025",
+    "word": "جلس",
+    "lemmaFamily": "جلس",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "جلس",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-026",
+    "word": "دخل",
+    "lemmaFamily": "دخل",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "دخل",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-027",
+    "word": "خرج",
+    "lemmaFamily": "خرج",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "خرج",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-028",
+    "word": "عمل",
+    "lemmaFamily": "عمل",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "عمل",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-029",
+    "word": "فتح",
+    "lemmaFamily": "فتح",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "فتح",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-030",
+    "word": "سمع",
+    "lemmaFamily": "سمع",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        "root": "سمع",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-031",
+    "word": "الكتاب",
+    "lemmaFamily": "كتاب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 6
+          }
+        ],
+        "root": "كتب",
+        "pattern": "فعال",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-032",
+    "word": "القلم",
+    "lemmaFamily": "قلم",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 5
+          }
+        ],
+        "root": "قلم",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-033",
+    "word": "البيت",
+    "lemmaFamily": "بيت",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 5
+          }
+        ],
+        "root": "بيت",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-034",
+    "word": "الشمس",
+    "lemmaFamily": "شمس",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 5
+          }
+        ],
+        "root": "شمس",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-035",
+    "word": "القمر",
+    "lemmaFamily": "قمر",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 5
+          }
+        ],
+        "root": "قمر",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-036",
+    "word": "الطالب",
+    "lemmaFamily": "طالب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 6
+          }
+        ],
+        "root": "طلب",
+        "pattern": "فاعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-037",
+    "word": "الرجل",
+    "lemmaFamily": "رجل",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 5
+          }
+        ],
+        "root": "رجل",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-038",
+    "word": "الطفل",
+    "lemmaFamily": "طفل",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 5
+          }
+        ],
+        "root": "طفل",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-039",
+    "word": "الطريق",
+    "lemmaFamily": "طريق",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 6
+          }
+        ],
+        "root": "طرق",
+        "pattern": "فعيل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-040",
+    "word": "المدينة",
+    "lemmaFamily": "مدينة",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 7
+          }
+        ],
+        "root": "مدن",
+        "pattern": null,
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-041",
+    "word": "وبكتابهم",
+    "lemmaFamily": "كتاب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "preposition",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 6
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 6,
+            "end": 8
+          }
+        ],
+        "root": "كتب",
+        "pattern": "فعال",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-042",
+    "word": "فبالقلم",
+    "lemmaFamily": "قلم",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "preposition",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "type": "article",
+            "start": 2,
+            "end": 4
+          },
+          {
+            "type": "stem",
+            "start": 4,
+            "end": 7
+          }
+        ],
+        "root": "قلم",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-043",
+    "word": "والبيت",
+    "lemmaFamily": "بيت",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "article",
+            "start": 1,
+            "end": 3
+          },
+          {
+            "type": "stem",
+            "start": 3,
+            "end": 6
+          }
+        ],
+        "root": "بيت",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-044",
+    "word": "بالمدرسة",
+    "lemmaFamily": "مدرسة",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "preposition",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "article",
+            "start": 1,
+            "end": 3
+          },
+          {
+            "type": "stem",
+            "start": 3,
+            "end": 8
+          }
+        ],
+        "root": "درس",
+        "pattern": "مفعلة",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-045",
+    "word": "كتابه",
+    "lemmaFamily": "كتاب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 4,
+            "end": 5
+          }
+        ],
+        "root": "كتب",
+        "pattern": "فعال",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-046",
+    "word": "قلمي",
+    "lemmaFamily": "قلم",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 3,
+            "end": 4
+          }
+        ],
+        "root": "قلم",
+        "pattern": "فعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-047",
+    "word": "وكاتب",
+    "lemmaFamily": "كاتب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 5
+          }
+        ],
+        "root": "كتب",
+        "pattern": "فاعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-048",
+    "word": "فخرج",
+    "lemmaFamily": "خرج",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 4
+          }
+        ],
+        "root": "خرج",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-049",
+    "word": "كتبنا",
+    "lemmaFamily": "كتب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 3,
+            "end": 5
+          }
+        ],
+        "root": "كتب",
+        "pattern": "فعل",
+        "pos": "verb",
+        "features": {},
+        "score": 0
+      }
+    ]
+  },
+  {
+    "id": "contract-050",
+    "word": "طالبات",
+    "lemmaFamily": "طالب",
+    "labelOrigin": "author-curated",
+    "reviewStatus": "pending-human-review",
+    "slices": [
+      "clitic-stack"
+    ],
+    "analyses": [
+      {
+        "spans": [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 6
+          }
+        ],
+        "root": "طلب",
+        "pattern": "فاعل",
+        "pos": "noun",
+        "features": {},
+        "score": 0
+      }
+    ]
+  }
+]

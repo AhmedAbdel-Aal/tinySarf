@@ -1,0 +1,11 @@
+{
+ "schemaVersion":1,
+ "mappingImplementation":"src/tinysarf_training/contract.py",
+ "missingStates":["__missing__","__unknown__","__na__"],
+ "segmentation":"Strict concatenation of dediacritized bw morphemes to surface; merge adjacent identical span types; a standalone function word is a stem. Unalignable analyses are rejected and counted in mapping-audit.json.",
+ "mergedPOS":{"adj,adj_comp,adj_num":"adjective","noun,noun_quant,verb_nom":"noun","verb,verb_pseudo":"verb","pron*":"pronoun","part*":"particle"},
+ "preserved":"Every distinct mappable teacher analysis, including internal missing states and lemma family, is retained.",
+ "droppedFeatures":["diac","caphi","gloss","catib6","ud","form_gen","form_num","rat","prc0","prc1","prc2","prc3","enc0","enc1","enc2","stem","stemcat","source","cm_*","atb*","d3*","lex (lemma output deferred)"],
+ "patterns":"Closed classes derived from training only, at most 64 common patterns; unseen/rare patterns become unknown.",
+ "limitations":"Surface-alignment filtering can bias the corpus away from orthographic alternations. Teacher sampling is not natural-distribution evaluation. Human audit is pending. Diacritic distinctions are ignored by the first student."
+}

@@ -1,0 +1,25 @@
+{
+  "name": "tinysarf",
+  "version": "0.1.0-experimental.0",
+  "type": "module",
+  "description": "Experimental local Arabic morphology with a tiny learned WebGPU model",
+  "license": "MIT AND CC-BY-4.0",
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/CONTRACT.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  }
+}

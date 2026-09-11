@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "status": "experimental-unpromoted",
+  "modelId": "20260911T191243.077466Z-250000",
+  "modelSha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
+  "artifacts": {
+    "correctness": {
+      "file": "packages/benchmark/results/correctness-2026-09-11T191845656Z.json",
+      "sha256": "a94452b00514ba933986c7b8853985aaf6065ea2b35b6018d12f8e9ed860f0b0"
+    },
+    "size": {
+      "file": "packages/benchmark/results/size-2026-09-11T195058746Z.json",
+      "sha256": "73a0b498c0f63f6aa8018b9cad0b9c7ed19b12874a477dc3b1ddcb1a27eacbbb"
+    },
+    "browser": {
+      "file": "packages/benchmark/results/browser-2026-09-11T193240105Z.json",
+      "sha256": "997ecdfe376f2f57a270579babab69ba2485073896947d8e6ee226795684c001"
+    },
+    "parity": {
+      "file": "packages/benchmark/results/parity-2026-09-11T192818202Z.json",
+      "sha256": "f6dc0453958a811bf14821e07c3d2bfe0ad1b1229f55d9cf7dc317245d7e2d25"
+    }
+  }
+}

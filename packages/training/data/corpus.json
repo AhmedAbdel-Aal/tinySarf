@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "normalizationVersion": "arabic-v1",
+  "seed": 42,
+  "sources": [
+    {
+      "name": "CAMELMORPH MSA v1.0",
+      "purpose": "Offline teacher database",
+      "version": "LREC-COLING 2024",
+      "commit": "15f5aede4b609db54abd6f87aded1f5ec5d930af",
+      "url": "https://raw.githubusercontent.com/CAMeL-Lab/camel_morph/15f5aede4b609db54abd6f87aded1f5ec5d930af/official_releases/lrec-coling2024_release/databases/camel-morph-msa/camel_morph_msa_v1.0.db",
+      "license": "CC-BY-4.0",
+      "attribution": "CAMeL Lab, New York University Abu Dhabi; Khairallah et al. (2024), Camel Morph MSA",
+      "labelOrigin": "teacher-generated",
+      "splits": [
+        "train",
+        "verification",
+        "mining",
+        "final-test"
+      ],
+      "sha256": "110e03baa282874062d076e23d9671e985b6f76520b891d58cba4e55de0b8f60"
+    },
+    {
+      "name": "CAMeL Tools compatible fork",
+      "purpose": "Analyzer for the published CAMELMORPH database",
+      "commit": "1a41f9a17e1fa21183537d8b757f2883b1d68060",
+      "url": "https://codeload.github.com/christios/camel_tools/tar.gz/1a41f9a17e1fa21183537d8b757f2883b1d68060",
+      "license": "MIT",
+      "attribution": "CAMeL Lab, New York University Abu Dhabi, and Christo Khairallah",
+      "labelOrigin": null,
+      "splits": [],
+      "sha256": "fb952a2e8d11ea3e371d997fe8261d447b82e04a87df7c7cc92779de205cf308"
+    },
+    {
+      "name": "Contract fixtures",
+      "purpose": "API examples reserved from optimization",
+      "version": "v1",
+      "path": "contract-fixtures.json",
+      "license": "MIT",
+      "attribution": "TinySarf contributors",
+      "labelOrigin": "author-curated; pending independent human review",
+      "splits": [
+        "verification"
+      ]
+    }
+  ],
+  "sampling": "Deterministic seeded sample of non-Wikipedia, non-proper-name database stem surfaces plus clitic combinations, reanalyzed for complete teacher ambiguity. This is teacher-sampled, not a natural text corpus.",
+  "splitPolicy": "Connected components of all lemma families sharing ambiguous surfaces; 75/10/5/10 hash buckets. Example-connected families forced into verification. Final test sealed until release-candidate evaluation.",
+  "build": "pnpm data:prepare -- --limit 12000",
+  "goldNatural": null,
+  "goldBalanced": null,
+  "datasetId": "teacher-sampled-v2"
+}

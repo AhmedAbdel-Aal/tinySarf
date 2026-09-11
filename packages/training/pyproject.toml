@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinysarf-training"
+version = "0.1.0"
+requires-python = ">=3.11,<3.13"
+dependencies = ["numpy==1.26.4", "torch==2.5.1", "cachetools==5.5.2", "six==1.17.0", "emoji==2.14.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

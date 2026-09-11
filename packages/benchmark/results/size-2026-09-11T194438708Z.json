@@ -1,0 +1,896 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-09-11T194438708Z",
+  "git": {
+    "commit": null,
+    "dirty": true
+  },
+  "createdAt": "2026-09-11T19:44:38.718Z",
+  "commands": [
+    "/Users/ahmed/.hermes/node/bin/node /Users/ahmed/Desktop/tinySarf/packages/benchmark/src/size.ts --local"
+  ],
+  "environment": {
+    "os": "darwin 23.5.0",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "ramBytes": 8589934592,
+    "node": "v22.23.0",
+    "browser": null,
+    "webgpuAdapter": null
+  },
+  "kind": "size",
+  "status": "experimental-unpromoted",
+  "model": {
+    "dilations": [
+      1,
+      2,
+      4
+    ],
+    "embedding": 32,
+    "floatBinarySha256": "816422af1132ca566d303dd1cb39025375181210a91e923f7da4571e4329dabd",
+    "floatSha256": "e619078e5b4c29f683c3e60b8922e2dee206376a25e4faa18afebd64c505d568",
+    "format": "cnn-v1",
+    "id": "20260911T191243.077466Z-250000",
+    "labels": {
+      "heads": {
+        "aspect": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "perfective",
+          "imperfective",
+          "imperative"
+        ],
+        "case": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "nominative",
+          "accusative",
+          "genitive"
+        ],
+        "gender": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "masculine",
+          "feminine"
+        ],
+        "mood": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "indicative",
+          "subjunctive",
+          "jussive"
+        ],
+        "number": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "singular",
+          "dual",
+          "plural"
+        ],
+        "pattern": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "فَعَل",
+          "فَعْل",
+          "فاعِل",
+          "فَعَّل",
+          "أَفْعَل",
+          "فَعِيل",
+          "ٌطWص+ِيّ",
+          "فَعّال",
+          "مَفْعُول",
+          "فِعال",
+          "فُعْل",
+          "تَفْعِيل",
+          "فُعُول",
+          "فِعْل",
+          "مَفاعِل",
+          "مُفَعَّل",
+          "فاعَل",
+          "تَفَعُّل",
+          "مُفَعِّل",
+          "ٱِفْتِعال",
+          "فَعال",
+          "فَعالِل",
+          "مُفْعِل",
+          "فَعْلَل",
+          "فَعائِل",
+          "مَفْعَل",
+          "تَفَعّل",
+          "مُتَفَعِّل",
+          "فَواعِل",
+          "فَعِل",
+          "مُفْتَعِل",
+          "فُعّال",
+          "فَعالِيل",
+          "مُفاعِل",
+          "فَعُول",
+          "فُعال",
+          "فِعال+ِيّ",
+          "فَعْل+ِيّ",
+          "فِعَل",
+          "مِفْعَل",
+          "فَعْلاء",
+          "مُفْعَل",
+          "ٱِفْتَعَل",
+          "مُفْتَعَل",
+          "مُتَفاعِل",
+          "فَعَل+ِيّ",
+          "ٱِسْتِفْعال",
+          "ٱِنْفِعال",
+          "مِفْعال",
+          "فُعَلاء",
+          "تَفاعُل",
+          "مَفاعِيل",
+          "فُعْل+ِيّ",
+          "فُعَل",
+          "فاعِل+ِيّ",
+          "فِعْل+ِيّ",
+          "فُعْلان",
+          "فَعِيل+ِيّ",
+          "فُعُل",
+          "فِعْلان",
+          "مَفْعِل",
+          "ٱِسْتَفْعَل",
+          "فاعُول",
+          "تَفاعَل"
+        ],
+        "person": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "first",
+          "second",
+          "third"
+        ],
+        "pos": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "noun",
+          "proper_noun",
+          "numeral",
+          "adjective",
+          "verb",
+          "adverb",
+          "preposition",
+          "conjunction",
+          "interjection",
+          "pronoun",
+          "particle"
+        ],
+        "root0": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root1": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root2": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root3": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "state": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "definite",
+          "indefinite",
+          "construct"
+        ],
+        "voice": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "active",
+          "passive"
+        ]
+      },
+      "segmentation": [
+        "conjunction",
+        "particle",
+        "preposition",
+        "article",
+        "stem",
+        "derivational_suffix",
+        "inflectional_suffix",
+        "pronominal_enclitic"
+      ]
+    },
+    "maxLength": 32,
+    "normalizationVersion": "arabic-v1",
+    "packedWeightsBytes": 245732,
+    "quantization": "symmetric-per-tensor-int8",
+    "reachableWeights": 245667,
+    "schemaVersion": 1,
+    "sha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
+    "status": "experimental-unpromoted",
+    "tensors": {
+      "aspect.bias": {
+        "length": 6,
+        "offset": 241736,
+        "scale": 0.0008982828003354371,
+        "shape": [
+          6
+        ]
+      },
+      "aspect.weight": {
+        "length": 1032,
+        "offset": 240704,
+        "scale": 0.00455059576779604,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "case.bias": {
+        "length": 6,
+        "offset": 244684,
+        "scale": 0.0008581824949942529,
+        "shape": [
+          6
+        ]
+      },
+      "case.weight": {
+        "length": 1032,
+        "offset": 243652,
+        "scale": 0.007890579290688038,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "conv0.bias": {
+        "length": 172,
+        "offset": 18720,
+        "scale": 0.0018964497139677405,
+        "shape": [
+          172
+        ]
+      },
+      "conv0.weight": {
+        "length": 16512,
+        "offset": 2208,
+        "scale": 0.0043164584785699844,
+        "shape": [
+          172,
+          3,
+          32
+        ]
+      },
+      "conv1.bias": {
+        "length": 172,
+        "offset": 107644,
+        "scale": 0.0006516575231216848,
+        "shape": [
+          172
+        ]
+      },
+      "conv1.weight": {
+        "length": 88752,
+        "offset": 18892,
+        "scale": 0.004955793730914593,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "conv2.bias": {
+        "length": 172,
+        "offset": 196568,
+        "scale": 0.0011922874255105853,
+        "shape": [
+          172
+        ]
+      },
+      "conv2.weight": {
+        "length": 88752,
+        "offset": 107816,
+        "scale": 0.005055295303463936,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "embedding": {
+        "length": 1184,
+        "offset": 0,
+        "scale": 0.02600051648914814,
+        "shape": [
+          37,
+          32
+        ]
+      },
+      "gender.bias": {
+        "length": 5,
+        "offset": 239656,
+        "scale": 0.00122736650519073,
+        "shape": [
+          5
+        ]
+      },
+      "gender.weight": {
+        "length": 860,
+        "offset": 238796,
+        "scale": 0.004492000211030245,
+        "shape": [
+          5,
+          172
+        ]
+      },
+      "mood.bias": {
+        "length": 6,
+        "offset": 242776,
+        "scale": 0.0004823975032195449,
+        "shape": [
+          6
+        ]
+      },
+      "mood.weight": {
+        "length": 1032,
+        "offset": 241744,
+        "scale": 0.004531926475465298,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "number.bias": {
+        "length": 6,
+        "offset": 240696,
+        "scale": 0.001153977820649743,
+        "shape": [
+          6
+        ]
+      },
+      "number.weight": {
+        "length": 1032,
+        "offset": 239664,
+        "scale": 0.004564363043755293,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pattern.bias": {
+        "length": 67,
+        "offset": 237688,
+        "scale": 0.001367977587506175,
+        "shape": [
+          67
+        ]
+      },
+      "pattern.weight": {
+        "length": 11524,
+        "offset": 226164,
+        "scale": 0.008518285118043423,
+        "shape": [
+          67,
+          172
+        ]
+      },
+      "person.bias": {
+        "length": 6,
+        "offset": 238788,
+        "scale": 0.0006815318483859301,
+        "shape": [
+          6
+        ]
+      },
+      "person.weight": {
+        "length": 1032,
+        "offset": 237756,
+        "scale": 0.0050756367854774,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pos.bias": {
+        "length": 14,
+        "offset": 200532,
+        "scale": 0.0013052545255050063,
+        "shape": [
+          14
+        ]
+      },
+      "pos.weight": {
+        "length": 2408,
+        "offset": 198124,
+        "scale": 0.005701378453522921,
+        "shape": [
+          14,
+          172
+        ]
+      },
+      "position": {
+        "length": 1024,
+        "offset": 1184,
+        "scale": 0.029511356726288795,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      "root0.bias": {
+        "length": 37,
+        "offset": 206912,
+        "scale": 0.0012769013410434127,
+        "shape": [
+          37
+        ]
+      },
+      "root0.weight": {
+        "length": 6364,
+        "offset": 200548,
+        "scale": 0.005650089122354984,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root1.bias": {
+        "length": 37,
+        "offset": 213316,
+        "scale": 0.0011855042539536953,
+        "shape": [
+          37
+        ]
+      },
+      "root1.weight": {
+        "length": 6364,
+        "offset": 206952,
+        "scale": 0.005082467570900917,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root2.bias": {
+        "length": 37,
+        "offset": 219720,
+        "scale": 0.0011456395732238889,
+        "shape": [
+          37
+        ]
+      },
+      "root2.weight": {
+        "length": 6364,
+        "offset": 213356,
+        "scale": 0.004992933943867683,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root3.bias": {
+        "length": 37,
+        "offset": 226124,
+        "scale": 0.0010689018527045846,
+        "shape": [
+          37
+        ]
+      },
+      "root3.weight": {
+        "length": 6364,
+        "offset": 219760,
+        "scale": 0.007890173234045506,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "segmentation.bias": {
+        "length": 8,
+        "offset": 198116,
+        "scale": 0.0010151041205972433,
+        "shape": [
+          8
+        ]
+      },
+      "segmentation.weight": {
+        "length": 1376,
+        "offset": 196740,
+        "scale": 0.0048494720831513405,
+        "shape": [
+          8,
+          172
+        ]
+      },
+      "state.bias": {
+        "length": 6,
+        "offset": 245724,
+        "scale": 0.00034476048313081264,
+        "shape": [
+          6
+        ]
+      },
+      "state.weight": {
+        "length": 1032,
+        "offset": 244692,
+        "scale": 0.00715420488268137,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "voice.bias": {
+        "length": 5,
+        "offset": 243644,
+        "scale": 0.000998991192318499,
+        "shape": [
+          5
+        ]
+      },
+      "voice.weight": {
+        "length": 860,
+        "offset": 242784,
+        "scale": 0.004018800333142281,
+        "shape": [
+          5,
+          172
+        ]
+      }
+    },
+    "trainingParameters": 245699,
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "vocabulary": [
+      "__pad__",
+      "ء",
+      "آ",
+      "أ",
+      "ؤ",
+      "إ",
+      "ئ",
+      "ا",
+      "ب",
+      "ة",
+      "ت",
+      "ث",
+      "ج",
+      "ح",
+      "خ",
+      "د",
+      "ذ",
+      "ر",
+      "ز",
+      "س",
+      "ش",
+      "ص",
+      "ض",
+      "ط",
+      "ظ",
+      "ع",
+      "غ",
+      "ف",
+      "ق",
+      "ك",
+      "ل",
+      "م",
+      "ن",
+      "ه",
+      "و",
+      "ي",
+      "ى"
+    ],
+    "width": 172
+  },
+  "data": {
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "goldDigest": null
+  },
+  "runtime": {
+    "sha256": "df07be23896d06e587947c946f0de4835bd6355f660ab7cd5febeee1016243b2",
+    "modelModuleSha256": "7592e9fb5784dbe94419d330694a5f5141da7dec142862ac7ae4fbb5f780f092"
+  },
+  "size": {
+    "trainingParameters": 245699,
+    "reachableWeights": 245667,
+    "packedWeightsBytes": 245732,
+    "wgslSourceBytes": 9639,
+    "javascriptRawBytes": 32934,
+    "javascriptMinifiedBytes": 21745,
+    "wrapper": {
+      "raw": 21745,
+      "gzip": 8318,
+      "brotli": 7533
+    },
+    "modelModule": {
+      "raw": 336990,
+      "gzip": 225102,
+      "brotli": 215394
+    },
+    "modelMetadata": {
+      "raw": 7183,
+      "gzip": 2161,
+      "brotli": 1790
+    },
+    "modelBinary": {
+      "raw": 245732,
+      "gzip": 185126,
+      "brotli": 177149
+    },
+    "npmTarballBytes": 240154,
+    "npmUnpackedBytes": 374046,
+    "npmTarballSha256": "e845f437c3351d44864b0a765cdc7ed389cdc09bc746492a7dd363d7e51f3fd3",
+    "completePackage": {
+      "raw": 389632,
+      "gzip": 240154,
+      "brotli": 227834
+    },
+    "wasmFallbackBytes": 0,
+    "firstLoad": {
+      "webgpu": {
+        "raw": 358735,
+        "gzip": 233420,
+        "brotli": 222927
+      },
+      "cpu": {
+        "raw": 358735,
+        "gzip": 233420,
+        "brotli": 222927
+      }
+    }
+  },
+  "compression": {
+    "gzipLevel": 9,
+    "brotliQuality": 11,
+    "zlib": "1.3.1-e00f703",
+    "brotli": "1.1.0",
+    "npm": "10.9.8",
+    "esbuild": "0.25.12"
+  },
+  "packageFiles": [
+    {
+      "path": "LICENSE",
+      "size": 1239,
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "size": 1602,
+      "mode": 420
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "size": 2083,
+      "mode": 420
+    },
+    {
+      "path": "dist/checkpoint.d.ts",
+      "size": 136,
+      "mode": 420
+    },
+    {
+      "path": "dist/checkpoint.js",
+      "size": 336990,
+      "mode": 420
+    },
+    {
+      "path": "dist/cpu.d.ts",
+      "size": 772,
+      "mode": 420
+    },
+    {
+      "path": "dist/decode.d.ts",
+      "size": 425,
+      "mode": 420
+    },
+    {
+      "path": "dist/gpu.d.ts",
+      "size": 1589,
+      "mode": 420
+    },
+    {
+      "path": "dist/index.d.ts",
+      "size": 165,
+      "mode": 420
+    },
+    {
+      "path": "dist/index.js",
+      "size": 21745,
+      "mode": 420
+    },
+    {
+      "path": "dist/model.d.ts",
+      "size": 1074,
+      "mode": 420
+    },
+    {
+      "path": "dist/normalize.d.ts",
+      "size": 795,
+      "mode": 420
+    },
+    {
+      "path": "dist/runtime.d.ts",
+      "size": 264,
+      "mode": 420
+    },
+    {
+      "path": "dist/scheduler.d.ts",
+      "size": 482,
+      "mode": 420
+    },
+    {
+      "path": "dist/schema.d.ts",
+      "size": 1946,
+      "mode": 420
+    },
+    {
+      "path": "dist/shaders.d.ts",
+      "size": 121,
+      "mode": 420
+    },
+    {
+      "path": "docs/CONTRACT.md",
+      "size": 2181,
+      "mode": 420
+    },
+    {
+      "path": "package.json",
+      "size": 437,
+      "mode": 420
+    }
+  ],
+  "budgetPassed": true,
+  "notes": [
+    "Raw wrapper is a non-minified build of the same production entry",
+    "First-load totals sum the separately compressed runtime and checkpoint modules",
+    "Complete package Brotli is Brotli of the exact uncompressed npm tar; npm distributes the measured gzip tarball",
+    "No WASM fallback is included; CPU reference is JavaScript",
+    "Generated workspace benchmark tables are excluded from the tarball to avoid circular size claims"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "eligible": false,
+  "reason": "Pre-training mapping audit: unrestricted stems were dominated by Wikipedia proper names (47,660 of 74,449 training analyses). This obscures radical learning and is unsuitable for the first morphology experiment. Retained under generated/*.json. No candidate was trained or tuned on v1. V2 samples non-Wikipedia lexical stems and explicitly maps teacher hamzat al-wasl for alignment."
+}
