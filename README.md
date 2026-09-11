@@ -37,10 +37,10 @@ Experimental checkpoint `20260911T191243.077466Z-250000` — **unpromoted**. [Mo
 
 | Measured item | Result | Evidence |
 | --- | --- | --- |
-| Reachable deployed weights | 245,667 | [size-2026-09-11T210707831Z.json](packages/benchmark/results/size-2026-09-11T210707831Z.json) |
-| Complete package Brotli | 228,025 bytes | [size-2026-09-11T210707831Z.json](packages/benchmark/results/size-2026-09-11T210707831Z.json) |
-| Teacher segmentation agreement | 87.02% (1094 verification words) | [correctness-2026-09-11T210703100Z.json](packages/benchmark/results/correctness-2026-09-11T210703100Z.json) |
-| Gold segmentation / root / top-3 | TBD — not measured; no gold samples | [correctness-2026-09-11T210703100Z.json](packages/benchmark/results/correctness-2026-09-11T210703100Z.json) |
+| Reachable deployed weights | 245,667 | [size-2026-09-11T212226866Z.json](packages/benchmark/results/size-2026-09-11T212226866Z.json) |
+| Complete package Brotli | 228,025 bytes | [size-2026-09-11T212226866Z.json](packages/benchmark/results/size-2026-09-11T212226866Z.json) |
+| Teacher segmentation agreement | 87.02% (1094 verification words) | [correctness-2026-09-11T212223821Z.json](packages/benchmark/results/correctness-2026-09-11T212223821Z.json) |
+| Gold segmentation / root / top-3 | TBD — not measured; no gold samples | [correctness-2026-09-11T212223821Z.json](packages/benchmark/results/correctness-2026-09-11T212223821Z.json) |
 | Reference batch throughput | 1,342.6 words/s at batch 128 (full; JS-reference comparison) | [browser-2026-09-11T211921285Z.json](packages/benchmark/results/browser-2026-09-11T211921285Z.json) |
 <!-- GENERATED:RESULTS:END -->
 

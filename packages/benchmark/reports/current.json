@@ -5,26 +5,30 @@
   "modelSha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
   "artifacts": {
     "correctness": {
-      "file": "packages/benchmark/results/correctness-2026-09-11T210703100Z.json",
-      "sha256": "7fbc84c806d3bd616df2d3946c4469065fa0f96c8ba921641892b2403d955367"
+      "file": "packages/benchmark/results/correctness-2026-09-11T212223821Z.json",
+      "sha256": "c771f07375a10cd4061b8252d4f7cd1c2ff41154abf28eb810d2a690d4cde822"
     },
     "size": {
-      "file": "packages/benchmark/results/size-2026-09-11T210707831Z.json",
-      "sha256": "c6eda2e30ab74f8889ca39e6e1ba1f11c4bc64ba5f38c3600dc52aa08822ae45"
+      "file": "packages/benchmark/results/size-2026-09-11T212226866Z.json",
+      "sha256": "0c75f492db2d56b6229bd2f46fd7ebb6acbf51d63e81903475d7d18781a558ef"
     },
     "browser": {
       "file": "packages/benchmark/results/browser-2026-09-11T211921285Z.json",
       "sha256": "1b93cde939c4670bb773ab24718677dd26ca313313462078a98ce19cde609a6a"
     },
     "parity": {
-      "file": "packages/benchmark/results/parity-2026-09-11T211618054Z.json",
-      "sha256": "788e1a9c3431ea729165542758e8071692e47bb9d4821aa87af7638416e9ec56"
+      "file": "packages/benchmark/results/parity-2026-09-11T212227895Z.json",
+      "sha256": "ea81f65a71d23f517fb9912f8d197260d5fd6b9626802750d5bc7b4a33ae6708"
     }
   },
   "supplemental": {
+    "reproduction": {
+      "file": "packages/benchmark/results/reproduction-2026-09-11T212039305Z.json",
+      "sha256": "9fb4b4418844cb3dedc6783c83ca11b3062d727a8376cc06f7110166c7fee9b1"
+    },
     "ai-review": {
-      "file": "packages/benchmark/results/ai-review-2026-09-11T210704853Z.json",
-      "sha256": "1a2e1e0351f7934df115d9909cbe45e51da6d9e1301e315005cea70484d02763"
+      "file": "packages/benchmark/results/ai-review-2026-09-11T212233259Z.json",
+      "sha256": "c432f79d549fe17b67290c25bebac73a9b796ff554694a4d763df24bfb80a7c3"
     },
     "corrected-comparison": {
       "file": "packages/benchmark/results/corrected-comparison-2026-09-11T211224679Z.json",
