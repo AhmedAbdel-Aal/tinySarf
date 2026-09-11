@@ -2,6 +2,8 @@
 
 Experimental Modern Standard Arabic morphology, running locally in the browser with WebGPU. This build contains an **unpromoted research checkpoint**. It has not passed independent human gold evaluation or all release gates. Do not infer linguistic correctness from a well-formed output.
 
+Source, installable experimental releases, the model card and raw measurements are available in [the TinySarf repository](https://github.com/AhmedAbdel-Aal/tinySarf).
+
 ```ts
 import { analyze } from 'tinysarf';
 const alternatives = await analyze('وبكتابهم', { topK: 3 });

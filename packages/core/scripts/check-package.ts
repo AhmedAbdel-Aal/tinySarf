@@ -1,5 +1,5 @@
 import {selectedModel} from '../../benchmark/src/selection';
-import {readFile,mkdtemp,mkdir,writeFile} from "node:fs/promises";
+import {readFile,mkdtemp,mkdir,writeFile,rename} from "node:fs/promises";
 import {execFileSync} from "node:child_process";
 import path from "node:path";
 import os from "node:os";
@@ -20,10 +20,34 @@ const packed=JSON.parse(execFileSync("npm",["pack","--json","--ignore-scripts","
 if(packed.files.some((f:{path:string})=>/test|\.pt$|\.npz$|\.bin$|\.meta\.json$|\.map$/.test(f.path))) throw new Error("Unexpected development/training files in package");
 const modules=path.join(temporary,"node_modules");await mkdir(modules,{recursive:true});
 execFileSync("tar",["-xzf",path.join(temporary,packed.filename),"-C",temporary]);
-execFileSync("mv",[path.join(temporary,"package"),path.join(modules,"tinysarf")]);
+await rename(path.join(temporary,"package"),path.join(modules,"tinysarf"));
+await writeFile(path.join(temporary,"package.json"),JSON.stringify({name:"tinysarf-package-consumer",private:true,type:"module"}));
 await writeFile(path.join(temporary,"smoke.mjs"),"import {analyze} from 'tinysarf'; const r=await analyze('كتب',{backend:'cpu',topK:3}); if(!r.length||!r[0].spans.length) throw Error('Missing analysis'); console.log('Tarball CPU API passed');");
 execFileSync(process.execPath,[path.join(temporary,"smoke.mjs")],{cwd:temporary,stdio:"inherit"});
-console.log(JSON.stringify({package:packed.filename,files:packed.files.length,tarballBytes:packed.size,wrapperBrotliBytes:compress(wrapper),firstLoadBrotliBytes:compress(wrapper)+compress(checkpoint)}));
-
-await writeFile(path.join(temporary,"usage.ts"),"import {analyze} from 'tinysarf'; const r=await analyze('كتب',{backend:'cpu',topK:3}); r[0].spans[0].start satisfies number; await analyze.batch(['كتب']);\n// @ts-expect-error only documented backends are accepted\nawait analyze('كتب',{backend:'remote'});\n// @ts-expect-error no debug entry is publicly exported\nimport {GPUBackend} from 'tinysarf';\n");
-execFileSync(process.execPath,[path.join(ROOT,'node_modules/typescript/bin/tsc'),path.join(temporary,'usage.ts'),'--noEmit','--strict','--skipLibCheck','--module','ESNext','--moduleResolution','bundler','--target','ES2022','--lib','es2022,dom'],{cwd:temporary,stdio:'inherit'});
+await writeFile(path.join(temporary,"usage.ts"),`import {analyze, type AnalyzeOptions, type MorphAnalysis} from 'tinysarf';
+const options: AnalyzeOptions = {backend:'cpu',topK:3};
+const r: MorphAnalysis[] = await analyze('كتب',options);
+r[0].spans[0].start satisfies number;
+await analyze.batch(['كتب','وَبِكِتَابِهِمْ'] as const,options);
+// @ts-expect-error only documented backends are accepted
+await analyze('كتب',{backend:'remote'});
+// @ts-expect-error return values retain their declared shape
+r[0].inventedField;
+// @ts-expect-error no debug entry is publicly exported
+import {GPUBackend} from 'tinysarf';
+// @ts-expect-error package internals cannot bypass the public exports map
+import {GPUBackend as InternalGPUBackend} from 'tinysarf/dist/gpu.js';
+`);
+for(const [module,moduleResolution] of [["ESNext","Bundler"],["NodeNext","NodeNext"]] as const) {
+  const config=path.join(temporary,`tsconfig-${moduleResolution.toLowerCase()}.json`);
+  await writeFile(config,JSON.stringify({compilerOptions:{module,moduleResolution,target:"ES2022",lib:["ES2022","DOM"],strict:true,skipLibCheck:false,noEmit:true,types:[]},files:["usage.ts"]}));
+  execFileSync(process.execPath,[path.join(ROOT,"node_modules/typescript/bin/tsc"),"--project",config],{cwd:temporary,stdio:"inherit"});
+  console.log(`Tarball strict ${moduleResolution} TypeScript API passed`);
+}
+let browserSmoke;
+if(process.env.TINYSARF_PACKAGE_BROWSER==="1") {
+  const {checkBrowserConsumer}=await import("./browser-consumer");
+  browserSmoke=await checkBrowserConsumer(path.join(modules,"tinysarf"));
+  console.log("Tarball browser CPU API and module-loading smoke passed (not hardware evidence)");
+}
+console.log(JSON.stringify({package:packed.filename,files:packed.files.length,tarballBytes:packed.size,wrapperBrotliBytes:compress(wrapper),firstLoadBrotliBytes:compress(wrapper)+compress(checkpoint),typeConsumers:["Bundler","NodeNext"],...(browserSmoke?{browserSmoke}:{})}));

@@ -4,6 +4,8 @@ LETTERS = 'ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهو�
 MARKS = re.compile('[\u0610-\u061a\u064b-\u065f\u0670\u06d6-\u06ed\u0640]')
 SPAN_TYPES = ['conjunction','particle','preposition','article','stem','derivational_suffix','inflectional_suffix','pronominal_enclitic']
 SPECIAL = ['__missing__','__unknown__','__na__']
+LEGACY_MAPPING = 'legacy-v2'
+CORRECTED_MAPPING = 'corrected-v1'
 FEATURE_MAP = {
  'per': ('person', {'1':'first','2':'second','3':'third'}),
  'gen': ('gender', {'m':'masculine','f':'feminine'}),
@@ -28,7 +30,9 @@ def internal_feature(analysis, source):
     if source not in analysis: return '__missing__'
     if analysis[source]=='na': return '__na__'
     return FEATURE_MAP[source][1].get(analysis[source], '__unknown__')
-def segment_type(tag):
+def segment_type(tag, version=LEGACY_MAPPING):
+    if version not in (LEGACY_MAPPING, CORRECTED_MAPPING): raise ValueError('Unknown label mapping version')
+    if version == CORRECTED_MAPPING and tag in {'CONNEC_PART', 'RC_PART'}: return 'particle'
     if tag in {'CONJ','SUB_CONJ'}: return 'conjunction'
     if tag=='PREP': return 'preposition'
     if tag=='DET': return 'article'
@@ -37,8 +41,26 @@ def segment_type(tag):
     if tag.startswith(('PART','FUT','NEG','INTERROG','JUS','SUBJ')): return 'particle'
     return 'stem'
 
-def map_analysis(word, raw):
+def mapped_pattern(raw, version=LEGACY_MAPPING):
+    """Keep the frozen legacy representation unless correction is explicitly requested."""
+    if version not in (LEGACY_MAPPING, CORRECTED_MAPPING): raise ValueError('Unknown label mapping version')
+    pattern=raw.get('pattern_abstract') or raw.get('pattern')
+    if not pattern or pattern in ('na','NOAN','NTWS'): return None
+    if version == CORRECTED_MAPPING and raw.get('pattern') in ('na', 'NOAN', 'NTWS'):
+        # Some pinned teacher entries transliterate NTWS inside pattern_abstract.
+        # An Arabic derivational ending does not supply the missing stem pattern.
+        return None
+    pattern=pattern.translate(str.maketrans({'1':'ف','2':'ع','3':'ل','4':'ل'}))
+    if version == CORRECTED_MAPPING:
+        # '+' is the teacher's morpheme separator, not a character in the pattern.
+        pattern=pattern.replace('+', '')
+        if not any(c in LETTERS or c == 'ٱ' for c in pattern): return None
+        if any(c not in LETTERS and c != 'ٱ' and not MARKS.fullmatch(c) for c in pattern): return None
+    return pattern
+
+def map_analysis(word, raw, version=LEGACY_MAPPING):
     """Strict surface alignment. Non-concatenative teacher segmentations are logged and dropped."""
+    if version not in (LEGACY_MAPPING, CORRECTED_MAPPING): raise ValueError('Unknown label mapping version')
     word=normalize(word); spans=[]; pieces=[]
     for part in raw.get('bw','').split('+'):
         if '/' not in part: continue
@@ -46,7 +68,7 @@ def map_analysis(word, raw):
         # The teacher spells hamzat al-wasl explicitly, while its surface index uses alef.
         surface=dediac(surface).replace('ٱ','ا')
         if not surface or surface=='(null)': continue
-        pieces.append((surface, segment_type(tag)))
+        pieces.append((surface, segment_type(tag, version)))
     if ''.join(p[0] for p in pieces)!=word:
         raise ValueError('teacher segmentation does not concatenate to normalized surface')
     offset=0
@@ -61,9 +83,7 @@ def map_analysis(word, raw):
     if len(root) not in (3,4): root=None
     pos=raw.get('pos','')
     pos=POS_MAP.get(pos, 'pronoun' if pos.startswith('pron') else 'particle' if pos.startswith('part') else 'unknown')
-    pattern=raw.get('pattern_abstract') or raw.get('pattern')
-    if not pattern or pattern in ('na','NOAN','NTWS'): pattern=None
-    if pattern: pattern=pattern.translate(str.maketrans({'1':'ف','2':'ع','3':'ل','4':'ل'}))
+    pattern=mapped_pattern(raw, version)
     return {'spans':spans,'root':root,'pattern':pattern,'pos':pos,
       'features':{target:internal_feature(raw,source) for source,(target,_) in FEATURE_MAP.items()},
       'lemmaFamily':lemma_family(raw.get('lex',word))}

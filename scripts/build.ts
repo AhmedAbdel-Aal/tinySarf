@@ -1,7 +1,7 @@
 import {selectedModel} from '../packages/benchmark/src/selection';
 import {build} from "esbuild";
 import {execFileSync} from "node:child_process";
-import {readFile,writeFile,mkdir,copyFile} from "node:fs/promises";
+import {readFile,writeFile,mkdir,copyFile,readdir} from "node:fs/promises";
 import path from "node:path";
 import {ROOT,json,hash} from "../packages/benchmark/src/artifact";
 import {validateManifest} from "../packages/core/src/model";
@@ -17,6 +17,11 @@ for(const name of ["index","checkpoint"]) {
   await writeFile(path.join(ROOT,`packages/core/dist/${name}.meta.json`),JSON.stringify(result.metafile));
 }
 execFileSync(path.join(ROOT,"node_modules/.bin/tsc"),["packages/core/src/index.ts","--declaration","--emitDeclarationOnly","--strict","--skipLibCheck","--module","ESNext","--moduleResolution","bundler","--target","es2022","--lib","es2022,dom","--types","@webgpu/types","--outDir","packages/core/dist"],{cwd:ROOT,stdio:"inherit"});
+// ESM declaration imports need runtime-style extensions for strict NodeNext consumers.
+for(const name of (await readdir(path.join(ROOT,'packages/core/dist'))).filter(n=>n.endsWith('.d.ts'))){
+ const file=path.join(ROOT,'packages/core/dist',name),source=await readFile(file,'utf8');
+ await writeFile(file,source.replace(/((?:from\s+|import\()["'])(\.[^"']+)(["'])/g,(_,prefix,specifier,suffix)=>`${prefix}${/\.[a-z]+$/i.test(specifier)?specifier:specifier+'.js'}${suffix}`));
+}
 for(const filename of ["LICENSE","THIRD_PARTY_NOTICES.md"]) await copyFile(path.join(ROOT,filename),path.join(ROOT,"packages/core",filename));
 await mkdir(path.join(ROOT,"packages/core/docs"),{recursive:true});
 await copyFile(path.join(ROOT,"docs/CONTRACT.md"),path.join(ROOT,"packages/core/docs/CONTRACT.md"));

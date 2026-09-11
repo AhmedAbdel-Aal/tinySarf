@@ -16,8 +16,8 @@ function segmentationCandidates(word:string,logits:Float32Array,limit=8):SegCand
       const last=b.tags.at(-1)??-1;
       if(tag<last || (tag>4 && !b.tags.includes(4))) continue;
       if(tag===0 && (p!==0 || !"وف".includes(word[p]))) continue;
-      if(tag===1 && !"أسل".includes(word[p])) continue;
-      if(tag===2 && (!"بكل".includes(word[p]) || last===2)) continue;
+      if(tag===1 && !"أسلبوف".includes(word[p])) continue;
+      if(tag===2 && (!"بكلو".includes(word[p]) || last===2)) continue;
       if(tag===3 && !(last!==3 && word.slice(p,p+2)==="ال" || last===3 && word[p]==="ل" && word[p-1]==="ا")) continue;
       // An article must include both letters before moving to a stem.
       if(last===3 && tag!==3 && b.tags.filter(t=>t===3).length!==2) continue;
@@ -47,6 +47,9 @@ function rootCandidates(heads:Record<string,number[]>,m:ModelManifest):{root:str
   return candidates.sort((a,b)=>b.score-a.score).slice(0,4);
 }
 function publicValue(s:string):string|null {return s.startsWith("__")?null:s;}
+// Legacy teacher exports contain a corrupted mixed-script pattern class. Keep
+// its learned ranking score, but never expose that class as an Arabic pattern.
+function publicPattern(s:string):string|null {return /^[ء-غف-ي\u064b-\u065f\u0670\u0671+]+$/u.test(s)&&/[ء-غف-ي\u0671]/u.test(s)?s:null;}
 function constrainedFeatures(pos:string,features:Record<string,string>,spans:MorphSpan[]):MorphFeatures|null {
   const noun=["noun","proper_noun","adjective","numeral"].includes(pos), verb=pos==="verb",pronoun=pos==="pronoun";
   if(!noun && spans.some(s=>s.type==="article")) return null;
@@ -98,7 +101,7 @@ export function decode(word:NormalizedWord,logits:Logits,m:ModelManifest,topK:nu
     push(node.s+1,node.b,node.r);push(node.s,node.b+1,node.r);push(node.s,node.b,node.r+1);
     const b=beam[node.b],spans=spanCache[node.s],pos=publicValue(b.values.pos)??"unknown";
     const features=constrainedFeatures(pos,b.values,spans);if(!features)continue;
-    const a={spans,root:roots[node.r].root,pattern:publicValue(b.values.pattern),pos,features,score};
+    const a={spans,root:roots[node.r].root,pattern:publicPattern(b.values.pattern),pos,features,score};
     const key=JSON.stringify({...a,score:0});if(unique.has(key))continue;unique.add(key);result.push(a);
   }
   return result;

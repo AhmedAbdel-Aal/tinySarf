@@ -19,6 +19,10 @@ jobs:
       - run: bash scripts/setup.sh
       - run: pnpm test
       - run: pnpm build:core && pnpm check:package
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm check:package
+        env:
+          TINYSARF_PACKAGE_BROWSER: '1'
       - run: npm --prefix apps/website run build
       - run: npm --prefix apps/website audit --audit-level=high
   browser-hardware:

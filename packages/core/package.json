@@ -3,6 +3,9 @@
   "version": "0.1.0-experimental.0",
   "type": "module",
   "description": "Experimental local Arabic morphology with a tiny learned WebGPU model",
+  "repository": { "type": "git", "url": "https://github.com/AhmedAbdel-Aal/tinySarf.git", "directory": "packages/core" },
+  "homepage": "https://github.com/AhmedAbdel-Aal/tinySarf#readme",
+  "bugs": { "url": "https://github.com/AhmedAbdel-Aal/tinySarf/issues" },
   "license": "MIT AND CC-BY-4.0",
   "files": [
     "dist/*.js",

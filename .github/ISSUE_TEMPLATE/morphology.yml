@@ -1,0 +1,37 @@
+name: Report a morphology error
+description: Submit an Arabic word and proposed correction for review.
+title: "Morphology: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "TinySarf is experimental. Reports are reviewed before they can enter training; a report alone does not establish a correct label."
+  - type: input
+    id: word
+    attributes:
+      label: Arabic word
+      description: Preserve the spelling and any diacritics that produced the error.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual analysis
+      description: Paste the returned JSON, including alternatives if available.
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Proposed correction and linguistic source
+      description: Explain the root, POS, segmentation or features you believe are correct. Include alternative readings and a dictionary or grammar reference when available.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version, backend and browser
+      placeholder: 0.1.0-experimental.0, WebGPU, Chrome
+    validations:
+      required: true

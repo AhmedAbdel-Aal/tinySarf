@@ -22,6 +22,7 @@
     "benchmark": "pnpm benchmark:correctness && pnpm benchmark:size && pnpm benchmark:browser",
     "benchmark:correctness": "node --import tsx packages/benchmark/src/correctness.ts",
     "benchmark:ai-review": "node --import tsx packages/benchmark/src/ai-review.ts",
+    "benchmark:compare": "node --import tsx packages/benchmark/src/compare.ts",
     "benchmark:size": "node --import tsx packages/benchmark/src/size.ts",
     "benchmark:browser": "node --import tsx packages/benchmark/src/browser.ts",
     "docs:generate": "node --import tsx scripts/docs.ts",

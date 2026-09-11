@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TinySarf package example</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:760px;margin:60px auto;padding:0 24px;color:#152940;background:#f6f8fb}input,select,button{font:inherit;padding:10px;border:1px solid #96a4b5;border-radius:6px}input{max-width:100%;box-sizing:border-box;font-size:26px}form{display:flex;gap:12px;align-items:end;flex-wrap:wrap}label{display:grid;gap:5px}button{background:#183b70;color:white;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:20px;border:1px solid #ccd4df;border-radius:8px}a{color:#183b70}</style>
+<h1>TinySarf</h1><p>Analyze an Arabic word locally. This experimental checkpoint can make linguistic errors. Ranking scores are not probabilities.</p>
+<form id="form"><label>Arabic word<input id="word" dir="rtl" value="وَبِكِتَابِهِمْ" required></label><label>Backend<select id="backend"><option value="cpu">CPU reference</option><option value="webgpu">WebGPU</option></select></label><button id="run">Analyze</button></form>
+<p id="status" role="status">Ready. Choose a backend and analyze.</p><pre id="output" aria-label="Analysis JSON">Results appear here.</pre>
+<p><a href="https://github.com/AhmedAbdel-Aal/tinySarf">Source, model card and measured evidence</a></p>
+<script type="module">
+import {analyze} from '/tinysarf/index.js';
+const form=document.querySelector('#form'),status=document.querySelector('#status'),output=document.querySelector('#output'),button=document.querySelector('#run');
+form.addEventListener('submit',async(event)=>{
+ event.preventDefault();button.disabled=true;status.textContent='Analyzing locally…';
+ try{const start=performance.now(),result=await analyze(document.querySelector('#word').value,{backend:document.querySelector('#backend').value,topK:3});output.textContent=JSON.stringify(result,null,2);status.textContent=`${result.length} alternatives · ${(performance.now()-start).toFixed(1)} ms`;}catch(error){status.textContent=error.message;output.textContent='';}finally{button.disabled=false;}
+});
+</script></html>
