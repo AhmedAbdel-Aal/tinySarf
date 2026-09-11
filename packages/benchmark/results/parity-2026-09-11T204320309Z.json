@@ -1,0 +1,2115 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-09-11T204320309Z",
+  "git": {
+    "commit": "f28575b650a91c3cb9486fc7fe0d43531ae8931e",
+    "dirty": false
+  },
+  "createdAt": "2026-09-11T20:43:20.322Z",
+  "commands": [
+    "/Users/ahmed/.hermes/node/bin/node /private/var/folders/dl/d24xg2c11gx7r5rs5b6kd_780000gn/T/tinysarf-reproduce-OZiGig/checkout/packages/benchmark/src/browser.ts --local --parity-only"
+  ],
+  "environment": {
+    "os": "darwin 23.5.0",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "ramBytes": 8589934592,
+    "node": "v22.23.0",
+    "browser": "152.0.7977.83",
+    "webgpuAdapter": null,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "secureContext": true,
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "device": "",
+      "description": "",
+      "isFallbackAdapter": false
+    },
+    "visibility": "visible",
+    "devicePixelRatio": 1,
+    "screen": {
+      "width": 1366,
+      "height": 768
+    },
+    "heap": {
+      "usedBytes": 26145785,
+      "totalBytes": 87687893,
+      "limitBytes": 4395630592,
+      "api": "performance.memory (Chromium-specific)"
+    },
+    "powerState": null,
+    "pluggedIn": null,
+    "measureUserAgentSpecificMemory": null
+  },
+  "kind": "parity",
+  "runtime": {
+    "sha256": "df07be23896d06e587947c946f0de4835bd6355f660ab7cd5febeee1016243b2",
+    "modelModuleSha256": "7592e9fb5784dbe94419d330694a5f5141da7dec142862ac7ae4fbb5f780f092"
+  },
+  "status": "experimental-unpromoted",
+  "model": {
+    "dilations": [
+      1,
+      2,
+      4
+    ],
+    "embedding": 32,
+    "floatBinarySha256": "816422af1132ca566d303dd1cb39025375181210a91e923f7da4571e4329dabd",
+    "floatSha256": "e619078e5b4c29f683c3e60b8922e2dee206376a25e4faa18afebd64c505d568",
+    "format": "cnn-v1",
+    "id": "20260911T191243.077466Z-250000",
+    "labels": {
+      "heads": {
+        "aspect": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "perfective",
+          "imperfective",
+          "imperative"
+        ],
+        "case": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "nominative",
+          "accusative",
+          "genitive"
+        ],
+        "gender": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "masculine",
+          "feminine"
+        ],
+        "mood": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "indicative",
+          "subjunctive",
+          "jussive"
+        ],
+        "number": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "singular",
+          "dual",
+          "plural"
+        ],
+        "pattern": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "فَعَل",
+          "فَعْل",
+          "فاعِل",
+          "فَعَّل",
+          "أَفْعَل",
+          "فَعِيل",
+          "ٌطWص+ِيّ",
+          "فَعّال",
+          "مَفْعُول",
+          "فِعال",
+          "فُعْل",
+          "تَفْعِيل",
+          "فُعُول",
+          "فِعْل",
+          "مَفاعِل",
+          "مُفَعَّل",
+          "فاعَل",
+          "تَفَعُّل",
+          "مُفَعِّل",
+          "ٱِفْتِعال",
+          "فَعال",
+          "فَعالِل",
+          "مُفْعِل",
+          "فَعْلَل",
+          "فَعائِل",
+          "مَفْعَل",
+          "تَفَعّل",
+          "مُتَفَعِّل",
+          "فَواعِل",
+          "فَعِل",
+          "مُفْتَعِل",
+          "فُعّال",
+          "فَعالِيل",
+          "مُفاعِل",
+          "فَعُول",
+          "فُعال",
+          "فِعال+ِيّ",
+          "فَعْل+ِيّ",
+          "فِعَل",
+          "مِفْعَل",
+          "فَعْلاء",
+          "مُفْعَل",
+          "ٱِفْتَعَل",
+          "مُفْتَعَل",
+          "مُتَفاعِل",
+          "فَعَل+ِيّ",
+          "ٱِسْتِفْعال",
+          "ٱِنْفِعال",
+          "مِفْعال",
+          "فُعَلاء",
+          "تَفاعُل",
+          "مَفاعِيل",
+          "فُعْل+ِيّ",
+          "فُعَل",
+          "فاعِل+ِيّ",
+          "فِعْل+ِيّ",
+          "فُعْلان",
+          "فَعِيل+ِيّ",
+          "فُعُل",
+          "فِعْلان",
+          "مَفْعِل",
+          "ٱِسْتَفْعَل",
+          "فاعُول",
+          "تَفاعَل"
+        ],
+        "person": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "first",
+          "second",
+          "third"
+        ],
+        "pos": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "noun",
+          "proper_noun",
+          "numeral",
+          "adjective",
+          "verb",
+          "adverb",
+          "preposition",
+          "conjunction",
+          "interjection",
+          "pronoun",
+          "particle"
+        ],
+        "root0": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root1": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root2": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root3": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "state": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "definite",
+          "indefinite",
+          "construct"
+        ],
+        "voice": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "active",
+          "passive"
+        ]
+      },
+      "segmentation": [
+        "conjunction",
+        "particle",
+        "preposition",
+        "article",
+        "stem",
+        "derivational_suffix",
+        "inflectional_suffix",
+        "pronominal_enclitic"
+      ]
+    },
+    "maxLength": 32,
+    "normalizationVersion": "arabic-v1",
+    "packedWeightsBytes": 245732,
+    "quantization": "symmetric-per-tensor-int8",
+    "reachableWeights": 245667,
+    "schemaVersion": 1,
+    "sha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
+    "status": "experimental-unpromoted",
+    "tensors": {
+      "aspect.bias": {
+        "length": 6,
+        "offset": 241736,
+        "scale": 0.0008982828003354371,
+        "shape": [
+          6
+        ]
+      },
+      "aspect.weight": {
+        "length": 1032,
+        "offset": 240704,
+        "scale": 0.00455059576779604,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "case.bias": {
+        "length": 6,
+        "offset": 244684,
+        "scale": 0.0008581824949942529,
+        "shape": [
+          6
+        ]
+      },
+      "case.weight": {
+        "length": 1032,
+        "offset": 243652,
+        "scale": 0.007890579290688038,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "conv0.bias": {
+        "length": 172,
+        "offset": 18720,
+        "scale": 0.0018964497139677405,
+        "shape": [
+          172
+        ]
+      },
+      "conv0.weight": {
+        "length": 16512,
+        "offset": 2208,
+        "scale": 0.0043164584785699844,
+        "shape": [
+          172,
+          3,
+          32
+        ]
+      },
+      "conv1.bias": {
+        "length": 172,
+        "offset": 107644,
+        "scale": 0.0006516575231216848,
+        "shape": [
+          172
+        ]
+      },
+      "conv1.weight": {
+        "length": 88752,
+        "offset": 18892,
+        "scale": 0.004955793730914593,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "conv2.bias": {
+        "length": 172,
+        "offset": 196568,
+        "scale": 0.0011922874255105853,
+        "shape": [
+          172
+        ]
+      },
+      "conv2.weight": {
+        "length": 88752,
+        "offset": 107816,
+        "scale": 0.005055295303463936,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "embedding": {
+        "length": 1184,
+        "offset": 0,
+        "scale": 0.02600051648914814,
+        "shape": [
+          37,
+          32
+        ]
+      },
+      "gender.bias": {
+        "length": 5,
+        "offset": 239656,
+        "scale": 0.00122736650519073,
+        "shape": [
+          5
+        ]
+      },
+      "gender.weight": {
+        "length": 860,
+        "offset": 238796,
+        "scale": 0.004492000211030245,
+        "shape": [
+          5,
+          172
+        ]
+      },
+      "mood.bias": {
+        "length": 6,
+        "offset": 242776,
+        "scale": 0.0004823975032195449,
+        "shape": [
+          6
+        ]
+      },
+      "mood.weight": {
+        "length": 1032,
+        "offset": 241744,
+        "scale": 0.004531926475465298,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "number.bias": {
+        "length": 6,
+        "offset": 240696,
+        "scale": 0.001153977820649743,
+        "shape": [
+          6
+        ]
+      },
+      "number.weight": {
+        "length": 1032,
+        "offset": 239664,
+        "scale": 0.004564363043755293,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pattern.bias": {
+        "length": 67,
+        "offset": 237688,
+        "scale": 0.001367977587506175,
+        "shape": [
+          67
+        ]
+      },
+      "pattern.weight": {
+        "length": 11524,
+        "offset": 226164,
+        "scale": 0.008518285118043423,
+        "shape": [
+          67,
+          172
+        ]
+      },
+      "person.bias": {
+        "length": 6,
+        "offset": 238788,
+        "scale": 0.0006815318483859301,
+        "shape": [
+          6
+        ]
+      },
+      "person.weight": {
+        "length": 1032,
+        "offset": 237756,
+        "scale": 0.0050756367854774,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pos.bias": {
+        "length": 14,
+        "offset": 200532,
+        "scale": 0.0013052545255050063,
+        "shape": [
+          14
+        ]
+      },
+      "pos.weight": {
+        "length": 2408,
+        "offset": 198124,
+        "scale": 0.005701378453522921,
+        "shape": [
+          14,
+          172
+        ]
+      },
+      "position": {
+        "length": 1024,
+        "offset": 1184,
+        "scale": 0.029511356726288795,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      "root0.bias": {
+        "length": 37,
+        "offset": 206912,
+        "scale": 0.0012769013410434127,
+        "shape": [
+          37
+        ]
+      },
+      "root0.weight": {
+        "length": 6364,
+        "offset": 200548,
+        "scale": 0.005650089122354984,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root1.bias": {
+        "length": 37,
+        "offset": 213316,
+        "scale": 0.0011855042539536953,
+        "shape": [
+          37
+        ]
+      },
+      "root1.weight": {
+        "length": 6364,
+        "offset": 206952,
+        "scale": 0.005082467570900917,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root2.bias": {
+        "length": 37,
+        "offset": 219720,
+        "scale": 0.0011456395732238889,
+        "shape": [
+          37
+        ]
+      },
+      "root2.weight": {
+        "length": 6364,
+        "offset": 213356,
+        "scale": 0.004992933943867683,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root3.bias": {
+        "length": 37,
+        "offset": 226124,
+        "scale": 0.0010689018527045846,
+        "shape": [
+          37
+        ]
+      },
+      "root3.weight": {
+        "length": 6364,
+        "offset": 219760,
+        "scale": 0.007890173234045506,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "segmentation.bias": {
+        "length": 8,
+        "offset": 198116,
+        "scale": 0.0010151041205972433,
+        "shape": [
+          8
+        ]
+      },
+      "segmentation.weight": {
+        "length": 1376,
+        "offset": 196740,
+        "scale": 0.0048494720831513405,
+        "shape": [
+          8,
+          172
+        ]
+      },
+      "state.bias": {
+        "length": 6,
+        "offset": 245724,
+        "scale": 0.00034476048313081264,
+        "shape": [
+          6
+        ]
+      },
+      "state.weight": {
+        "length": 1032,
+        "offset": 244692,
+        "scale": 0.00715420488268137,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "voice.bias": {
+        "length": 5,
+        "offset": 243644,
+        "scale": 0.000998991192318499,
+        "shape": [
+          5
+        ]
+      },
+      "voice.weight": {
+        "length": 860,
+        "offset": 242784,
+        "scale": 0.004018800333142281,
+        "shape": [
+          5,
+          172
+        ]
+      }
+    },
+    "trainingParameters": 245699,
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "vocabulary": [
+      "__pad__",
+      "ء",
+      "آ",
+      "أ",
+      "ؤ",
+      "إ",
+      "ئ",
+      "ا",
+      "ب",
+      "ة",
+      "ت",
+      "ث",
+      "ج",
+      "ح",
+      "خ",
+      "د",
+      "ذ",
+      "ر",
+      "ز",
+      "س",
+      "ش",
+      "ص",
+      "ض",
+      "ط",
+      "ظ",
+      "ع",
+      "غ",
+      "ف",
+      "ق",
+      "ك",
+      "ل",
+      "م",
+      "ن",
+      "ه",
+      "و",
+      "ي",
+      "ى"
+    ],
+    "width": 172
+  },
+  "data": {
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "parityInputDigest": "b17c77f1e301329e15b2a781940ff4f1ae785d5fdbabc507b7e0a53209602260",
+    "fixtureDigest": "e909521487416c60e243ee52c6d47a602e5b50d155ba8ca096354e9df28d144a",
+    "goldDigest": null,
+    "normalizationVersion": "arabic-v1"
+  },
+  "pythonCPU": {
+    "segmentation": {
+      "elements": 5544,
+      "maxAbsoluteError": 0.0000152587890625,
+      "maxRelativeError": 0.00004389720942729966,
+      "argmaxMatches": 693,
+      "argmaxCount": 693,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "aspect": {
+      "elements": 786,
+      "maxAbsoluteError": 0.000011444091796875,
+      "maxRelativeError": 0.0001654020129187919,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "case": {
+      "elements": 786,
+      "maxAbsoluteError": 0.0000057220458984375,
+      "maxRelativeError": 0.00006050378081827833,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "gender": {
+      "elements": 655,
+      "maxAbsoluteError": 0.0000152587890625,
+      "maxRelativeError": 0.000010329065432357119,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "mood": {
+      "elements": 786,
+      "maxAbsoluteError": 0.00000762939453125,
+      "maxRelativeError": 0.00006829916659065786,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "number": {
+      "elements": 786,
+      "maxAbsoluteError": 0.000011444091796875,
+      "maxRelativeError": 0.00003078837962515186,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "pattern": {
+      "elements": 8777,
+      "maxAbsoluteError": 0.0000133514404296875,
+      "maxRelativeError": 0.000932702417790756,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "person": {
+      "elements": 786,
+      "maxAbsoluteError": 0.000011444091796875,
+      "maxRelativeError": 0.00005912220765607955,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "pos": {
+      "elements": 1834,
+      "maxAbsoluteError": 0.0000133514404296875,
+      "maxRelativeError": 0.00002319855904447937,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "root0": {
+      "elements": 4847,
+      "maxAbsoluteError": 0.0000152587890625,
+      "maxRelativeError": 0.0007630499056940408,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "root1": {
+      "elements": 4847,
+      "maxAbsoluteError": 0.0000133514404296875,
+      "maxRelativeError": 0.0006661116638154818,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "root2": {
+      "elements": 4847,
+      "maxAbsoluteError": 0.0000152587890625,
+      "maxRelativeError": 0.0016127145395133404,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "root3": {
+      "elements": 4847,
+      "maxAbsoluteError": 0.0000152587890625,
+      "maxRelativeError": 0.000005361610727324253,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "state": {
+      "elements": 786,
+      "maxAbsoluteError": 0.000011444091796875,
+      "maxRelativeError": 0.002735594557912059,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    },
+    "voice": {
+      "elements": 655,
+      "maxAbsoluteError": 0.000011444091796875,
+      "maxRelativeError": 0.00004420323789980566,
+      "argmaxMatches": 131,
+      "argmaxCount": 131,
+      "argmaxAgreement": 1,
+      "finite": true
+    }
+  },
+  "parity": {
+    "words": 131,
+    "tensors": {
+      "embedding": {
+        "elements": 22176,
+        "maxAbsoluteError": 4.76837158203125e-7,
+        "maxRelativeError": 0.000008446706910532481,
+        "argmaxMatches": 693,
+        "argmaxCount": 693,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "conv0": {
+        "elements": 119196,
+        "maxAbsoluteError": 0.000001430511474609375,
+        "maxRelativeError": 0.0019275841419754483,
+        "argmaxMatches": 693,
+        "argmaxCount": 693,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "conv1": {
+        "elements": 119196,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.0019833529304244158,
+        "argmaxMatches": 693,
+        "argmaxCount": 693,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "conv2": {
+        "elements": 119196,
+        "maxAbsoluteError": 0.0000171661376953125,
+        "maxRelativeError": 0.0029261492069431114,
+        "argmaxMatches": 693,
+        "argmaxCount": 693,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "pooled": {
+        "elements": 22532,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.0009308381567889398,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "segmentation": {
+        "elements": 5544,
+        "maxAbsoluteError": 0.00002288818359375,
+        "maxRelativeError": 0.0000538786832733465,
+        "argmaxMatches": 693,
+        "argmaxCount": 693,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "aspect": {
+        "elements": 786,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.00007074534078833713,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "case": {
+        "elements": 786,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.00003511678908875559,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "gender": {
+        "elements": 655,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.00001094869626849839,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "mood": {
+        "elements": 786,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.00007126698046371242,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "number": {
+        "elements": 786,
+        "maxAbsoluteError": 0.000011444091796875,
+        "maxRelativeError": 0.000011246888199338296,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "pattern": {
+        "elements": 8777,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.0005197488348873572,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "person": {
+        "elements": 786,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.000025456900031164172,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "pos": {
+        "elements": 1834,
+        "maxAbsoluteError": 0.000011444091796875,
+        "maxRelativeError": 0.000025509924771683353,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "root0": {
+        "elements": 4847,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.0008297212932350455,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "root1": {
+        "elements": 4847,
+        "maxAbsoluteError": 0.000011444091796875,
+        "maxRelativeError": 0.0007705376258547297,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "root2": {
+        "elements": 4847,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.0018385468856266943,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "root3": {
+        "elements": 4847,
+        "maxAbsoluteError": 0.0000152587890625,
+        "maxRelativeError": 0.0000013705534534691962,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "state": {
+        "elements": 786,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.007693708270327486,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "voice": {
+        "elements": 655,
+        "maxAbsoluteError": 0.000011444091796875,
+        "maxRelativeError": 0.00001894340745425609,
+        "argmaxMatches": 131,
+        "argmaxCount": 131,
+        "argmaxAgreement": 1,
+        "finite": true
+      }
+    },
+    "headArgmaxMatches": 2527,
+    "headArgmaxCount": 2527,
+    "completeAnalysisMatches": 131,
+    "completeAnalysisCount": 131,
+    "disagreements": [],
+    "finite": true,
+    "metadata": {
+      "backend": "webgpu",
+      "adapter": {
+        "vendor": "apple",
+        "architecture": "metal-3",
+        "device": null,
+        "description": null,
+        "isFallbackAdapter": false
+      },
+      "pipelineCount": 6,
+      "internalBatchLimit": 256,
+      "residentGPUBytes": 12814328,
+      "peakAllocatedGPUBytes": 12814328,
+      "initialization": {
+        "deviceAcquisitionMs": 9.699999988079071,
+        "shaderCompilationMs": 8.835000038146973,
+        "weightUploadMs": 1.0450000166893005
+      },
+      "lastTimings": {
+        "packingMs": 0.02499997615814209,
+        "inputUploadMs": 0.375,
+        "encodingMs": 0.7799999713897705,
+        "readbackAndExecutionMs": 24.835000038146973,
+        "backendTotalMs": 26.735000014305115
+      }
+    }
+  },
+  "fixtureParity": {
+    "words": 50,
+    "tensors": {
+      "segmentation": {
+        "elements": 1752,
+        "maxAbsoluteError": 0.000011444091796875,
+        "maxRelativeError": 0.000025840012799655656,
+        "argmaxMatches": 219,
+        "argmaxCount": 219,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "aspect": {
+        "elements": 300,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.00001788632450451415,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "case": {
+        "elements": 300,
+        "maxAbsoluteError": 0.00000286102294921875,
+        "maxRelativeError": 0.000005923127851851444,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "gender": {
+        "elements": 250,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.0000036966941179991917,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "mood": {
+        "elements": 300,
+        "maxAbsoluteError": 0.0000019073486328125,
+        "maxRelativeError": 0.0000028596131229405975,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "number": {
+        "elements": 300,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.000011246888199338296,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "pattern": {
+        "elements": 3350,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.0002560884350421196,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "person": {
+        "elements": 300,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.0000066935880151700325,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "pos": {
+        "elements": 700,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.0000203959373190157,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "root0": {
+        "elements": 1850,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.0010416683296959556,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "root1": {
+        "elements": 1850,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.0035814435820933654,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "root2": {
+        "elements": 1850,
+        "maxAbsoluteError": 0.00000762939453125,
+        "maxRelativeError": 0.0001405795952813075,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "root3": {
+        "elements": 1850,
+        "maxAbsoluteError": 0.0000095367431640625,
+        "maxRelativeError": 0.00001995070684431363,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "state": {
+        "elements": 300,
+        "maxAbsoluteError": 0.000003814697265625,
+        "maxRelativeError": 0.00000533969699044539,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      },
+      "voice": {
+        "elements": 250,
+        "maxAbsoluteError": 0.0000057220458984375,
+        "maxRelativeError": 0.0000058431120017630766,
+        "argmaxMatches": 50,
+        "argmaxCount": 50,
+        "argmaxAgreement": 1,
+        "finite": true
+      }
+    },
+    "headArgmaxMatches": 919,
+    "headArgmaxCount": 919,
+    "completeAnalysisMatches": 50,
+    "completeAnalysisCount": 50,
+    "disagreements": [],
+    "finite": true,
+    "metadata": {
+      "backend": "webgpu",
+      "adapter": {
+        "vendor": "apple",
+        "architecture": "metal-3",
+        "device": null,
+        "description": null,
+        "isFallbackAdapter": false
+      },
+      "pipelineCount": 6,
+      "internalBatchLimit": 256,
+      "residentGPUBytes": 12814328,
+      "peakAllocatedGPUBytes": 12814328,
+      "initialization": {
+        "deviceAcquisitionMs": 9.699999988079071,
+        "shaderCompilationMs": 8.835000038146973,
+        "weightUploadMs": 1.0450000166893005
+      },
+      "lastTimings": {
+        "packingMs": 0.019999980926513672,
+        "inputUploadMs": 0.020000040531158447,
+        "encodingMs": 0.0549999475479126,
+        "readbackAndExecutionMs": 9.430000007152557,
+        "backendTotalMs": 9.569999992847443
+      }
+    }
+  },
+  "shapes": [
+    {
+      "words": 1,
+      "tensors": {
+        "segmentation": {
+          "elements": 8,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 3.8871728640349537e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "aspect": {
+          "elements": 6,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 2.468545383301739e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "case": {
+          "elements": 6,
+          "maxAbsoluteError": 2.384185791015625e-7,
+          "maxRelativeError": 0.000002270739601460222,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "gender": {
+          "elements": 5,
+          "maxAbsoluteError": 9.5367431640625e-7,
+          "maxRelativeError": 5.736220365394942e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "mood": {
+          "elements": 6,
+          "maxAbsoluteError": 9.5367431640625e-7,
+          "maxRelativeError": 1.8611905477576842e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "number": {
+          "elements": 6,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 1.5892572566479626e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "pattern": {
+          "elements": 67,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 0.0000010475488404681884,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "person": {
+          "elements": 6,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 0.000002169581516653191,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "pos": {
+          "elements": 14,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 8.213295048427347e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root0": {
+          "elements": 37,
+          "maxAbsoluteError": 0.0000017285346984863281,
+          "maxRelativeError": 0.000002781087645018137,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root1": {
+          "elements": 37,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 0.000002189757749727857,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root2": {
+          "elements": 37,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 0.000009552146976681188,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root3": {
+          "elements": 37,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 2.3024598790609924e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "state": {
+          "elements": 6,
+          "maxAbsoluteError": 2.384185791015625e-7,
+          "maxRelativeError": 1.1769074285808438e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "voice": {
+          "elements": 5,
+          "maxAbsoluteError": 9.5367431640625e-7,
+          "maxRelativeError": 3.243756142457725e-7,
+          "argmaxMatches": 1,
+          "argmaxCount": 1,
+          "argmaxAgreement": 1,
+          "finite": true
+        }
+      },
+      "headArgmaxMatches": 15,
+      "headArgmaxCount": 15,
+      "completeAnalysisMatches": 1,
+      "completeAnalysisCount": 1,
+      "disagreements": [],
+      "finite": true,
+      "metadata": {
+        "backend": "webgpu",
+        "adapter": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": null,
+          "description": null,
+          "isFallbackAdapter": false
+        },
+        "pipelineCount": 6,
+        "internalBatchLimit": 256,
+        "residentGPUBytes": 12814328,
+        "peakAllocatedGPUBytes": 12814328,
+        "initialization": {
+          "deviceAcquisitionMs": 9.699999988079071,
+          "shaderCompilationMs": 8.835000038146973,
+          "weightUploadMs": 1.0450000166893005
+        },
+        "lastTimings": {
+          "packingMs": 0,
+          "inputUploadMs": 0.04000002145767212,
+          "encodingMs": 0.034999966621398926,
+          "readbackAndExecutionMs": 2.259999990463257,
+          "backendTotalMs": 2.3549999594688416
+        }
+      }
+    },
+    {
+      "words": 3,
+      "tensors": {
+        "segmentation": {
+          "elements": 112,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 8.295293130019218e-7,
+          "argmaxMatches": 14,
+          "argmaxCount": 14,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "aspect": {
+          "elements": 18,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 4.013147391907681e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "case": {
+          "elements": 18,
+          "maxAbsoluteError": 9.5367431640625e-7,
+          "maxRelativeError": 0.0000010026304726614897,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "gender": {
+          "elements": 15,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 3.44106445887971e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "mood": {
+          "elements": 18,
+          "maxAbsoluteError": 0.000001430511474609375,
+          "maxRelativeError": 3.1455716453642265e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "number": {
+          "elements": 18,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 2.623870751625269e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "pattern": {
+          "elements": 201,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 0.000006445763199848739,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "person": {
+          "elements": 18,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 5.650314468251731e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "pos": {
+          "elements": 42,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 8.087133422188874e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root0": {
+          "elements": 111,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 0.00006859574716227353,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root1": {
+          "elements": 111,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 0.0000033738321160198043,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root2": {
+          "elements": 111,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 0.0000065631082140996825,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root3": {
+          "elements": 111,
+          "maxAbsoluteError": 0.0000057220458984375,
+          "maxRelativeError": 3.9883091491572585e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "state": {
+          "elements": 18,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 3.3097352884748727e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "voice": {
+          "elements": 15,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 3.4435447482326866e-7,
+          "argmaxMatches": 3,
+          "argmaxCount": 3,
+          "argmaxAgreement": 1,
+          "finite": true
+        }
+      },
+      "headArgmaxMatches": 56,
+      "headArgmaxCount": 56,
+      "completeAnalysisMatches": 3,
+      "completeAnalysisCount": 3,
+      "disagreements": [],
+      "finite": true,
+      "metadata": {
+        "backend": "webgpu",
+        "adapter": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": null,
+          "description": null,
+          "isFallbackAdapter": false
+        },
+        "pipelineCount": 6,
+        "internalBatchLimit": 256,
+        "residentGPUBytes": 12814328,
+        "peakAllocatedGPUBytes": 12814328,
+        "initialization": {
+          "deviceAcquisitionMs": 9.699999988079071,
+          "shaderCompilationMs": 8.835000038146973,
+          "weightUploadMs": 1.0450000166893005
+        },
+        "lastTimings": {
+          "packingMs": 0,
+          "inputUploadMs": 0.009999990463256836,
+          "encodingMs": 0.02499997615814209,
+          "readbackAndExecutionMs": 0.9050000309944153,
+          "backendTotalMs": 0.9549999833106995
+        }
+      }
+    },
+    {
+      "words": 17,
+      "tensors": {
+        "segmentation": {
+          "elements": 1088,
+          "maxAbsoluteError": 0.00000762939453125,
+          "maxRelativeError": 0.0000031503675346749634,
+          "argmaxMatches": 136,
+          "argmaxCount": 136,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "aspect": {
+          "elements": 102,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 1.84971805364281e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "case": {
+          "elements": 102,
+          "maxAbsoluteError": 4.76837158203125e-7,
+          "maxRelativeError": 1.5365588058725435e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "gender": {
+          "elements": 85,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 2.4521283247794926e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "mood": {
+          "elements": 102,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 2.3806508318470138e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "number": {
+          "elements": 102,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 8.286600360052785e-8,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "pattern": {
+          "elements": 1139,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 0.000012827541882477157,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "person": {
+          "elements": 102,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 1.7681572733458866e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "pos": {
+          "elements": 238,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 2.3399399197026218e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root0": {
+          "elements": 629,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 0.000004357410961239925,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root1": {
+          "elements": 629,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 0.000007289712996383215,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root2": {
+          "elements": 629,
+          "maxAbsoluteError": 0.000003814697265625,
+          "maxRelativeError": 0.000003371003900612692,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root3": {
+          "elements": 629,
+          "maxAbsoluteError": 0.0000057220458984375,
+          "maxRelativeError": 3.030470394918022e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "state": {
+          "elements": 102,
+          "maxAbsoluteError": 4.76837158203125e-7,
+          "maxRelativeError": 2.7371388687405054e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "voice": {
+          "elements": 85,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 9.353119545962165e-7,
+          "argmaxMatches": 17,
+          "argmaxCount": 17,
+          "argmaxAgreement": 1,
+          "finite": true
+        }
+      },
+      "headArgmaxMatches": 374,
+      "headArgmaxCount": 374,
+      "completeAnalysisMatches": 17,
+      "completeAnalysisCount": 17,
+      "disagreements": [],
+      "finite": true,
+      "metadata": {
+        "backend": "webgpu",
+        "adapter": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": null,
+          "description": null,
+          "isFallbackAdapter": false
+        },
+        "pipelineCount": 6,
+        "internalBatchLimit": 256,
+        "residentGPUBytes": 12814328,
+        "peakAllocatedGPUBytes": 12814328,
+        "initialization": {
+          "deviceAcquisitionMs": 9.699999988079071,
+          "shaderCompilationMs": 8.835000038146973,
+          "weightUploadMs": 1.0450000166893005
+        },
+        "lastTimings": {
+          "packingMs": 0.004999995231628418,
+          "inputUploadMs": 0.009999990463256836,
+          "encodingMs": 0.020000040531158447,
+          "readbackAndExecutionMs": 6.864999949932098,
+          "backendTotalMs": 6.909999966621399
+        }
+      }
+    },
+    {
+      "words": 257,
+      "tensors": {
+        "segmentation": {
+          "elements": 6168,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 7.067772874089646e-7,
+          "argmaxMatches": 771,
+          "argmaxCount": 771,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "aspect": {
+          "elements": 1542,
+          "maxAbsoluteError": 9.5367431640625e-7,
+          "maxRelativeError": 4.013147391907681e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "case": {
+          "elements": 1542,
+          "maxAbsoluteError": 4.172325134277344e-7,
+          "maxRelativeError": 0.0000010026304726614897,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "gender": {
+          "elements": 1285,
+          "maxAbsoluteError": 9.5367431640625e-7,
+          "maxRelativeError": 3.44106445887971e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "mood": {
+          "elements": 1542,
+          "maxAbsoluteError": 9.5367431640625e-7,
+          "maxRelativeError": 2.5798378107565136e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "number": {
+          "elements": 1542,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 2.623870751625269e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "pattern": {
+          "elements": 17219,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 0.000006445763199848739,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "person": {
+          "elements": 1542,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 2.0239709676207148e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "pos": {
+          "elements": 3598,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 8.087133422188874e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root0": {
+          "elements": 9509,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 0.000006938940675873638,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root1": {
+          "elements": 9509,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 0.0000011695922392096831,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root2": {
+          "elements": 9509,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 0.0000065631082140996825,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "root3": {
+          "elements": 9509,
+          "maxAbsoluteError": 0.00000286102294921875,
+          "maxRelativeError": 3.9883091491572585e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "state": {
+          "elements": 1542,
+          "maxAbsoluteError": 9.5367431640625e-7,
+          "maxRelativeError": 3.3097352884748727e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        },
+        "voice": {
+          "elements": 1285,
+          "maxAbsoluteError": 0.0000019073486328125,
+          "maxRelativeError": 1.361161184828198e-7,
+          "argmaxMatches": 257,
+          "argmaxCount": 257,
+          "argmaxAgreement": 1,
+          "finite": true
+        }
+      },
+      "headArgmaxMatches": 4369,
+      "headArgmaxCount": 4369,
+      "completeAnalysisMatches": 257,
+      "completeAnalysisCount": 257,
+      "disagreements": [],
+      "finite": true,
+      "metadata": {
+        "backend": "webgpu",
+        "adapter": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": null,
+          "description": null,
+          "isFallbackAdapter": false
+        },
+        "pipelineCount": 6,
+        "internalBatchLimit": 256,
+        "residentGPUBytes": 12814328,
+        "peakAllocatedGPUBytes": 12814328,
+        "initialization": {
+          "deviceAcquisitionMs": 9.699999988079071,
+          "shaderCompilationMs": 8.835000038146973,
+          "weightUploadMs": 1.0450000166893005
+        },
+        "lastTimings": {
+          "packingMs": 0.04500001668930054,
+          "inputUploadMs": 0.029999971389770508,
+          "encodingMs": 0.060000061988830566,
+          "readbackAndExecutionMs": 24.99500000476837,
+          "backendTotalMs": 25.22000002861023
+        }
+      }
+    }
+  ],
+  "contracts": {
+    "checks": {
+      "emptyBatch": true,
+      "invalid:": true,
+      "invalid: ": true,
+      "invalid:foreign": true,
+      "invalid:😀": true,
+      "invalid:كتب جيد": true,
+      "invalid:َكتب": true,
+      "invalid:ككككككككككككككككككككككككككككككككك": true,
+      "invalidTopK": true,
+      "maximumBatchRejected": true,
+      "concurrent": true,
+      "diacritizedOffsets": true,
+      "maximumShapes": true,
+      "adapterFailure": true,
+      "explicitCPUFallback": true,
+      "webgpuUnavailable": true,
+      "emptyWithoutGPU": true,
+      "deviceLossRecovery": true,
+      "deviceLossError": true
+    },
+    "passed": true
+  },
+  "deterministic": {
+    "runs": 100,
+    "deterministic": true,
+    "hash": "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+    "hashes": [
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154",
+      "a755986c5a1cd56af573171c35c71401e48572547fe14440beab5fc0b07a6154"
+    ]
+  },
+  "errors": [],
+  "passed": true
+}

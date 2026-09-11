@@ -5,30 +5,30 @@
   "modelSha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
   "artifacts": {
     "correctness": {
-      "file": "packages/benchmark/results/correctness-2026-09-11T201204777Z.json",
-      "sha256": "4838a0449c6f8a2c6a7a6c5090597d0d3706e7f24b1011f55f40c0b14dfd7700"
+      "file": "packages/benchmark/results/correctness-2026-09-11T204315462Z.json",
+      "sha256": "24e1c81aa13c61474c6584ed5f2e72ac6d222c186daa292bfd85bcf4de12ec06"
     },
     "size": {
-      "file": "packages/benchmark/results/size-2026-09-11T201212121Z.json",
-      "sha256": "ce5f01079cccbf8b803392cf20e7d0b76713b5b20c84fd3c5f292e5e0b25155a"
+      "file": "packages/benchmark/results/size-2026-09-11T204318231Z.json",
+      "sha256": "269e85c15caa367351a791d4d42015546cce43305ad076ac70f882ed9584799b"
     },
     "browser": {
       "file": "packages/benchmark/results/browser-2026-09-11T201749461Z.json",
       "sha256": "f986ff7c373ea64932c04aca26ea806d284b888e2a41c6312c888eb18af9f714"
     },
     "parity": {
-      "file": "packages/benchmark/results/parity-2026-09-11T201355866Z.json",
-      "sha256": "bbe8b3dc3f0734e52b6483a802409c9e2354d5820bcc8a4ccf3d41df2abfea55"
+      "file": "packages/benchmark/results/parity-2026-09-11T204320309Z.json",
+      "sha256": "234c200555dfa368a3c43059fdfc631729cbb84b62245c5e71e620452c6579b9"
     }
   },
   "supplemental": {
     "reproduction": {
-      "file": "packages/benchmark/results/reproduction-2026-09-11T200733555Z.json",
-      "sha256": "22d3ee2e261025052632b5c8132ef4871659c5571f388f0f017e80cf1ac77f19"
+      "file": "packages/benchmark/results/reproduction-2026-09-11T204137633Z.json",
+      "sha256": "3d6a7cb53fa734d24e26f66491a531201b9e511f7929aec99b0d2c377deee9e0"
     },
     "ai-review": {
-      "file": "packages/benchmark/results/ai-review-2026-09-11T204057758Z.json",
-      "sha256": "11c3e7c5f1af401e406c01c3baa7d055102b856315ac535bf4eed86b06018681"
+      "file": "packages/benchmark/results/ai-review-2026-09-11T204325925Z.json",
+      "sha256": "d529a777e0b927ffa6de2f72d718c4c79785879e0f849cc14ab79b54b4cb3fa5"
     },
     "eligibility": {
       "file": "packages/training/promotions/20260911T201128.904550Z.json",
