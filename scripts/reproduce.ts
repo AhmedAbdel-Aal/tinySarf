@@ -58,6 +58,7 @@ try {
  passed=true;
 }catch(e){error=String(e);}
 const selection=await selectedModel(),model=await json(path.join(selection.directory,'manifest.json'));
-const report={...source,kind:'reproduction',separateCheckout:true,checkout,modelSha256:model.sha256,model,data:{verificationDigest:model.verificationDigest,goldDigest:null},passed,error,commands:commands.map(c=>c.join(' ')),artifacts,upstreamCache:'Only pinned source archive/database bytes reused; dependencies installed from lockfiles; generated datasets reconstructed; final-test labels never evaluated'};
+let runtimeSha256:string|null=null;try{runtimeSha256=hash(await readFile(path.join(checkout,'packages/core/dist/index.js')));}catch{}
+const report={...source,kind:'reproduction',runtime:{sha256:runtimeSha256},separateCheckout:true,checkout,modelSha256:model.sha256,model,data:{verificationDigest:model.verificationDigest,goldDigest:null},passed,error,commands:commands.map(c=>c.join(' ')),artifacts,upstreamCache:'Only pinned source archive/database bytes reused; dependencies installed from lockfiles; generated datasets reconstructed; final-test labels never evaluated'};
 const out=path.join(ROOT,'packages/benchmark/local');await mkdir(out,{recursive:true});const file=path.join(out,`reproduction-${source.runId}.json`);await writeFile(file,JSON.stringify(report,null,2)+'\n',{flag:'wx'});
 console.log(`REPRODUCTION_ARTIFACT=${file}`);console.log(`REPRODUCTION_CHECKOUT=${checkout}`);if(!passed)throw new Error(error!);

@@ -16,7 +16,8 @@ if(values.refresh){
   if(!artifacts[kind])throw new Error(`No measured ${kind} artifact for this checkpoint`);
  }
  const supplemental:any={};
- for(const kind of ['reproduction','ai-review'])for(const file of files.filter(f=>f.startsWith(kind+'-')&&f.endsWith('.json'))){const record=await json(path.join(results,file));if(record.model.sha256===m.sha256&&(kind==='reproduction'?record.passed:record.runtime?.sha256===runtimeSha256)){supplemental[kind]={file:`packages/benchmark/results/${file}`,sha256:hash(await readFile(path.join(results,file)))};break;}}
+ for(const kind of ['reproduction','ai-review'])for(const file of files.filter(f=>f.startsWith(kind+'-')&&f.endsWith('.json'))){const record=await json(path.join(results,file));if(record.model.sha256===m.sha256&&record.runtime?.sha256===runtimeSha256&&(kind!=='reproduction'||record.passed)){supplemental[kind]={file:`packages/benchmark/results/${file}`,sha256:hash(await readFile(path.join(results,file)))};break;}}
+ for(const file of files.filter(f=>f.startsWith('corrected-comparison-')&&f.endsWith('.json'))){const record=await json(path.join(results,file));if(record.baselineModel.sha256===m.sha256&&record.runtime?.sha256===runtimeSha256){supplemental['corrected-comparison']={file:`packages/benchmark/results/${file}`,sha256:hash(await readFile(path.join(results,file)))};break;}}
  const promotions=path.join(ROOT,'packages/training/promotions');for(const file of (await readdir(promotions)).filter(f=>/^\d.*Z\.json$/.test(f)).sort().reverse()){supplemental.eligibility={file:`packages/training/promotions/${file}`,sha256:hash(await readFile(path.join(promotions,file)))};break;}
  index={schemaVersion:1,status:'experimental-unpromoted',modelId:m.id,modelSha256:m.sha256,artifacts,supplemental};await mkdir(path.dirname(indexFile),{recursive:true});await writeFile(indexFile,JSON.stringify(index,null,2)+'\n');
 }else index=await json(indexFile);
@@ -169,6 +170,25 @@ The [annotation audit](packages/training/data/ai-review/README.md) preserves sou
 
 `:'### AI-reviewed diagnostic agreement\n\nTBD — not measured. Agent review is separate from independent human gold.\n\n';
 text=text.replace('## Browser performance',aiSection+'## Browser performance');
+const corrected=supplemental['corrected-comparison'];
+if(corrected){
+ const experiment=await json(path.join(ROOT,'packages/training/experiments/corrected-pilot-v1/result.json'));
+ const dataset=await json(path.join(ROOT,'packages/training/data/audits/corrected-pilot-v1-manifest.json'));
+ const section=`### Corrected teacher pilot, retained unselected
+
+An opt-in mapping fixes corrupted non-Arabic pattern labels and teacher connective-particle tags. It preserves the legacy compiler and frozen verification surface order. The release decoder also rejects the malformed legacy pattern and admits attested particle and oath-preposition prefixes. The repaired pilot uses ${num(dataset.roles.train.words)} training words, adds ${num(dataset.supplementWords)} POS-stratified teacher words, and excludes ambiguity-connected held-out and AI challenge families. AI labels were never used for training or selection. [Dataset audit](packages/training/data/audits/corrected-pilot-v1-manifest.json).
+
+The pilot ran ${num((await json(path.join(ROOT,'packages/training/experiments/corrected-pilot-v1/config.json'))).epochs)} epochs and selected epoch ${num(experiment.training.bestEpoch)}. Its bounded sampling retains ordinary ambiguity sampling and adds rare-POS coverage; actual per-epoch counts and losses are preserved in the [history](packages/training/experiments/corrected-pilot-v1/history.json). [Checkpoint and reference-parity artifacts](packages/training/experiments/corrected-pilot-v1), [preparation and training CLI](packages/training/src/tinysarf_training/corrected.py).
+
+Both models below use the same ${num(dataset.roles.verification.words)} words and **corrected** labels. These figures are not directly comparable to the legacy-label headline. Mapping, training coverage and sampling changed together, so this is not a single-factor ablation. ${evidenceLink('corrected-comparison')}.
+
+${table(['Metric','Current checkpoint','Corrected pilot','Paired change / 95% CI, percentage points'],Object.entries(corrected.metrics).map(([name,value]:[string,any])=>{const d=corrected.deltas[name];return [name,pct(value.baseline.value),pct(value.candidate.value),`${(d.difference*100).toFixed(2)} (${(d.ci95.low*100).toFixed(2)} to ${(d.ci95.high*100).toFixed(2)})`];}))}
+
+The pilot remains **unselected** because root and full-analysis agreement regressed. Float reference parity passed; separate browser hardware qualification of this rejected pilot was not performed. The complete run is retained for investigation. Reconstruct with \`.venv/bin/python -m tinysarf_training.corrected prepare\`, then run \`.venv/bin/python -m tinysarf_training.corrected pilot --dataset packages/training/data/generated/teacher-corrected-pilot-v1\`. Neither command changes the selected model.
+
+`;
+ text=text.replace('## Evaluation',section+'## Evaluation');
+}
 text=text.replace('## Ethical and licensing notes',`### Validation evidence\n\n${supplemental.reproduction?`Clean-clone reproduction passed for source commit \`${supplemental.reproduction.git.commit}\`. It reconstructed teacher data and repeated correctness, package size and real WebGPU parity. ${evidenceLink('reproduction')}.`:'Clean reproduction: TBD — not measured.'}\n\n${supplemental.eligibility?`The guarded promotion check rejected the experimental candidate. The report records each failed quality, human-gold and hardware/protocol gate. ${evidenceLink('eligibility')}.`:''}\n\n## Ethical and licensing notes`);
 await writeFile(path.join(ROOT,'MODEL_CARD.md'),text);
 const readme=await readFile(path.join(ROOT,'README.md'),'utf8');
