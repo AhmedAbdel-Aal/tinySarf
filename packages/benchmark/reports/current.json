@@ -26,6 +26,10 @@
       "file": "packages/benchmark/results/reproduction-2026-09-11T200733555Z.json",
       "sha256": "22d3ee2e261025052632b5c8132ef4871659c5571f388f0f017e80cf1ac77f19"
     },
+    "ai-review": {
+      "file": "packages/benchmark/results/ai-review-2026-09-11T204057758Z.json",
+      "sha256": "11c3e7c5f1af401e406c01c3baa7d055102b856315ac535bf4eed86b06018681"
+    },
     "eligibility": {
       "file": "packages/training/promotions/20260911T201128.904550Z.json",
       "sha256": "0717227e66e27037f55b92e99ce65d087035eb50386d6f164749e48c0c28a411"

@@ -21,6 +21,6 @@
       "note": "Batch 128 vs JavaScript reference · full"
     }
   ],
-  "note": "Experimental, unpromoted. Root and full-analysis quality remain below release targets. One headless Chromium / Apple M2 measurement; not a cross-browser claim.",
+  "note": "Experimental, unpromoted. Root and full-analysis quality remain below release targets. One headless Chromium / Apple M2 measurement; not a cross-browser claim. An additional 82-input challenge was independently annotated by two AI agents and adjudicated by a third; see the model card for AI agreement and its limitations.",
   "artifact": "/results/current.json"
 }

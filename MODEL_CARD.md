@@ -150,7 +150,24 @@ Quantized CPU/WebGPU parity: 2,527 / 2,527 matching head argmax labels; 131 / 13
 
 ### AI-reviewed diagnostic agreement
 
-TBD — not measured. Agent review is separate from independent human gold.
+82 curated inputs were annotated independently of model and teacher outputs by two AI agents and adjudicated by a third. This is **AI-reviewed, not human gold**, and does not satisfy human-review promotion requirements. Labels cover roots, POS and span boundaries only; accepted values are scored separately, so these numbers are not full-analysis accuracy. AI reviewers can share correlated errors. [ai-review evidence](packages/benchmark/results/ai-review-2026-09-11T204057758Z.json).
+
+| Field | Top-1 agreement | Top-3 field recall |
+| --- | --- | --- |
+| rootExact | 27 / 76 · 35.53% (95% CI 25.00%–46.05%) | 28 / 76 · 36.84% (95% CI 26.32%–47.37%) |
+| rootCanonical | 29 / 76 · 38.16% (95% CI 27.63%–48.68%) | 30 / 76 · 39.47% (95% CI 28.95%–50.00%) |
+| pos | 57 / 76 · 75.00% (95% CI 64.47%–84.21%) | 60 / 76 · 78.95% (95% CI 69.74%–88.16%) |
+| segmentation | 61 / 76 · 80.26% (95% CI 69.74%–89.47%) | 62 / 76 · 81.58% (95% CI 72.37%–90.79%) |
+
+| Same-input method | Segmentation top-1 | Canonical root top-1 | POS top-1 |
+| --- | --- | --- | --- |
+| Int8 candidate | 80.26% | 38.16% | 75.00% |
+| rules | 80.26% | 13.16% | 81.58% |
+| frequency | 78.95% | 13.16% | 9.21% |
+
+Valid morphology inputs: 76; input-rejection cases: 6 (6 / 6 · 100.00% (95% CI 100.00%–100.00%)). Normalized surface overlap: train: 1; verification: 12; mining: 0. The raw report separates high-confidence and unseen-training-surface results. Surface separation does not establish lemma-family separation. Bare-hamza canonical root agreement is a separate secondary diagnostic; exact radical spelling remains reported.
+
+The [annotation audit](packages/training/data/ai-review/README.md) preserves source labels, disagreements, adjudication decisions and input hashes. These labels were not used to retrain or select the current model.
 
 ## Browser performance
 
