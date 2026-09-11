@@ -7,7 +7,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "pnpm test:core && pnpm test:training && pnpm test:benchmark && pnpm typecheck",
+    "test": "pnpm build:core && pnpm test:core && pnpm test:training && pnpm test:benchmark && pnpm typecheck",
     "test:core": "node --import tsx --test packages/core/test/*.test.ts",
     "test:training": ".venv/bin/python -m unittest discover -s packages/training/test -v",
     "test:benchmark": "node --import tsx --test packages/benchmark/test/*.test.ts",
