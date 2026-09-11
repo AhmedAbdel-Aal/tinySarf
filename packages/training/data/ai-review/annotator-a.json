@@ -1,0 +1,2247 @@
+{
+  "schemaVersion": 1,
+  "annotator": "ai-annotator-a",
+  "labelOrigin": "ai-authored",
+  "independentOfModelAndTeacher": true,
+  "records": [
+    {
+      "word": "كاتب",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "noun",
+        "adjective",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Writer/scribe or adjectival active participle; also Form III perfect كَاتَبَ and imperative كَاتِبْ. No clitic boundary."
+    },
+    {
+      "word": "مكتوب",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Passive participle written; also a written document/letter or that which is prescribed, used substantivally."
+    },
+    {
+      "word": "مدرسة",
+      "roots": [
+        "درس"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 5
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "derivational_suffix",
+            "start": 4,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "School مَدْرَسَة, or feminine teacher/teaching/taught مُدَرِّسَة/مُدَرَّسَة. The school suffix can be lexical or derivational; the participial feminine ending is inflectional."
+    },
+    {
+      "word": "مفتاح",
+      "roots": [
+        "فتح"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Key or means of opening; instrument noun. The internal م and ا belong to the derived stem."
+    },
+    {
+      "word": "استغفار",
+      "roots": [
+        "غفر"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 7
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Form X verbal noun seeking forgiveness; the derivational prefix and internal vowels remain in the stem."
+    },
+    {
+      "word": "مستخرج",
+      "roots": [
+        "خرج"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Form X active/passive participle مُسْتَخْرِج/مُسْتَخْرَج, or an extract/extractor as a noun."
+    },
+    {
+      "word": "قارئ",
+      "roots": [
+        "قرء"
+      ],
+      "pos": [
+        "noun",
+        "adjective",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Reader or reading active participle; also the regular Form III imperative قَارِئْ from قارأ, inferred from the dictionary lemma. Bare ء represents the hamza radical.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D9%82%D8%B1%D8%A3"
+      ]
+    },
+    {
+      "word": "قراءة",
+      "roots": [
+        "قرء"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "derivational_suffix",
+            "start": 4,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Reading, a verbal noun. Terminal ة may remain part of its lexical stem or be represented as a derivational ending; it is not a separate feminine agreement suffix here."
+    },
+    {
+      "word": "مؤمن",
+      "roots": [
+        "ءمن"
+      ],
+      "pos": [
+        "noun",
+        "adjective",
+        "proper_noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Believer/believing مُؤْمِن, insurer/assuring مُؤَمِّن, insured/secured مُؤَمَّن; also the conventional Arabic personal name Muʾmin. All retain root ءمن."
+    },
+    {
+      "word": "مسؤول",
+      "roots": [
+        "سءل"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Responsible, questioned, or an official/person responsible. Hamza radical is canonical bare ء, irrespective of its written seat."
+    },
+    {
+      "word": "سائل",
+      "roots": [
+        "سءل",
+        "سيل"
+      ],
+      "pos": [
+        "noun",
+        "adjective",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "سَائِل is asker/beggar from سءل or fluid/flowing from سيل. Verb accepts the Form III imperative سَائِلْ from ساءل; the perfect سَاءَلَ has different spelling.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D8%A7%D9%84%D8%B3%D8%A7%D8%A6%D9%84%D9%8F?exact_search=true"
+      ]
+    },
+    {
+      "word": "مبادئ",
+      "roots": [
+        "بدء"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Usually principles, broken plural of مبدأ. Also a possible Form III active participle مُبَادِئ from بادأ, initiating/engaging another first. The latter noun/adjective reading is less common."
+    },
+    {
+      "word": "قائل",
+      "roots": [
+        "قول",
+        "قيل"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Speaker/saying from قول; also one taking a midday rest from قيل. The latter is a dictionary-attested homograph.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D9%82%D8%A7%D9%84%D9%8E"
+      ]
+    },
+    {
+      "word": "مقول",
+      "roots": [
+        "قول"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Said/quoted مَقُول, or nominal quoted matter; unmarked shadda also allows مُقَوِّل/مُقَوَّل participial readings, with the same root."
+    },
+    {
+      "word": "ميزان",
+      "roots": [
+        "وزن"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Balance/scale; the initial root و surfaces as ي in the instrument-noun pattern."
+    },
+    {
+      "word": "ميعاد",
+      "roots": [
+        "وعد"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Appointed time/place or appointment; initial root و surfaces as ي."
+    },
+    {
+      "word": "داع",
+      "roots": [
+        "دعو"
+      ],
+      "pos": [
+        "noun",
+        "adjective",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Indefinite defective active participle دَاعٍ, caller/cause; final radical و has no separate surface span. Also the regular imperative دَاعِ from dictionary-attested داعى, inferred by conjugation.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D8%AF%D8%B9%D9%88"
+      ]
+    },
+    {
+      "word": "دعاء",
+      "roots": [
+        "دعو"
+      ],
+      "pos": [
+        "noun",
+        "proper_noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Supplication/calling; also the conventional Arabic personal name Duʿāʾ. Surface final hamza is not a hamza radical."
+    },
+    {
+      "word": "رام",
+      "roots": [
+        "رمي",
+        "روم",
+        "ريم"
+      ],
+      "pos": [
+        "noun",
+        "adjective",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "رَامٍ is a thrower/archer from رمي; رَامَ sought/desired is from روم; رَامَ departed or a wound healed is from ريم. The last is less common and dictionary-attested. Imperative رَامِ from رامى also has root رمي.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D8%B1%D8%A7%D9%85%D9%8E?exact_search=true"
+      ]
+    },
+    {
+      "word": "مرمي",
+      "roots": [
+        "رمي"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Thrown/cast, مَرْمِيّ; can denote a thrown object. The final ي represents stem/root allomorphy and is not stripped as a pronoun."
+    },
+    {
+      "word": "مدرس",
+      "roots": [
+        "درس"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Teacher/teaching مُدَرِّس or taught مُدَرَّس; also a possible place-of-study noun. The prefix belongs to the derived stem."
+    },
+    {
+      "word": "ممدود",
+      "roots": [
+        "مدد"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Stretched/extended; also a substantive grammatical category such as an extended noun. Geminate radicals are expanded in the canonical root."
+    },
+    {
+      "word": "شديد",
+      "roots": [
+        "شدد"
+      ],
+      "pos": [
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Strong/severe/intense; root has repeated د radicals."
+    },
+    {
+      "word": "استعداد",
+      "roots": [
+        "عدد"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 7
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Readiness/preparation, verbal noun of استعدّ. The geminate root is عدد."
+    },
+    {
+      "word": "زلزال",
+      "roots": [
+        "زلزل"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Earthquake/shaking, quadriliteral verbal noun."
+    },
+    {
+      "word": "مدحرج",
+      "roots": [
+        "دحرج"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Rolling/rolled, active or passive quadriliteral participle; substantival use is possible."
+    },
+    {
+      "word": "دحرجة",
+      "roots": [
+        "دحرج"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "derivational_suffix",
+            "start": 4,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Rolling, quadriliteral verbal noun. Final ة is lexical/derivational, not a required gender-agreement morpheme."
+    },
+    {
+      "word": "طمأنينة",
+      "roots": [
+        "طمءن"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 7
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "type": "derivational_suffix",
+            "start": 6,
+            "end": 7
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Tranquillity. Uses the synchronic quadriliteral root listed by the Cairo Academy, with bare hamza; historical metathesis theories are not separate accepted roots. Terminal ة may be lexical or derivational.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D8%B7%D9%85%D8%A3%D9%86"
+      ]
+    },
+    {
+      "word": "عصافير",
+      "roots": [
+        "عصفر"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Sparrows/birds, broken plural of عصفور. The Cairo Academy places this family under quadriliteral عصفر; the stem contains the broken-plural pattern.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D8%B9%D8%B5%D9%81%D8%B1"
+      ]
+    },
+    {
+      "word": "رجال",
+      "roots": [
+        "رجل"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Men, or men on foot/pedestrians as the broken plural of راجل. Adjectival pedestrian/on-foot use is also credible."
+    },
+    {
+      "word": "بيوت",
+      "roots": [
+        "بيت"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Usually houses, broken plural بُيُوت. Dictionary-attested بَيُّوت also describes something kept overnight or an affair that keeps one awake.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D8%A8%D9%8A%D8%AA"
+      ]
+    },
+    {
+      "word": "مساجد",
+      "roots": [
+        "سجد"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Mosques/places of prostration; broken plural, without a separable plural suffix."
+    },
+    {
+      "word": "مفاتيح",
+      "roots": [
+        "فتح"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Keys, broken plural of مفتاح; all surface letters belong to the stem."
+    },
+    {
+      "word": "كتب",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "noun",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Books كُتُب, or Form I/II active/passive verbal readings such as كَتَبَ، كُتِبَ، كَتَّبَ، كُتِّبَ، كَتِّبْ. No one vocalization is selected."
+    },
+    {
+      "word": "علم",
+      "roots": [
+        "علم"
+      ],
+      "pos": [
+        "noun",
+        "adjective",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Knowledge عِلْم, flag/landmark عَلَم, knowing/teaching verbs with omitted vowels or shadda. Adjective additionally accepts the uncommon plural عُلْم of أعلم (cleft upper lip), explicitly listed in the dictionary.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D9%85%D8%B9%D8%AC%D9%85/dic-19/%D8%B9%D9%84%D9%85"
+      ]
+    },
+    {
+      "word": "ذهب",
+      "roots": [
+        "ذهب"
+      ],
+      "pos": [
+        "noun",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Gold ذَهَب, or went/gilded and corresponding passive/imperative Form II readings. No vocalization is fixed."
+    },
+    {
+      "word": "وعد",
+      "roots": [
+        "وعد",
+        "عود",
+        "عدد"
+      ],
+      "pos": [
+        "noun",
+        "verb",
+        "proper_noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Whole-word وَعْد promise or وَعَدَ promised; Waʿd is also a conventional personal name. و + عُدْ means and return (عود); و + عُدَّ/عَدَّ/عَدّ means and count/counted/counting (عدد); و + عِدْ is and promise (وعد)."
+    },
+    {
+      "word": "قال",
+      "roots": [
+        "قول",
+        "قيل"
+      ],
+      "pos": [
+        "verb",
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "قالَ said (قول) or took a midday rest (قيل). The dictionary also lists قال as a nominal word for speech and an adjective meaning speaking (قول).",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D9%82%D8%A7%D9%84%D9%8E"
+      ]
+    },
+    {
+      "word": "باع",
+      "roots": [
+        "بيع",
+        "بوع"
+      ],
+      "pos": [
+        "verb",
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Sold/bought (بيع), but also arm-span or stretching/striding/measuring by arm-spans (بوع), all dictionary-attested.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D9%85%D8%B9%D8%AC%D9%85/dic-19/%D8%A8%D8%A7%D8%B9%20%D8%A8%D8%A7%D8%B9"
+      ]
+    },
+    {
+      "word": "رمى",
+      "roots": [
+        "رمي"
+      ],
+      "pos": [
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Threw/cast رَمَى; absent shadda may also allow an intensive Form II reading. Final ى is part of the weak stem."
+    },
+    {
+      "word": "دعا",
+      "roots": [
+        "دعو",
+        "دعع",
+        "ودع"
+      ],
+      "pos": [
+        "verb",
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 2,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "دَعَا called/prayed has root دعو. دَعًّا pushing is an accusative verbal noun from دعع; دَعَّا can be its dual perfect. دَعَا can also be the dual imperative leave! from ودع. Dual and accusative-support alif are separately spanned in those readings.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D8%AF%D8%B9%D9%88",
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D8%AF%D8%B9%D8%B9",
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D9%88%D8%AF%D8%B9"
+      ]
+    },
+    {
+      "word": "أكل",
+      "roots": [
+        "ءكل",
+        "كلل",
+        null
+      ],
+      "pos": [
+        "verb",
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        [
+          {
+            "type": "particle",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "أَكَلَ/أُكِلَ and eating/food أَكْل/أُكُل have root ءكل; أَكَلَّ made weary has root كلل. Interrogative أَ + كُلّ all is grammatical and rootless here; interrogative أَ + كَلّ dull/burdensome is lexical كلل. These parses require context.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D9%85%D8%B9%D8%AC%D9%85/dic-19/%D8%A3%D9%83%D9%84",
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D9%83%D9%8E%D9%84%D9%8E%D9%91?exact_search=true"
+      ]
+    },
+    {
+      "word": "سأل",
+      "roots": [
+        "سءل"
+      ],
+      "pos": [
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Asked سَأَلَ, with canonical bare hamza root. No implicit spelling correction to other seated-hamza forms."
+    },
+    {
+      "word": "قرأ",
+      "roots": [
+        "قرء"
+      ],
+      "pos": [
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Read قَرَأَ; a final hamza radical written on alef. It remains distinct from قارئ and قراءة at the surface."
+    },
+    {
+      "word": "يكتبون",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 6
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 5
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 5,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Imperfect plural, with active/passive and Form I/II vocalization ambiguity. The agreement prefix remains inside stem يكتب; ون is an inflectional ending. An alternative groups و and indicative ن separately."
+    },
+    {
+      "word": "تكتبين",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 6
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 5
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 5,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Second-person feminine singular imperfect; active/passive and Form I/II readings share the letters. ين may be one ending or ي agreement plus indicative ن."
+    },
+    {
+      "word": "اكتبوا",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Plural imperative write!. Stem اكتب includes the imperative support vowel/prefix; وا combines the plural marker and its silent orthographic alif."
+    },
+    {
+      "word": "لمدرستهم",
+      "roots": [
+        "درس"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "preposition",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 5
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 6,
+            "end": 8
+          }
+        ],
+        [
+          {
+            "type": "preposition",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 6
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 6,
+            "end": 8
+          }
+        ],
+        [
+          {
+            "type": "preposition",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 5
+          },
+          {
+            "type": "derivational_suffix",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 6,
+            "end": 8
+          }
+        ],
+        [
+          {
+            "type": "particle",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 5
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 6,
+            "end": 8
+          }
+        ],
+        [
+          {
+            "type": "particle",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 6
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 6,
+            "end": 8
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "To/for their school or female teacher; emphatic لَ can instead precede a nominal predicate. ت is the construct form of ة. School may retain it lexically; teacher uses feminine inflection."
+    },
+    {
+      "word": "وبكتابهم",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "preposition",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 6
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 6,
+            "end": 8
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "And with/by their book, or their writers (كُتّاب). Intensive كَتّاب prolific writer permits adjectival use. هم is the possessive enclitic."
+    },
+    {
+      "word": "فبالمدارس",
+      "roots": [
+        "درس"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "preposition",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "type": "article",
+            "start": 2,
+            "end": 4
+          },
+          {
+            "type": "stem",
+            "start": 4,
+            "end": 9
+          }
+        ],
+        [
+          {
+            "type": "particle",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "preposition",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "type": "article",
+            "start": 2,
+            "end": 4
+          },
+          {
+            "type": "stem",
+            "start": 4,
+            "end": 9
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Then/so at the schools; مُدارِس can also be a Form III studying/studying-with participle under the article. ف may be classified as conjunction or as a consequence/answer particle, which the contract does not distinguish."
+    },
+    {
+      "word": "أطفالنا",
+      "roots": [
+        "طفل"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 5,
+            "end": 7
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Our children; broken plural أطفال followed by possessive نا."
+    },
+    {
+      "word": "معلماتهم",
+      "roots": [
+        "علم"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 6
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 6,
+            "end": 8
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Their female teachers/teaching females مُعَلِّمات, or taught/marked females مُعَلَّمات. ات is feminine plural and هم possessive."
+    },
+    {
+      "word": "بالسيارتين",
+      "roots": [
+        "سير"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "preposition",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "article",
+            "start": 1,
+            "end": 3
+          },
+          {
+            "type": "stem",
+            "start": 3,
+            "end": 8
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 8,
+            "end": 10
+          }
+        ],
+        [
+          {
+            "type": "preposition",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "article",
+            "start": 1,
+            "end": 3
+          },
+          {
+            "type": "stem",
+            "start": 3,
+            "end": 7
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 7,
+            "end": 8
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 8,
+            "end": 10
+          }
+        ],
+        [
+          {
+            "type": "preposition",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "article",
+            "start": 1,
+            "end": 3
+          },
+          {
+            "type": "stem",
+            "start": 3,
+            "end": 7
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 7,
+            "end": 10
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "With/in the two cars, or two feminine traveling/mobile referents. ت is the ة allomorph before dual ين. A lexical سيارة stem can keep ت; an agreement analysis can split it or group تين."
+    },
+    {
+      "word": "والطالبات",
+      "roots": [
+        "طلب"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "article",
+            "start": 1,
+            "end": 3
+          },
+          {
+            "type": "stem",
+            "start": 3,
+            "end": 7
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 7,
+            "end": 9
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "And the female students/seekers, or feminine plural seeking participle. ال is the article; ات is feminine plural."
+    },
+    {
+      "word": "مستشفيات",
+      "roots": [
+        "شفي"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 6,
+            "end": 8
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Hospitals مُسْتَشْفَيَات or females seeking recovery مُسْتَشْفِيَات. The written ي belongs to the weak stem, followed by feminine plural ات."
+    },
+    {
+      "word": "مكتبات",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Libraries/bookshops مَكْتَبَات, or feminine plural writing-related participles with different vowels/shadda (e.g. مُكَتِّبات). ات is the plural ending."
+    },
+    {
+      "word": "وَبِكِتَابِهِمْ",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "conjunction",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "preposition",
+            "start": 2,
+            "end": 4
+          },
+          {
+            "type": "stem",
+            "start": 4,
+            "end": 11
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 11,
+            "end": 15
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Vowels fix and with their book. Every combining mark stays with its preceding letter; suffix span contains هِمْ."
+    },
+    {
+      "word": "مُعَلِّم",
+      "roots": [
+        "علم"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 8
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Vocalization fixes the active Form II participle: teacher/teaching. Shadda and kasra stay on the ل inside the stem."
+    },
+    {
+      "word": "مُعَلَّم",
+      "roots": [
+        "علم"
+      ],
+      "pos": [
+        "adjective",
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 8
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Vocalization fixes the passive Form II participle: taught/marked; substantive use for a taught/marked person or thing is possible."
+    },
+    {
+      "word": "كَتَبَ",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "The supplied vowels fix the active perfect wrote. Do not admit the passive reading merely because inference strips marks."
+    },
+    {
+      "word": "كُتِبَ",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "The supplied vowels fix the passive perfect was written. Do not admit the active reading merely because inference strips marks."
+    },
+    {
+      "word": "اِسْتِغْفَار",
+      "roots": [
+        "غفر"
+      ],
+      "pos": [
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 12
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Vocalized Form X verbal noun seeking forgiveness. Attached marks are covered by the single stem span."
+    },
+    {
+      "word": "محمد",
+      "roots": [
+        "حمد"
+      ],
+      "pos": [
+        "proper_noun",
+        "adjective",
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Conventionally the Arabic name Muḥammad; also lexical مُحَمَّد much-praised, adjectivally or substantivally. The proper name retains its transparent Arabic root."
+    },
+    {
+      "word": "القاهرة",
+      "roots": [
+        "قهر"
+      ],
+      "pos": [
+        "proper_noun",
+        "adjective",
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 7
+          }
+        ],
+        [
+          {
+            "type": "article",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "stem",
+            "start": 2,
+            "end": 6
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 6,
+            "end": 7
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Cairo, or the feminine definite conquering/overpowering participle. The article is segmentable even in the proper name; ة may stay in the lexical stem or be feminine inflection."
+    },
+    {
+      "word": "إبراهيم",
+      "roots": [
+        null
+      ],
+      "pos": [
+        "proper_noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 7
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Borrowed biblical personal name; no invented Arabic triliteral or quadriliteral root."
+    },
+    {
+      "word": "واشنطن",
+      "roots": [
+        null
+      ],
+      "pos": [
+        "proper_noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Borrowed name Washington. Initial و belongs to the name; it is not a conjunction here."
+    },
+    {
+      "word": "كتابان",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Two books كِتَابَان, or dual of intensive كَتَّاب prolific writer. ان is a nominative dual ending, not a numeral lexical POS."
+    },
+    {
+      "word": "كاتبات",
+      "roots": [
+        "كتب"
+      ],
+      "pos": [
+        "noun",
+        "adjective"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 4,
+            "end": 6
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Female writers or feminine plural writing participle; ات is inflectional plural."
+    },
+    {
+      "word": "لن",
+      "roots": [
+        null,
+        "لين"
+      ],
+      "pos": [
+        "particle",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 2
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Negative/future subjunctive particle لَنْ has no root; لِنْ be gentle/soft is the regular imperative of لان from لين, inferred from the dictionary lemma. The standalone grammatical token must still use a stem span under schema.ts.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D9%84%D9%8A%D9%86"
+      ]
+    },
+    {
+      "word": "في",
+      "roots": [
+        null,
+        "وفي",
+        "فوه"
+      ],
+      "pos": [
+        "preposition",
+        "verb",
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 2
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "pronominal_enclitic",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Usually preposition فِي, rootless. Also feminine imperative فِي fulfill! from وفى, inferred by conjugation; and genitive construct mouth فِي from فوه. فِيَّ my mouth has fused case/pronominal ي and can take the enclitic boundary. These infrequent lexical readings require context.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D9%88%D9%81%D9%8A",
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D9%81%D9%88%D9%87"
+      ]
+    },
+    {
+      "word": "هذا",
+      "roots": [
+        null,
+        "هذذ"
+      ],
+      "pos": [
+        "pronoun",
+        "noun",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        [
+          {
+            "type": "particle",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "type": "stem",
+            "start": 1,
+            "end": 3
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 2,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Usually demonstrative هٰذا, treated as one stem or attention particle ه + demonstrative ذا. Unvocalized هذًّا is an accusative verbal noun rapid recitation/cutting from هذذ; هذَّا can be a dual perfect. The rare noun is attested in Lisan al-Arab; the dual is inferred.",
+      "sources": [
+        "https://www.islamweb.net/ar/library/content/122/8577/%D9%87%D8%B0%D8%B0"
+      ]
+    },
+    {
+      "word": "الذين",
+      "roots": [
+        null
+      ],
+      "pos": [
+        "pronoun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 5
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Plural relative pronoun. Initial ال is retained within the lexical relative-pronoun stem, not assumed to be a productive definite article."
+    },
+    {
+      "word": "نحن",
+      "roots": [
+        null
+      ],
+      "pos": [
+        "pronoun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "high",
+      "notes": "Independent first-person plural pronoun; no lexical Arabic root assigned."
+    },
+    {
+      "word": "أنا",
+      "roots": [
+        null,
+        "ءنن"
+      ],
+      "pos": [
+        "pronoun",
+        "particle",
+        "noun",
+        "verb"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ],
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "type": "inflectional_suffix",
+            "start": 2,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "low",
+      "notes": "Usually independent I. Also contracted أَنَّا that we (particle plus fused pronoun), or أَنًّا groaning / أَنَّا they two groaned from أنّ. Whole-stem segmentation is retained for the contracted grammatical token because the schema has no shared/fused span; separate ا represents accusative support or dual ending for lexical readings. Contraction segmentation remains uncertain.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D8%A3%D9%86"
+      ]
+    },
+    {
+      "word": "سوف",
+      "roots": [
+        null,
+        "سوف"
+      ],
+      "pos": [
+        "particle",
+        "verb",
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "Future particle سَوْفَ is rootless. سَوَّفَ/سَوِّفْ procrastinated/procrastinate and passive سُوِّفَ are lexical سوف; سَوْف also occurs as a verbal noun of smelling/patience in the dictionary.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D8%B3%D9%88%D9%81"
+      ]
+    },
+    {
+      "word": "من",
+      "roots": [
+        null,
+        "منن",
+        "مين",
+        "مون"
+      ],
+      "pos": [
+        "preposition",
+        "pronoun",
+        "verb",
+        "noun"
+      ],
+      "segmentations": [
+        [
+          {
+            "type": "stem",
+            "start": 0,
+            "end": 2
+          }
+        ]
+      ],
+      "confidence": "medium",
+      "notes": "مِنْ from is preposition; مَنْ who/whoever is pronoun, both rootless. مَنّ favor/manna or مَنَّ bestowed has root منن. Rare imperative مِنْ lie! (مين) and مُنْ provide for! (مون) follow the attested hollow verbs مان; those forms are inferred rather than directly cited.",
+      "sources": [
+        "https://www.arabicacademy.gov.eg/ar/%D9%85%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB/%D9%85%D8%B9%D8%AC%D9%85/dic-19/%D9%85%D9%86",
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D9%85%D9%8A%D9%86",
+        "https://www.arabicacademy.gov.eg/ar/search_engine/roots/%D9%85%D9%88%D9%86"
+      ]
+    },
+    {
+      "word": "hello",
+      "expectedError": true,
+      "roots": [],
+      "pos": [],
+      "segmentations": [],
+      "confidence": "high",
+      "notes": "Invalid: Latin characters are outside arabic-v1."
+    },
+    {
+      "word": "كتاب123",
+      "expectedError": true,
+      "roots": [],
+      "pos": [],
+      "segmentations": [],
+      "confidence": "high",
+      "notes": "Invalid: ASCII digits are outside arabic-v1."
+    },
+    {
+      "word": "كتب جيد",
+      "expectedError": true,
+      "roots": [],
+      "pos": [],
+      "segmentations": [],
+      "confidence": "high",
+      "notes": "Invalid: contains whitespace; inputs are single words and are not trimmed."
+    },
+    {
+      "word": "َكتب",
+      "expectedError": true,
+      "roots": [],
+      "pos": [],
+      "segmentations": [],
+      "confidence": "high",
+      "notes": "Invalid: leading combining mark has no preceding Arabic letter to attach to."
+    },
+    {
+      "word": "😀",
+      "expectedError": true,
+      "roots": [],
+      "pos": [],
+      "segmentations": [],
+      "confidence": "high",
+      "notes": "Invalid: emoji is outside arabic-v1; it also occupies two UTF-16 code units."
+    },
+    {
+      "word": "ككككككككككككككككككككككككككككككككك",
+      "expectedError": true,
+      "roots": [],
+      "pos": [],
+      "segmentations": [],
+      "confidence": "high",
+      "notes": "Invalid: 33 Arabic letters exceed the maximum of 32 normalized letters."
+    }
+  ],
+  "limitations": [
+    "AI-authored blind annotations, not human gold. Only frozen words, docs/CONTRACT.md and packages/core/src/schema.ts were read locally. No model outputs, teacher analyses, generated training data, fixture labels or other annotator files were inspected.",
+    "Field-level accepted sets are independent. Their Cartesian product is not a set of valid complete analyses; notes explain which reading motivates an alternative. These sets are not claimed exhaustive.",
+    "Canonical roots expand geminate radicals, preserve weak radicals and use bare ء for all hamza radicals. Rootless grammatical words and borrowed proper names use null. Transparent Arabic personal/place names may retain Arabic roots.",
+    "POS refers to the lexical head, not an attached preposition/conjunction. Participles with credible substantive and attributive uses accept both noun and adjective. This taxonomy is not fully defined by the contract and needs human adjudication.",
+    "The contract fixes coverage and span names but does not define all linguistic boundaries. Stem spans retain derivational prefixes, imperfective prefixes, internal broken-plural material and weak-root allomorphs. Orthographic endings are not re-expanded.",
+    "Standalone particles, prepositions and pronouns receive a stem span because schema.ts requires at least one stem. Contracted/fused forms cannot always be uniquely segmented with nonoverlapping surface spans.",
+    "Productive number/gender endings and enclitics are separated. Where a lexical feminine/masdar ending may reasonably be part of a lemma or derivational suffix, alternatives are supplied. Grouped versus separately spanned agreement endings are accepted where stated.",
+    "Offsets are original-input UTF-16 code units. Combining marks remain attached to preceding letters. Supplied diacritics constrain linguistic readings even though the documented initial model does not learn vowel distinctions.",
+    "Ordinary standard/classical dictionary readings and recognizable conventional names are included; unrestricted conversion of any word into a surname, brand, acronym or nonce borrowed name is not enumerated. Dialectal readings and speculative productive clitic combinations are not exhaustive.",
+    "Sources are primary dictionary/grammar texts rather than analyzer predictions. Where a source attests a lemma but not a particular inflected form, notes explicitly identify the conjugational inference.",
+    "Pattern and feature labels are intentionally omitted. Confidence concerns this finite accepted-set judgment; high confidence does not certify exhaustive analysis coverage. أنا has a specifically unresolved fused-segmentation convention."
+  ]
+}

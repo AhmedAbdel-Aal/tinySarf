@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';
 import {mkdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
-import {ROOT,provenance} from './artifact';
+import {ROOT,provenance,hash} from './artifact';
 const url=process.env.TINYSARF_WEBSITE_URL??'http://127.0.0.1:3001';
 const browser=await chromium.launch({executablePath:process.env.BROWSER_PATH??'/Applications/Brave Browser.app/Contents/MacOS/Brave Browser',headless:true});
 const directory=path.join(ROOT,'packages/benchmark/local');await mkdir(directory,{recursive:true});const errors:string[]=[],checks:any={};
@@ -23,6 +23,11 @@ try{
  checks.mobileNoHorizontalOverflow=await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
  checks.localRequestsOnly=requests.every(r=>new URL(r).origin===new URL(url).origin);
  for(const document of ['/docs/MODEL_CARD.md','/docs/architecture.md','/results/current.json'])checks[document]=(await page.request.get(url+document)).status()===200;
+ const index=await (await page.request.get(url+'/results/current.json')).json();
+ checks.evidenceHashes=true;for(const entry of [...Object.values(index.artifacts),...Object.values(index.supplemental??{})] as any[]){const response=await page.request.get(url+entry.file);if(response.status()!==200||hash(await response.body())!==entry.sha256)checks.evidenceHashes=false;}
+ const queue=['/docs/MODEL_CARD.md','/docs/architecture.md','/docs/THIRD_PARTY_NOTICES.md'],seen=new Set<string>();checks.documentationLinks=true;
+ while(queue.length){const document=queue.shift()!;if(seen.has(document))continue;seen.add(document);const response=await page.request.get(url+document);if(response.status()!==200){checks.documentationLinks=false;continue;}if(document.endsWith('.md'))for(const match of (await response.text()).matchAll(/\]\((\/[^)]+)\)/g))queue.push(match[1]);}
+ checks.documentationFiles=seen.size;
  const report={...provenance(),kind:'website-smoke',url,checks,errors,passed:!errors.length&&Object.values(checks).every(Boolean)};
  await writeFile(path.join(directory,'website-smoke.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));if(!report.passed)throw new Error('Website smoke failed');
 }finally{await browser.close();}

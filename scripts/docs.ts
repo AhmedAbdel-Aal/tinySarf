@@ -1,5 +1,5 @@
 /** All public numeric tables are derived from immutable, hash-linked evidence. */
-import {readFile,writeFile,readdir,mkdir,copyFile} from 'node:fs/promises';
+import {readFile,writeFile,readdir,mkdir,copyFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {parseArgs} from 'node:util';
 import {ROOT,json,hash,validateArtifact} from '../packages/benchmark/src/artifact';
@@ -14,10 +14,14 @@ if(values.refresh){
   for(const file of files.filter(f=>f.startsWith(kind+'-')&&f.endsWith('.json'))){const candidate=await json(path.join(results,file));if(candidate.model.sha256===m.sha256){artifacts[kind]={file:`packages/benchmark/results/${file}`,sha256:hash(await readFile(path.join(results,file)))};break;}}
   if(!artifacts[kind])throw new Error(`No measured ${kind} artifact for this checkpoint`);
  }
- index={schemaVersion:1,status:'experimental-unpromoted',modelId:m.id,modelSha256:m.sha256,artifacts};await mkdir(path.dirname(indexFile),{recursive:true});await writeFile(indexFile,JSON.stringify(index,null,2)+'\n');
+ const supplemental:any={};
+ for(const kind of ['reproduction','ai-review'])for(const file of files.filter(f=>f.startsWith(kind+'-')&&f.endsWith('.json'))){const record=await json(path.join(results,file));if(record.model.sha256===m.sha256&&(kind!=='reproduction'||record.passed)){supplemental[kind]={file:`packages/benchmark/results/${file}`,sha256:hash(await readFile(path.join(results,file)))};break;}}
+ const promotions=path.join(ROOT,'packages/training/promotions');for(const file of (await readdir(promotions)).filter(f=>/^\d.*Z\.json$/.test(f)).sort().reverse()){supplemental.eligibility={file:`packages/training/promotions/${file}`,sha256:hash(await readFile(path.join(promotions,file)))};break;}
+ index={schemaVersion:1,status:'experimental-unpromoted',modelId:m.id,modelSha256:m.sha256,artifacts,supplemental};await mkdir(path.dirname(indexFile),{recursive:true});await writeFile(indexFile,JSON.stringify(index,null,2)+'\n');
 }else index=await json(indexFile);
 const loaded:any={};for(const [kind,entry] of Object.entries(index.artifacts) as [string,any][]){const bytes=await readFile(path.join(ROOT,entry.file));if(hash(bytes)!==entry.sha256)throw new Error(`Frozen ${kind} artifact changed`);loaded[kind]=JSON.parse(bytes.toString());validateArtifact(loaded[kind]);if(loaded[kind].model.sha256!==m.sha256)throw new Error('Report/checkpoint mismatch');}
 const {correctness:c,size:s,browser:b,parity:p}=loaded,q=c.correctness.teacherAgreement,sz=s.size;
+const supplemental:any={};for(const [kind,entry] of Object.entries(index.supplemental??{}) as [string,any][]){const bytes=await readFile(path.join(ROOT,entry.file));if(hash(bytes)!==entry.sha256)throw new Error(`Frozen ${kind} evidence changed`);supplemental[kind]=JSON.parse(bytes.toString());}
 const split=await json(path.join(ROOT,'packages/training/data/split-manifest.json')),config=await json(path.join(selected.directory,'config.json')),training=await json(path.join(selected.directory,'result.json'));
 const pct=(x:number|null|undefined)=>x==null?'TBD — not measured':`${(x*100).toFixed(2)}%`;
 const num=(x:number|null|undefined)=>x==null?'TBD — not measured':x.toLocaleString('en-US',{maximumFractionDigits:2});
@@ -148,15 +152,49 @@ Checkpoint SHA-256: \`${m.sha256}\`. Source manifest and per-split hashes: [spli
 
 Code and authored fixtures: MIT. Teacher data and derived checkpoint attribution: CC BY 4.0; preserve CAMeL Lab attribution and the license notices when redistributing the model. Review [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for pinned sources and model/data terms. Local inference keeps submitted words in the browser; hosting still serves static assets. Incorrect morphology can mislead learners or downstream systems. Human review remains necessary where errors matter.
 `;
+const evidenceLink=(kind:string)=>`[${kind} evidence](${index.supplemental[kind].file})`;
+const ai=supplemental['ai-review'];
+const aiSection=ai?`### AI-reviewed diagnostic agreement
+
+${ai.counts.inputs} curated inputs were annotated independently of model and teacher outputs by two AI agents and adjudicated by a third. This is **AI-reviewed, not human gold**, and does not satisfy human-review promotion requirements. Labels cover roots, POS and span boundaries only; accepted values are scored separately, so these numbers are not full-analysis accuracy. AI reviewers can share correlated errors. ${evidenceLink('ai-review')}.
+
+${table(['Field','Top-1 agreement','Top-3 field recall'],Object.entries(ai.metrics.all).map(([field,v]:[string,any])=>[field,rate(v.top1),rate(v.top3)]))}
+
+${table(['Same-input method','Segmentation top-1','Canonical root top-1','POS top-1'],[['Int8 candidate',pct(ai.metrics.all.segmentation.top1.value),pct(ai.metrics.all.rootCanonical.top1.value),pct(ai.metrics.all.pos.top1.value)],...Object.entries(ai.baselines).map(([name,v]:[string,any])=>[name,pct(v.all.segmentation.top1.value),pct(v.all.rootCanonical.top1.value),pct(v.all.pos.top1.value)])])}
+
+Valid morphology inputs: ${ai.counts.valid}; input-rejection cases: ${ai.counts.rejections} (${rate(ai.metrics.inputRejection)}). Normalized surface overlap: ${Object.entries(ai.counts.overlap).map(([role,count])=>`${role}: ${count}`).join('; ')}. The raw report separates high-confidence and unseen-training-surface results. Surface separation does not establish lemma-family separation. Bare-hamza canonical root agreement is a separate secondary diagnostic; exact radical spelling remains reported.
+
+The [annotation audit](packages/training/data/ai-review/README.md) preserves source labels, disagreements, adjudication decisions and input hashes. These labels were not used to retrain or select the current model.
+
+`:'### AI-reviewed diagnostic agreement\n\nTBD — not measured. Agent review is separate from independent human gold.\n\n';
+text=text.replace('## Browser performance',aiSection+'## Browser performance');
+text=text.replace('## Ethical and licensing notes',`### Validation evidence\n\n${supplemental.reproduction?`Clean-clone reproduction passed for source commit \`${supplemental.reproduction.git.commit}\`. It reconstructed teacher data and repeated correctness, package size and real WebGPU parity. ${evidenceLink('reproduction')}.`:'Clean reproduction: TBD — not measured.'}\n\n${supplemental.eligibility?`The guarded promotion check rejected the experimental candidate. The report records each failed quality, human-gold and hardware/protocol gate. ${evidenceLink('eligibility')}.`:''}\n\n## Ethical and licensing notes`);
 await writeFile(path.join(ROOT,'MODEL_CARD.md'),text);
 const readme=await readFile(path.join(ROOT,'README.md'),'utf8');
 const compact=`Experimental checkpoint \`${m.id}\` — **unpromoted**. [Model card](MODEL_CARD.md), [result index](packages/benchmark/reports/current.json).
 
 ${table(['Measured item','Result','Evidence'],[['Reachable deployed weights',num(m.reachableWeights),link('size')],['Complete package Brotli',`${num(sz.completePackage.brotli)} bytes`,link('size')],['Teacher segmentation agreement',`${pct(q.segmentationExactMatch.value)} (${q.count} verification words)`,link('correctness')],['Gold segmentation / root / top-3','TBD — not measured; no gold samples',link('correctness')],['Reference batch throughput',batch?`${num(batch.webgpuWordsPerSecond)} words/s at batch 128 (${b.protocol.mode}; JS-reference comparison)`:'TBD — not measured',link('browser')]])}`;
 await writeFile(path.join(ROOT,'README.md'),readme.replace(/<!-- GENERATED:RESULTS:START -->[\s\S]*?<!-- GENERATED:RESULTS:END -->/,`<!-- GENERATED:RESULTS:START -->\n${compact}\n<!-- GENERATED:RESULTS:END -->`));
-const website=path.join(ROOT,'apps/website');await writeFile(path.join(website,'lib/results.json'),JSON.stringify({entries:[{label:'Reachable weights',value:num(m.reachableWeights),note:`Int8 · ${num(m.packedWeightsBytes)} packed bytes`},{label:'Teacher segmentation agreement',value:pct(q.segmentationExactMatch.value),note:`${num(q.count)} teacher-sampled verification words`},{label:'Independent gold accuracy',value:'Not measured',note:'Independent human annotation is required'},{label:'WebGPU batch advantage',value:batch?`${batch.speedup.toFixed(2)}×`:'Not measured',note:`Batch 128 vs JavaScript reference · ${b.protocol.mode}`}],note:'Experimental, unpromoted. Root and full-analysis quality remain below release targets. One headless Chromium / Apple M2 measurement; not a cross-browser claim.',artifact:'/results/current.json'},null,2)+'\n');
+const website=path.join(ROOT,'apps/website');await writeFile(path.join(website,'lib/results.json'),JSON.stringify({entries:[{label:'Reachable weights',value:num(m.reachableWeights),note:`Int8 · ${num(m.packedWeightsBytes)} packed bytes`},{label:'Teacher segmentation agreement',value:pct(q.segmentationExactMatch.value),note:`${num(q.count)} teacher-sampled verification words`},{label:'Independent gold accuracy',value:'Not measured',note:'Independent human annotation is required'},{label:'WebGPU batch advantage',value:batch?`${batch.speedup.toFixed(2)}×`:'Not measured',note:`Batch 128 vs JavaScript reference · ${b.protocol.mode}`}],note:'Experimental, unpromoted. Root and full-analysis quality remain below release targets. One headless Chromium / Apple M2 measurement; not a cross-browser claim.'+(ai?` An additional ${ai.counts.inputs}-input challenge was independently annotated by two AI agents and adjudicated by a third; see the model card for AI agreement and its limitations.`:''),artifact:'/results/current.json'},null,2)+'\n');
 await mkdir(path.join(website,'public/docs'),{recursive:true});await mkdir(path.join(website,'public/results'),{recursive:true});
-for(const file of ['MODEL_CARD.md','architecture.md','THIRD_PARTY_NOTICES.md'])await copyFile(path.join(ROOT,file),path.join(website,'public/docs',file));
-const webIndex={...index,artifacts:Object.fromEntries(Object.entries(index.artifacts).map(([k,e]:[string,any])=>[k,{...e,file:`/results/${path.basename(e.file)}`}]))};await writeFile(path.join(website,'public/results/current.json'),JSON.stringify(webIndex,null,2)+'\n');
-for(const e of Object.values(index.artifacts) as any[])await copyFile(path.join(ROOT,e.file),path.join(website,'public/results',path.basename(e.file)));
+const publicEntry=(e:any)=>({...e,file:`/results/${path.basename(e.file)}`});
+const webIndex={...index,artifacts:Object.fromEntries(Object.entries(index.artifacts).map(([k,e])=>[k,publicEntry(e)])),supplemental:Object.fromEntries(Object.entries(index.supplemental??{}).map(([k,e])=>[k,publicEntry(e)]))};await writeFile(path.join(website,'public/results/current.json'),JSON.stringify(webIndex,null,2)+'\n');
+for(const e of [...Object.values(index.artifacts),...Object.values(index.supplemental??{})] as any[])await copyFile(path.join(ROOT,e.file),path.join(website,'public/results',path.basename(e.file)));
+// Documentation links must remain usable when served outside the repository.
+const published=new Set<string>();
+async function publishDocument(file:string,destination:string):Promise<void>{
+ if(published.has(destination))return;published.add(destination);await mkdir(path.dirname(destination),{recursive:true});
+ if(!file.endsWith('.md')){await copyFile(file,destination);return;}
+ let markdown=await readFile(file,'utf8');
+ for(const match of [...markdown.matchAll(/(?<!!)\[[^\]]*\]\(([^)]+)\)/g)]){
+  const target=match[1];if(/^(https?:|mailto:|#|\/)/.test(target))continue;
+  let source=path.resolve(path.dirname(file),target);if(!source.startsWith(ROOT+path.sep))throw new Error('Documentation link escapes repository');
+  if((await stat(source)).isDirectory()){const manifest=path.join(source,'manifest.json');try{await stat(manifest);source=manifest;}catch{source=path.join(source,'README.md');}}
+  const relative=path.relative(ROOT,source),url=relative==='packages/benchmark/reports/current.json'?'/results/current.json':`/source/${relative}`;
+  if(url!=='/results/current.json')await publishDocument(source,path.join(website,'public',url));
+  markdown=markdown.replaceAll(`](${target})`,`](${url})`);
+ }
+ await writeFile(destination,markdown);
+}
+for(const file of ['MODEL_CARD.md','architecture.md','THIRD_PARTY_NOTICES.md'])await publishDocument(path.join(ROOT,file),path.join(website,'public/docs',file));
 console.log(`Generated model card, README and website evidence for ${m.id}`);

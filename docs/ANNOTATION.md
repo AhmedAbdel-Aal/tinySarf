@@ -10,4 +10,8 @@ Gold files are final-test data. The loader requires an explicit release-candidat
 
 Human review is an external requirement. The software validates the recorded provenance but cannot certify an annotator's independence or linguistic expertise.
 
+The separate [AI challenge review](../packages/training/data/ai-review/README.md) preserves two blind agent annotations and a third agent's adjudication. Run `pnpm benchmark:ai-review` to measure field-level agreement, confidence subsets, training-surface overlap and same-input rules/frequency baselines. This diagnostic omits pattern and feature annotation and does not claim exhaustive valid analyses. Canonical hamza comparison is secondary to exact root spelling. AI agents can share correlated errors, so this evidence cannot pass a human-gold promotion gate.
+
+The AI challenge inputs are frozen before evaluation. Their normalized surfaces are excluded from subsequent failure replay. Some may already occur in the original teacher training set; the report exposes that overlap and does not claim lemma-family separation. The current model is not trained or selected using these new annotations.
+
 Commands: `pnpm evaluate --gold path/to/gold-natural.json --gold path/to/gold-balanced.json --release-candidate` evaluates independent gold; `pnpm evaluate --dataset-role final-test --release-candidate` evaluates the sealed teacher test in a separate artifact. Neither command has been run on final-test data for this experiment.

@@ -1,0 +1,18 @@
+{
+  "packages/benchmark/local/browser-2026-09-11T201233166Z.json": {
+    "file": "packages/benchmark/results/browser-2026-09-11T201233166Z.json",
+    "sha256": "8af0cdab54a3b91a328f41eae6b472f3c1f75a7934357273f1a036697030b981"
+  },
+  "packages/benchmark/local/correctness-2026-09-11T201204777Z.json": {
+    "file": "packages/benchmark/results/correctness-2026-09-11T201204777Z.json",
+    "sha256": "4838a0449c6f8a2c6a7a6c5090597d0d3706e7f24b1011f55f40c0b14dfd7700"
+  },
+  "packages/benchmark/local/parity-2026-09-11T201218188Z.json": {
+    "file": "packages/benchmark/results/parity-2026-09-11T201218188Z.json",
+    "sha256": "1aae9abf8d1b6f810e15b030f5f73e2a9cf59cd7ef740bebebb785533dfd6371"
+  },
+  "packages/benchmark/local/size-2026-09-11T201212121Z.json": {
+    "file": "packages/benchmark/results/size-2026-09-11T201212121Z.json",
+    "sha256": "ce5f01079cccbf8b803392cf20e7d0b76713b5b20c84fd3c5f292e5e0b25155a"
+  }
+}

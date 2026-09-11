@@ -17,8 +17,8 @@
     },
     {
       "label": "WebGPU batch advantage",
-      "value": "2.08×",
-      "note": "Batch 128 vs JavaScript reference · smoke"
+      "value": "2.03×",
+      "note": "Batch 128 vs JavaScript reference · full"
     }
   ],
   "note": "Experimental, unpromoted. Root and full-analysis quality remain below release targets. One headless Chromium / Apple M2 measurement; not a cross-browser claim.",

@@ -5,20 +5,30 @@
   "modelSha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
   "artifacts": {
     "correctness": {
-      "file": "packages/benchmark/results/correctness-2026-09-11T195845117Z.json",
-      "sha256": "faed5d36bb53cdcbb0a21885f992b89e07bf868727ca3fee2a4069dfa6681e6a"
+      "file": "packages/benchmark/results/correctness-2026-09-11T201204777Z.json",
+      "sha256": "4838a0449c6f8a2c6a7a6c5090597d0d3706e7f24b1011f55f40c0b14dfd7700"
     },
     "size": {
-      "file": "packages/benchmark/results/size-2026-09-11T195058746Z.json",
-      "sha256": "73a0b498c0f63f6aa8018b9cad0b9c7ed19b12874a477dc3b1ddcb1a27eacbbb"
+      "file": "packages/benchmark/results/size-2026-09-11T201212121Z.json",
+      "sha256": "ce5f01079cccbf8b803392cf20e7d0b76713b5b20c84fd3c5f292e5e0b25155a"
     },
     "browser": {
-      "file": "packages/benchmark/results/browser-2026-09-11T193240105Z.json",
-      "sha256": "997ecdfe376f2f57a270579babab69ba2485073896947d8e6ee226795684c001"
+      "file": "packages/benchmark/results/browser-2026-09-11T201749461Z.json",
+      "sha256": "f986ff7c373ea64932c04aca26ea806d284b888e2a41c6312c888eb18af9f714"
     },
     "parity": {
-      "file": "packages/benchmark/results/parity-2026-09-11T192818202Z.json",
-      "sha256": "f6dc0453958a811bf14821e07c3d2bfe0ad1b1229f55d9cf7dc317245d7e2d25"
+      "file": "packages/benchmark/results/parity-2026-09-11T201355866Z.json",
+      "sha256": "bbe8b3dc3f0734e52b6483a802409c9e2354d5820bcc8a4ccf3d41df2abfea55"
+    }
+  },
+  "supplemental": {
+    "reproduction": {
+      "file": "packages/benchmark/results/reproduction-2026-09-11T200733555Z.json",
+      "sha256": "22d3ee2e261025052632b5c8132ef4871659c5571f388f0f017e80cf1ac77f19"
+    },
+    "eligibility": {
+      "file": "packages/training/promotions/20260911T201128.904550Z.json",
+      "sha256": "0717227e66e27037f55b92e99ce65d087035eb50386d6f164749e48c0c28a411"
     }
   }
 }

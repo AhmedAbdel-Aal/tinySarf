@@ -17,6 +17,7 @@ if(values.checkout){
 }else execFileSync('git',['clone','--no-hardlinks','--quiet',ROOT,checkout],{stdio:'inherit'});
 execFileSync('git',['checkout','--detach',source.git.commit],{cwd:checkout,stdio:'inherit'});
 const logs=path.join(temporary,'logs');await mkdir(logs,{recursive:true});
+const frozenIndex=await json(path.join(ROOT,'packages/benchmark/reports/current.json'));
 const commands:string[][]=[];
 async function run(args:string[]) {
  commands.push(args);const number=commands.length;console.log(`Reproduction ${number}: ${args.join(' ')}`);
@@ -36,17 +37,20 @@ try {
  await run(['node','--import','tsx','packages/benchmark/src/correctness.ts','--local']);
  await run(['node','--import','tsx','packages/benchmark/src/size.ts','--local']);
  await run(['node','--import','tsx','packages/benchmark/src/browser.ts','--local','--parity-only']);
+ if(frozenIndex.supplemental?.['ai-review'])await run(['pnpm','benchmark:ai-review','--local']);
  await run(['pnpm','docs:generate']);await run(['npm','--prefix','apps/website','run','build']);
- const resultDir=path.join(checkout,'packages/benchmark/local'),index=await json(path.join(ROOT,'packages/benchmark/reports/current.json'));
- for(const kind of ['correctness','size','parity']){
+ const resultDir=path.join(checkout,'packages/benchmark/local'),index=frozenIndex;
+ for(const kind of ['correctness','size','parity',...(index.supplemental?.['ai-review']?['ai-review']:[])]){
   const filename=(await readdir(resultDir)).filter(f=>f.startsWith(kind+'-')).sort().at(-1)!;const bytes=await readFile(path.join(resultDir,filename)),actual=JSON.parse(bytes.toString());
   if(actual.git.commit!==source.git.commit || actual.git.dirty!==false)throw new Error('Reproduction changed tracked source');
-  const expected=await json(path.join(ROOT,index.artifacts[kind].file));
+  const expected=await json(path.join(ROOT,(index.artifacts[kind]??index.supplemental[kind]).file));
   if(kind==='correctness'){
    if(JSON.stringify(actual.predictions)!==JSON.stringify(expected.predictions) || JSON.stringify(actual.correctness.teacherAgreement)!==JSON.stringify(expected.correctness.teacherAgreement))throw new Error('Frozen correctness predictions/metrics were not reproduced');
   }else if(kind==='size'){
    for(const field of ['packedWeightsBytes','javascriptMinifiedBytes','npmUnpackedBytes'])if(actual.size[field]!==expected.size[field])throw new Error(`Size changed: ${field}`);
    if(actual.runtime.sha256!==expected.runtime.sha256 || actual.size.completePackage.brotli!==expected.size.completePackage.brotli)throw new Error('Frozen runtime/package bytes were not reproduced');
+  }else if(kind==='ai-review'){
+   if(JSON.stringify(actual.predictions)!==JSON.stringify(expected.predictions)||JSON.stringify(actual.metrics)!==JSON.stringify(expected.metrics))throw new Error('AI diagnostic predictions/metrics were not reproduced');
   }else if(!actual.passed)throw new Error('Clean-clone browser parity failed');
   artifacts[kind]={file:filename,sha256:hash(bytes)};
  }

@@ -1,5 +1,7 @@
 import copy,unittest
-from tinysarf_training.failures import validate_failure
+import json,tempfile,hashlib
+from pathlib import Path
+from tinysarf_training.failures import validate_failure,ai_challenge_words
 from tinysarf_training.contract import normalize
 class FailureTest(unittest.TestCase):
  def setUp(self):
@@ -17,3 +19,10 @@ class FailureTest(unittest.TestCase):
   self.assertEqual(normalize('كِتَاب'),'كتاب')
   for word in ['','َكتب','ـكتب','a','😀','كتب جيد','ك'*33,'ك'+'َ'*512]:
    with self.assertRaises(ValueError):normalize(word)
+ def test_ai_challenge_replay_guard_uses_frozen_normalized_identities(self):
+  with tempfile.TemporaryDirectory() as directory:
+   base=Path(directory);source=base/'words.json';source.write_text(json.dumps({'words':['كِتَاب','كتاب','hello','َكتب']}))
+   (base/'words.sha256').write_text(hashlib.sha256(source.read_bytes()).hexdigest())
+   self.assertEqual(ai_challenge_words(base),{'كتاب'})
+   source.write_text('{}')
+   with self.assertRaisesRegex(ValueError,'digest'):ai_challenge_words(base)

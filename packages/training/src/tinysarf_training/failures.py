@@ -15,7 +15,7 @@ def validate_failure(entry,heldout):
     if not row.get('analyses'): raise ValueError('Retain all accepted analyses')
     families={a.get('lemmaFamily') for a in row['analyses']}
     if not families or None in families or '' in families: raise ValueError('Lemma families are required')
-    if word in heldout['words'] or families & heldout['families']: raise ValueError('Failure overlaps verification/final-test; never replay held-out data')
+    if word in heldout['words'] or families & heldout['families']: raise ValueError('Failure overlaps held-out evaluation data; never replay held-out data')
     allowed_pos={'noun','proper_noun','numeral','adjective','verb','adverb','preposition','conjunction','interjection','pronoun','particle','unknown'}
     features={target:set(values.values())|{'__missing__','__unknown__','__na__'} for _,(target,values) in FEATURE_MAP.items()}
     for analysis in row['analyses']:
@@ -31,6 +31,16 @@ def validate_failure(entry,heldout):
         if any(k not in features or v not in features[k] for k,v in analysis['features'].items()): raise ValueError('Invalid replay feature')
     return row
 
+def ai_challenge_words(directory):
+    source=directory/'words.json'
+    if not source.exists(): return set()
+    if sha(source)!=(directory/'words.sha256').read_text().strip(): raise ValueError('Frozen AI challenge input digest changed')
+    words=set()
+    for word in read_json(source)['words']:
+        try: words.add(normalize(word))
+        except ValueError: pass  # Rejection fixtures are never replay examples.
+    return words
+
 def heldout_identities():
     # Split identities only: never inspect final-test labels for mining or optimization.
     split=read_json(DATA/'split-manifest.json');words=set();families=set()
@@ -40,6 +50,7 @@ def heldout_identities():
         words.update(identities[role]['words']);families.update(identities[role]['lemmaFamilies'])
     for file in (DATA/'generated/audit').glob('gold-identities-*.json'):
         gold=read_json(file);words.update(gold['words']);families.update(gold['lemmaFamilies'])
+    words.update(ai_challenge_words(DATA/'ai-review'))
     return {'words':words,'families':families}
 
 def replay_records():

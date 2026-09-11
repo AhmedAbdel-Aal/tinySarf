@@ -1,0 +1,1291 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-09-11T201233166Z",
+  "git": {
+    "commit": "33bc000991eab3f04ce602d5316d4894aa567a92",
+    "dirty": false
+  },
+  "createdAt": "2026-09-11T20:12:33.199Z",
+  "commands": [
+    "/Users/ahmed/.hermes/node/bin/node /Users/ahmed/Desktop/tinySarf/packages/benchmark/src/browser.ts --local --smoke --workloads single-short,batch-8,batch-128"
+  ],
+  "environment": {
+    "os": "darwin 23.5.0",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "ramBytes": 8589934592,
+    "node": "v22.23.0",
+    "browser": "152.0.7977.83",
+    "webgpuAdapter": null,
+    "deviceModel": "Mac14,2",
+    "osVersion": "14.5",
+    "browserExecutable": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+    "headless": true,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "secureContext": true,
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "device": "",
+      "description": "",
+      "isFallbackAdapter": false
+    },
+    "visibility": "visible",
+    "devicePixelRatio": 1,
+    "screen": {
+      "width": 1280,
+      "height": 800
+    },
+    "heap": {
+      "usedBytes": 10894778,
+      "totalBytes": 46657330,
+      "limitBytes": 4395630592,
+      "api": "performance.memory (Chromium-specific)"
+    },
+    "powerState": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=7667811)\t30%; charging; 3:36 remaining present: true",
+    "pluggedIn": true,
+    "measureUserAgentSpecificMemory": null
+  },
+  "kind": "browser",
+  "runtime": {
+    "sha256": "df07be23896d06e587947c946f0de4835bd6355f660ab7cd5febeee1016243b2",
+    "modelModuleSha256": "7592e9fb5784dbe94419d330694a5f5141da7dec142862ac7ae4fbb5f780f092"
+  },
+  "status": "experimental-unpromoted",
+  "model": {
+    "dilations": [
+      1,
+      2,
+      4
+    ],
+    "embedding": 32,
+    "floatBinarySha256": "816422af1132ca566d303dd1cb39025375181210a91e923f7da4571e4329dabd",
+    "floatSha256": "e619078e5b4c29f683c3e60b8922e2dee206376a25e4faa18afebd64c505d568",
+    "format": "cnn-v1",
+    "id": "20260911T191243.077466Z-250000",
+    "labels": {
+      "heads": {
+        "aspect": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "perfective",
+          "imperfective",
+          "imperative"
+        ],
+        "case": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "nominative",
+          "accusative",
+          "genitive"
+        ],
+        "gender": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "masculine",
+          "feminine"
+        ],
+        "mood": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "indicative",
+          "subjunctive",
+          "jussive"
+        ],
+        "number": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "singular",
+          "dual",
+          "plural"
+        ],
+        "pattern": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "فَعَل",
+          "فَعْل",
+          "فاعِل",
+          "فَعَّل",
+          "أَفْعَل",
+          "فَعِيل",
+          "ٌطWص+ِيّ",
+          "فَعّال",
+          "مَفْعُول",
+          "فِعال",
+          "فُعْل",
+          "تَفْعِيل",
+          "فُعُول",
+          "فِعْل",
+          "مَفاعِل",
+          "مُفَعَّل",
+          "فاعَل",
+          "تَفَعُّل",
+          "مُفَعِّل",
+          "ٱِفْتِعال",
+          "فَعال",
+          "فَعالِل",
+          "مُفْعِل",
+          "فَعْلَل",
+          "فَعائِل",
+          "مَفْعَل",
+          "تَفَعّل",
+          "مُتَفَعِّل",
+          "فَواعِل",
+          "فَعِل",
+          "مُفْتَعِل",
+          "فُعّال",
+          "فَعالِيل",
+          "مُفاعِل",
+          "فَعُول",
+          "فُعال",
+          "فِعال+ِيّ",
+          "فَعْل+ِيّ",
+          "فِعَل",
+          "مِفْعَل",
+          "فَعْلاء",
+          "مُفْعَل",
+          "ٱِفْتَعَل",
+          "مُفْتَعَل",
+          "مُتَفاعِل",
+          "فَعَل+ِيّ",
+          "ٱِسْتِفْعال",
+          "ٱِنْفِعال",
+          "مِفْعال",
+          "فُعَلاء",
+          "تَفاعُل",
+          "مَفاعِيل",
+          "فُعْل+ِيّ",
+          "فُعَل",
+          "فاعِل+ِيّ",
+          "فِعْل+ِيّ",
+          "فُعْلان",
+          "فَعِيل+ِيّ",
+          "فُعُل",
+          "فِعْلان",
+          "مَفْعِل",
+          "ٱِسْتَفْعَل",
+          "فاعُول",
+          "تَفاعَل"
+        ],
+        "person": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "first",
+          "second",
+          "third"
+        ],
+        "pos": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "noun",
+          "proper_noun",
+          "numeral",
+          "adjective",
+          "verb",
+          "adverb",
+          "preposition",
+          "conjunction",
+          "interjection",
+          "pronoun",
+          "particle"
+        ],
+        "root0": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root1": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root2": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root3": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "state": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "definite",
+          "indefinite",
+          "construct"
+        ],
+        "voice": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "active",
+          "passive"
+        ]
+      },
+      "segmentation": [
+        "conjunction",
+        "particle",
+        "preposition",
+        "article",
+        "stem",
+        "derivational_suffix",
+        "inflectional_suffix",
+        "pronominal_enclitic"
+      ]
+    },
+    "maxLength": 32,
+    "normalizationVersion": "arabic-v1",
+    "packedWeightsBytes": 245732,
+    "quantization": "symmetric-per-tensor-int8",
+    "reachableWeights": 245667,
+    "schemaVersion": 1,
+    "sha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
+    "status": "experimental-unpromoted",
+    "tensors": {
+      "aspect.bias": {
+        "length": 6,
+        "offset": 241736,
+        "scale": 0.0008982828003354371,
+        "shape": [
+          6
+        ]
+      },
+      "aspect.weight": {
+        "length": 1032,
+        "offset": 240704,
+        "scale": 0.00455059576779604,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "case.bias": {
+        "length": 6,
+        "offset": 244684,
+        "scale": 0.0008581824949942529,
+        "shape": [
+          6
+        ]
+      },
+      "case.weight": {
+        "length": 1032,
+        "offset": 243652,
+        "scale": 0.007890579290688038,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "conv0.bias": {
+        "length": 172,
+        "offset": 18720,
+        "scale": 0.0018964497139677405,
+        "shape": [
+          172
+        ]
+      },
+      "conv0.weight": {
+        "length": 16512,
+        "offset": 2208,
+        "scale": 0.0043164584785699844,
+        "shape": [
+          172,
+          3,
+          32
+        ]
+      },
+      "conv1.bias": {
+        "length": 172,
+        "offset": 107644,
+        "scale": 0.0006516575231216848,
+        "shape": [
+          172
+        ]
+      },
+      "conv1.weight": {
+        "length": 88752,
+        "offset": 18892,
+        "scale": 0.004955793730914593,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "conv2.bias": {
+        "length": 172,
+        "offset": 196568,
+        "scale": 0.0011922874255105853,
+        "shape": [
+          172
+        ]
+      },
+      "conv2.weight": {
+        "length": 88752,
+        "offset": 107816,
+        "scale": 0.005055295303463936,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "embedding": {
+        "length": 1184,
+        "offset": 0,
+        "scale": 0.02600051648914814,
+        "shape": [
+          37,
+          32
+        ]
+      },
+      "gender.bias": {
+        "length": 5,
+        "offset": 239656,
+        "scale": 0.00122736650519073,
+        "shape": [
+          5
+        ]
+      },
+      "gender.weight": {
+        "length": 860,
+        "offset": 238796,
+        "scale": 0.004492000211030245,
+        "shape": [
+          5,
+          172
+        ]
+      },
+      "mood.bias": {
+        "length": 6,
+        "offset": 242776,
+        "scale": 0.0004823975032195449,
+        "shape": [
+          6
+        ]
+      },
+      "mood.weight": {
+        "length": 1032,
+        "offset": 241744,
+        "scale": 0.004531926475465298,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "number.bias": {
+        "length": 6,
+        "offset": 240696,
+        "scale": 0.001153977820649743,
+        "shape": [
+          6
+        ]
+      },
+      "number.weight": {
+        "length": 1032,
+        "offset": 239664,
+        "scale": 0.004564363043755293,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pattern.bias": {
+        "length": 67,
+        "offset": 237688,
+        "scale": 0.001367977587506175,
+        "shape": [
+          67
+        ]
+      },
+      "pattern.weight": {
+        "length": 11524,
+        "offset": 226164,
+        "scale": 0.008518285118043423,
+        "shape": [
+          67,
+          172
+        ]
+      },
+      "person.bias": {
+        "length": 6,
+        "offset": 238788,
+        "scale": 0.0006815318483859301,
+        "shape": [
+          6
+        ]
+      },
+      "person.weight": {
+        "length": 1032,
+        "offset": 237756,
+        "scale": 0.0050756367854774,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pos.bias": {
+        "length": 14,
+        "offset": 200532,
+        "scale": 0.0013052545255050063,
+        "shape": [
+          14
+        ]
+      },
+      "pos.weight": {
+        "length": 2408,
+        "offset": 198124,
+        "scale": 0.005701378453522921,
+        "shape": [
+          14,
+          172
+        ]
+      },
+      "position": {
+        "length": 1024,
+        "offset": 1184,
+        "scale": 0.029511356726288795,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      "root0.bias": {
+        "length": 37,
+        "offset": 206912,
+        "scale": 0.0012769013410434127,
+        "shape": [
+          37
+        ]
+      },
+      "root0.weight": {
+        "length": 6364,
+        "offset": 200548,
+        "scale": 0.005650089122354984,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root1.bias": {
+        "length": 37,
+        "offset": 213316,
+        "scale": 0.0011855042539536953,
+        "shape": [
+          37
+        ]
+      },
+      "root1.weight": {
+        "length": 6364,
+        "offset": 206952,
+        "scale": 0.005082467570900917,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root2.bias": {
+        "length": 37,
+        "offset": 219720,
+        "scale": 0.0011456395732238889,
+        "shape": [
+          37
+        ]
+      },
+      "root2.weight": {
+        "length": 6364,
+        "offset": 213356,
+        "scale": 0.004992933943867683,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root3.bias": {
+        "length": 37,
+        "offset": 226124,
+        "scale": 0.0010689018527045846,
+        "shape": [
+          37
+        ]
+      },
+      "root3.weight": {
+        "length": 6364,
+        "offset": 219760,
+        "scale": 0.007890173234045506,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "segmentation.bias": {
+        "length": 8,
+        "offset": 198116,
+        "scale": 0.0010151041205972433,
+        "shape": [
+          8
+        ]
+      },
+      "segmentation.weight": {
+        "length": 1376,
+        "offset": 196740,
+        "scale": 0.0048494720831513405,
+        "shape": [
+          8,
+          172
+        ]
+      },
+      "state.bias": {
+        "length": 6,
+        "offset": 245724,
+        "scale": 0.00034476048313081264,
+        "shape": [
+          6
+        ]
+      },
+      "state.weight": {
+        "length": 1032,
+        "offset": 244692,
+        "scale": 0.00715420488268137,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "voice.bias": {
+        "length": 5,
+        "offset": 243644,
+        "scale": 0.000998991192318499,
+        "shape": [
+          5
+        ]
+      },
+      "voice.weight": {
+        "length": 860,
+        "offset": 242784,
+        "scale": 0.004018800333142281,
+        "shape": [
+          5,
+          172
+        ]
+      }
+    },
+    "trainingParameters": 245699,
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "vocabulary": [
+      "__pad__",
+      "ء",
+      "آ",
+      "أ",
+      "ؤ",
+      "إ",
+      "ئ",
+      "ا",
+      "ب",
+      "ة",
+      "ت",
+      "ث",
+      "ج",
+      "ح",
+      "خ",
+      "د",
+      "ذ",
+      "ر",
+      "ز",
+      "س",
+      "ش",
+      "ص",
+      "ض",
+      "ط",
+      "ظ",
+      "ع",
+      "غ",
+      "ف",
+      "ق",
+      "ك",
+      "ل",
+      "م",
+      "ن",
+      "ه",
+      "و",
+      "ي",
+      "ى"
+    ],
+    "width": 172
+  },
+  "data": {
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "goldDigest": null,
+    "performanceCorpusDigest": "b66439ceb76ed6f901e85fade62a0758410ba0d60c9cf4787e4d334cc2b9f98b",
+    "normalizationVersion": "arabic-v1"
+  },
+  "protocol": {
+    "coldRuns": 3,
+    "warmups": 3,
+    "iterations": 5,
+    "repeats": 1,
+    "seed": 42,
+    "mode": "smoke",
+    "releaseQualifying": false,
+    "shaderCompilationIncluded": true,
+    "cacheState": "Fresh contexts for cold runs; HTTP no-store; driver shader cache not controlled",
+    "networkScope": "Loopback static server, not internet transfer latency",
+    "devToolsOpen": false,
+    "warmupStabilityAssessed": false,
+    "warmupStabilityPassed": false,
+    "warmupRule": "Two consecutive windows of 10 calls: median shift <=5%, CV <=10%; minimum20, maximum100",
+    "workloadSubset": true,
+    "availableWorkloads": [
+      "single-short",
+      "single-median",
+      "single-clitic",
+      "batch-8",
+      "batch-32",
+      "batch-128",
+      "batch-512",
+      "batch-2048",
+      "uniform-128",
+      "maximum-shape"
+    ],
+    "workloadRotation": "Seeded shuffle per repeat; backend order alternates across repeats"
+  },
+  "cold": {
+    "raw": {
+      "webgpu": [
+        {
+          "run": 0,
+          "importMs": 4.159999966621399,
+          "apiMs": 37.185000002384186,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 2.4699999690055847,
+              "transferBytes": 22045,
+              "encodedBodyBytes": 21745,
+              "decodedBodyBytes": 21745
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 5.929999947547913,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 41.344999969005585
+        },
+        {
+          "run": 1,
+          "importMs": 5.660000026226044,
+          "apiMs": 37.91499996185303,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 3.550000011920929,
+              "transferBytes": 22045,
+              "encodedBodyBytes": 21745,
+              "decodedBodyBytes": 21745
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 2.774999976158142,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 43.57499998807907
+        },
+        {
+          "run": 2,
+          "importMs": 4.639999985694885,
+          "apiMs": 43.485000014305115,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 2.1800000071525574,
+              "transferBytes": 22045,
+              "encodedBodyBytes": 21745,
+              "decodedBodyBytes": 21745
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 6.025000035762787,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 48.125
+        }
+      ],
+      "cpu": [
+        {
+          "run": 0,
+          "importMs": 3.915000021457672,
+          "apiMs": 47.594999969005585,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 2.0899999737739563,
+              "transferBytes": 22045,
+              "encodedBodyBytes": 21745,
+              "decodedBodyBytes": 21745
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 2.365000009536743,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 51.50999999046326
+        },
+        {
+          "run": 1,
+          "importMs": 3.1299999952316284,
+          "apiMs": 44.8299999833107,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 1.7100000381469727,
+              "transferBytes": 22045,
+              "encodedBodyBytes": 21745,
+              "decodedBodyBytes": 21745
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 2.1049999594688416,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 47.95999997854233
+        },
+        {
+          "run": 2,
+          "importMs": 4.189999997615814,
+          "apiMs": 39.85499995946884,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 1.8550000190734863,
+              "transferBytes": 22045,
+              "encodedBodyBytes": 21745,
+              "decodedBodyBytes": 21745
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 4.155000030994415,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 44.044999957084656
+        }
+      ]
+    },
+    "summary": {
+      "webgpu": {
+        "apiMs": {
+          "count": 3,
+          "p50": 37.91499996185303,
+          "p95": 42.92800000905991,
+          "mean": 39.52833332618078,
+          "standardDeviation": 2.8136137434375206,
+          "min": 37.185000002384186,
+          "max": 43.485000014305115
+        },
+        "moduleImportMs": {
+          "count": 3,
+          "p50": 4.639999985694885,
+          "p95": 5.558000022172928,
+          "mean": 4.819999992847443,
+          "standardDeviation": 0.6254598556980163,
+          "min": 4.159999966621399,
+          "max": 5.660000026226044
+        },
+        "totalMs": {
+          "count": 3,
+          "p50": 43.57499998807907,
+          "p95": 47.66999999880791,
+          "mean": 44.34833331902822,
+          "standardDeviation": 2.821422033377111,
+          "min": 41.344999969005585,
+          "max": 48.125
+        }
+      },
+      "cpu": {
+        "apiMs": {
+          "count": 3,
+          "p50": 44.8299999833107,
+          "p95": 47.31849997043609,
+          "mean": 44.093333303928375,
+          "standardDeviation": 3.2024894883294914,
+          "min": 39.85499995946884,
+          "max": 47.594999969005585
+        },
+        "moduleImportMs": {
+          "count": 3,
+          "p50": 3.915000021457672,
+          "p95": 4.1625,
+          "mean": 3.7450000047683716,
+          "standardDeviation": 0.44912879037783826,
+          "min": 3.1299999952316284,
+          "max": 4.189999997615814
+        },
+        "totalMs": {
+          "count": 3,
+          "p50": 47.95999997854233,
+          "p95": 51.15499998927116,
+          "mean": 47.83833330869675,
+          "standardDeviation": 3.0487875686901194,
+          "min": 44.044999957084656,
+          "max": 51.50999999046326
+        }
+      }
+    }
+  },
+  "warm": [
+    {
+      "id": "single-short",
+      "batch": 1,
+      "characters": 3,
+      "lengthClass": 8,
+      "paddingWaste": 0.625,
+      "synthetic": false,
+      "inputDigest": "9fe4329cc3464629f03b2b1f8e95020f29cfce8a204b6576c142dab13a0d913e",
+      "webgpu": {
+        "count": 5,
+        "p50": 1.5300000309944153,
+        "p95": 2.040999984741211,
+        "mean": 1.6620000004768372,
+        "standardDeviation": 0.24553206564180488,
+        "min": 1.5,
+        "max": 2.1449999809265137
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 1.3199999928474426,
+        "p95": 1.5720000028610228,
+        "mean": 1.3850000023841857,
+        "standardDeviation": 0.12144957752413454,
+        "min": 1.3050000071525574,
+        "max": 1.625
+      },
+      "speedup": 0.862745075887035,
+      "webgpuWordsPerSecond": 653.5947580014462,
+      "webgpuCharactersPerSecond": 1960.7842740043386,
+      "outputHashesMatch": true,
+      "outputHash": "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583"
+    },
+    {
+      "id": "batch-8",
+      "batch": 8,
+      "characters": 37,
+      "lengthClass": 8,
+      "paddingWaste": 0.421875,
+      "synthetic": false,
+      "inputDigest": "618133dd0aa5fb020be0e6d06776086c12dbfb4216707273b8124b39e7edc5eb",
+      "webgpu": {
+        "count": 5,
+        "p50": 7.5450000166893005,
+        "p95": 7.819999992847443,
+        "mean": 7.558000004291534,
+        "standardDeviation": 0.2271695397667152,
+        "min": 7.259999990463257,
+        "max": 7.824999988079071
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 13.865000009536743,
+        "p95": 15.605999970436097,
+        "mean": 14.302999985218047,
+        "standardDeviation": 0.846620330783591,
+        "min": 13.729999959468842,
+        "max": 15.974999964237213
+      },
+      "speedup": 1.8376408189354279,
+      "webgpuWordsPerSecond": 1060.304835295461,
+      "webgpuCharactersPerSecond": 4903.909863241507,
+      "outputHashesMatch": true,
+      "outputHash": "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e"
+    },
+    {
+      "id": "batch-128",
+      "batch": 128,
+      "characters": 673,
+      "lengthClass": 16,
+      "paddingWaste": 0.67138671875,
+      "synthetic": false,
+      "inputDigest": "4732ea33587864dd9ffacbd0f6bf1980cbf34d8633d71df6b609e83cbbde1776",
+      "webgpu": {
+        "count": 5,
+        "p50": 112.94999998807907,
+        "p95": 116.7070000052452,
+        "mean": 110.00000001192093,
+        "standardDeviation": 6.960850522736143,
+        "min": 97.43500000238419,
+        "max": 117.31499999761581
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 242.9650000333786,
+        "p95": 256.62900000810623,
+        "mean": 244.77100001573564,
+        "standardDeviation": 9.590224910540378,
+        "min": 229.9650000333786,
+        "max": 257.74000000953674
+      },
+      "speedup": 2.15108455120869,
+      "webgpuWordsPerSecond": 1133.2447987030484,
+      "webgpuCharactersPerSecond": 5958.388668180873,
+      "outputHashesMatch": true,
+      "outputHash": "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966"
+    }
+  ],
+  "raw": [
+    {
+      "repeat": 0,
+      "workload": "batch-128",
+      "backend": "webgpu",
+      "samples": [
+        112.94999998807907,
+        114.27500003576279,
+        117.31499999761581,
+        97.43500000238419,
+        108.02500003576279
+      ],
+      "hashes": [
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966",
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966",
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966",
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966",
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966"
+      ],
+      "warmupSamples": [
+        126.66000002622604,
+        116.32499998807907,
+        117.9549999833107
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-128",
+      "backend": "cpu",
+      "samples": [
+        229.9650000333786,
+        242.9650000333786,
+        241,
+        257.74000000953674,
+        252.1850000023842
+      ],
+      "hashes": [
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966",
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966",
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966",
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966",
+        "c78cbfcb3910aa4517b9f9c264ab95568bbba317aee152ea99bc95721fbab966"
+      ],
+      "warmupSamples": [
+        264.8149999976158,
+        269.42500001192093,
+        248.53000003099442
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "single-short",
+      "backend": "webgpu",
+      "samples": [
+        2.1449999809265137,
+        1.5099999904632568,
+        1.5,
+        1.5300000309944153,
+        1.625
+      ],
+      "hashes": [
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583"
+      ],
+      "warmupSamples": [
+        6.110000014305115,
+        1.9449999928474426,
+        1.7149999737739563
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "single-short",
+      "backend": "cpu",
+      "samples": [
+        1.3199999928474426,
+        1.625,
+        1.3600000143051147,
+        1.3050000071525574,
+        1.3149999976158142
+      ],
+      "hashes": [
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583"
+      ],
+      "warmupSamples": [
+        1.4399999976158142,
+        1.3199999928474426,
+        1.35999995470047
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-8",
+      "backend": "webgpu",
+      "samples": [
+        7.800000011920929,
+        7.5450000166893005,
+        7.360000014305115,
+        7.259999990463257,
+        7.824999988079071
+      ],
+      "hashes": [
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e",
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e",
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e",
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e",
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e"
+      ],
+      "warmupSamples": [
+        8.060000002384186,
+        8.77999997138977,
+        7.870000004768372
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-8",
+      "backend": "cpu",
+      "samples": [
+        13.865000009536743,
+        13.814999997615814,
+        13.729999959468842,
+        15.974999964237213,
+        14.129999995231628
+      ],
+      "hashes": [
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e",
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e",
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e",
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e",
+        "d3c871e5053c27c12623e9a784f072abfd07abe207f51a19bbe2c2657febd44e"
+      ],
+      "warmupSamples": [
+        15.475000023841858,
+        14.039999961853027,
+        14.125
+      ],
+      "stable": false
+    }
+  ],
+  "diagnostic": {
+    "backend": "webgpu",
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "device": null,
+      "description": null,
+      "isFallbackAdapter": false
+    },
+    "pipelineCount": 6,
+    "internalBatchLimit": 256,
+    "residentGPUBytes": 12814328,
+    "peakAllocatedGPUBytes": 12814328,
+    "initialization": {
+      "deviceAcquisitionMs": 0.7599999904632568,
+      "shaderCompilationMs": 1.4100000262260437,
+      "weightUploadMs": 0.25
+    },
+    "lastTimings": {
+      "packingMs": 0.2449999451637268,
+      "inputUploadMs": 0.3000001311302185,
+      "encodingMs": 0.6050000190734863,
+      "readbackAndExecutionMs": 757.379999935627,
+      "backendTotalMs": 759.4849999547005
+    }
+  },
+  "parityArtifact": "parity-2026-09-11T201218188Z.json",
+  "errors": [],
+  "limitations": [
+    "One headless Chromium browser on one integrated GPU",
+    "Independent discrete GPU, Android, Safari and Firefox measurements are unavailable",
+    "Warmup stability was not established for all workload/backend pairs",
+    "Only the explicitly selected workload subset was timed",
+    "Reference CPU is straightforward JavaScript, not optimized WASM",
+    "Timing runs are experimental; a controlled release-device run is still required"
+  ]
+}
