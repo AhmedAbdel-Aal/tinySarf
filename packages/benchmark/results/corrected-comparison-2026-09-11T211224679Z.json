@@ -1,0 +1,3652 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-09-11T211224679Z",
+  "git": {
+    "commit": "ed05bed7990e01cb4237f9cb022fb79fad6c3277",
+    "dirty": false
+  },
+  "createdAt": "2026-09-11T21:12:24.689Z",
+  "commands": [
+    "/Users/ahmed/.hermes/node/bin/node /Users/ahmed/Desktop/tinySarf/packages/benchmark/src/compare.ts --local --baseline packages/benchmark/results/comparison-correctness-2026-09-11T210747647Z.json --candidate packages/benchmark/results/comparison-correctness-2026-09-11T210922607Z.json"
+  ],
+  "environment": {
+    "os": "darwin 23.5.0",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "ramBytes": 8589934592,
+    "node": "v22.23.0",
+    "browser": null,
+    "webgpuAdapter": null
+  },
+  "kind": "corrected-comparison",
+  "status": "experimental-unpromoted",
+  "model": {
+    "dilations": [
+      1,
+      2,
+      4
+    ],
+    "embedding": 32,
+    "floatBinarySha256": "6ba7e8cb275d3897c1fe74abb3d3c9326b00a4e1558fe4bf964a784e28f96d2b",
+    "floatSha256": "2e580049f2b492843e5248f4423e03d2eaf27ee5352e08b4b4d0cebf936f5386",
+    "format": "cnn-v1",
+    "id": "20260911T210717.673959Z-250000-corrected-v1",
+    "labels": {
+      "heads": {
+        "aspect": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "perfective",
+          "imperfective",
+          "imperative"
+        ],
+        "case": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "nominative",
+          "accusative",
+          "genitive"
+        ],
+        "gender": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "masculine",
+          "feminine"
+        ],
+        "mood": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "indicative",
+          "subjunctive",
+          "jussive"
+        ],
+        "number": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "singular",
+          "dual",
+          "plural"
+        ],
+        "pattern": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "فَعَل",
+          "فَعْل",
+          "فاعِل",
+          "فَعَّل",
+          "فَعِيل",
+          "أَفْعَل",
+          "مَفْعُول",
+          "فَعّال",
+          "فِعال",
+          "تَفْعِيل",
+          "فُعْل",
+          "فُعُول",
+          "مَفاعِل",
+          "مُفَعَّل",
+          "فِعْل",
+          "مُفَعِّل",
+          "تَفَعُّل",
+          "ٱِفْتِعال",
+          "فَعالِل",
+          "مُفْعِل",
+          "فَعال",
+          "فاعَل",
+          "مَفْعَل",
+          "فَعائِل",
+          "مُتَفَعِّل",
+          "فَعْلَل",
+          "فَواعِل",
+          "تَفَعّل",
+          "مُفْتَعِل",
+          "فَعالِيل",
+          "فُعّال",
+          "مُفاعِل",
+          "فَعِل",
+          "فَعُول",
+          "فُعال",
+          "فِعالِيّ",
+          "مِفْعَل",
+          "مُفْعَل",
+          "مُفْتَعَل",
+          "مُتَفاعِل",
+          "فِعَل",
+          "فَعْلِيّ",
+          "فَعْلاء",
+          "ٱِسْتِفْعال",
+          "ٱِنْفِعال",
+          "مِفْعال",
+          "فُعَلاء",
+          "ٱِفْتَعَل",
+          "فَعَلِيّ",
+          "مَفاعِيل",
+          "فاعِلِيّ",
+          "فُعْلان",
+          "فَعِيلِيّ",
+          "فُعُل",
+          "فُعْلِيّ",
+          "تَفاعُل",
+          "فُعَل",
+          "فِعْلان",
+          "فِعْلِيّ",
+          "فاعُول",
+          "فُعْلُل",
+          "فَواعِيل",
+          "مُسْتَفْعِل",
+          "تَفاعَل"
+        ],
+        "person": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "first",
+          "second",
+          "third"
+        ],
+        "pos": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "noun",
+          "proper_noun",
+          "numeral",
+          "adjective",
+          "verb",
+          "adverb",
+          "preposition",
+          "conjunction",
+          "interjection",
+          "pronoun",
+          "particle"
+        ],
+        "root0": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root1": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root2": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root3": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "state": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "definite",
+          "indefinite",
+          "construct"
+        ],
+        "voice": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "active",
+          "passive"
+        ]
+      },
+      "segmentation": [
+        "conjunction",
+        "particle",
+        "preposition",
+        "article",
+        "stem",
+        "derivational_suffix",
+        "inflectional_suffix",
+        "pronominal_enclitic"
+      ]
+    },
+    "maxLength": 32,
+    "normalizationVersion": "arabic-v1",
+    "packedWeightsBytes": 245732,
+    "quantization": "symmetric-per-tensor-int8",
+    "reachableWeights": 245667,
+    "schemaVersion": 1,
+    "sha256": "4494ca09b099ae35ff41a100dfc54aece04d1f23c3ed4e7d83a23a600d03a996",
+    "status": "experimental-unpromoted",
+    "tensors": {
+      "aspect.bias": {
+        "length": 6,
+        "offset": 241736,
+        "scale": 0.0008851454476825893,
+        "shape": [
+          6
+        ]
+      },
+      "aspect.weight": {
+        "length": 1032,
+        "offset": 240704,
+        "scale": 0.0029900106601417065,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "case.bias": {
+        "length": 6,
+        "offset": 244684,
+        "scale": 0.000756130728404969,
+        "shape": [
+          6
+        ]
+      },
+      "case.weight": {
+        "length": 1032,
+        "offset": 243652,
+        "scale": 0.004657808691263199,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "conv0.bias": {
+        "length": 172,
+        "offset": 18720,
+        "scale": 0.00145038275513798,
+        "shape": [
+          172
+        ]
+      },
+      "conv0.weight": {
+        "length": 16512,
+        "offset": 2208,
+        "scale": 0.004178740084171295,
+        "shape": [
+          172,
+          3,
+          32
+        ]
+      },
+      "conv1.bias": {
+        "length": 172,
+        "offset": 107644,
+        "scale": 0.0007936385809443891,
+        "shape": [
+          172
+        ]
+      },
+      "conv1.weight": {
+        "length": 88752,
+        "offset": 18892,
+        "scale": 0.003803195431828499,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "conv2.bias": {
+        "length": 172,
+        "offset": 196568,
+        "scale": 0.0011161725269630551,
+        "shape": [
+          172
+        ]
+      },
+      "conv2.weight": {
+        "length": 88752,
+        "offset": 107816,
+        "scale": 0.004731875844299793,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "embedding": {
+        "length": 1184,
+        "offset": 0,
+        "scale": 0.025763679295778275,
+        "shape": [
+          37,
+          32
+        ]
+      },
+      "gender.bias": {
+        "length": 5,
+        "offset": 239656,
+        "scale": 0.0008867537835612893,
+        "shape": [
+          5
+        ]
+      },
+      "gender.weight": {
+        "length": 860,
+        "offset": 238796,
+        "scale": 0.003509695176035166,
+        "shape": [
+          5,
+          172
+        ]
+      },
+      "mood.bias": {
+        "length": 6,
+        "offset": 242776,
+        "scale": 0.0005012069595977664,
+        "shape": [
+          6
+        ]
+      },
+      "mood.weight": {
+        "length": 1032,
+        "offset": 241744,
+        "scale": 0.00235217553563416,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "number.bias": {
+        "length": 6,
+        "offset": 240696,
+        "scale": 0.0008618260617367923,
+        "shape": [
+          6
+        ]
+      },
+      "number.weight": {
+        "length": 1032,
+        "offset": 239664,
+        "scale": 0.0033536534756422043,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pattern.bias": {
+        "length": 67,
+        "offset": 237688,
+        "scale": 0.0014634296530857682,
+        "shape": [
+          67
+        ]
+      },
+      "pattern.weight": {
+        "length": 11524,
+        "offset": 226164,
+        "scale": 0.00490389671176672,
+        "shape": [
+          67,
+          172
+        ]
+      },
+      "person.bias": {
+        "length": 6,
+        "offset": 238788,
+        "scale": 0.0006377857062034309,
+        "shape": [
+          6
+        ]
+      },
+      "person.weight": {
+        "length": 1032,
+        "offset": 237756,
+        "scale": 0.002789470599964261,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pos.bias": {
+        "length": 14,
+        "offset": 200532,
+        "scale": 0.0011787738185375929,
+        "shape": [
+          14
+        ]
+      },
+      "pos.weight": {
+        "length": 2408,
+        "offset": 198124,
+        "scale": 0.007284455932676792,
+        "shape": [
+          14,
+          172
+        ]
+      },
+      "position": {
+        "length": 1024,
+        "offset": 1184,
+        "scale": 0.029621610417962074,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      "root0.bias": {
+        "length": 37,
+        "offset": 206912,
+        "scale": 0.0014105555601418018,
+        "shape": [
+          37
+        ]
+      },
+      "root0.weight": {
+        "length": 6364,
+        "offset": 200548,
+        "scale": 0.003804976586252451,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root1.bias": {
+        "length": 37,
+        "offset": 213316,
+        "scale": 0.0009465493494644761,
+        "shape": [
+          37
+        ]
+      },
+      "root1.weight": {
+        "length": 6364,
+        "offset": 206952,
+        "scale": 0.004401290789246559,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root2.bias": {
+        "length": 37,
+        "offset": 219720,
+        "scale": 0.0009221996297128499,
+        "shape": [
+          37
+        ]
+      },
+      "root2.weight": {
+        "length": 6364,
+        "offset": 213356,
+        "scale": 0.003490143222734332,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root3.bias": {
+        "length": 37,
+        "offset": 226124,
+        "scale": 0.0008091398631222546,
+        "shape": [
+          37
+        ]
+      },
+      "root3.weight": {
+        "length": 6364,
+        "offset": 219760,
+        "scale": 0.004261909984052181,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "segmentation.bias": {
+        "length": 8,
+        "offset": 198116,
+        "scale": 0.0007566228159703314,
+        "shape": [
+          8
+        ]
+      },
+      "segmentation.weight": {
+        "length": 1376,
+        "offset": 196740,
+        "scale": 0.002984024118632078,
+        "shape": [
+          8,
+          172
+        ]
+      },
+      "state.bias": {
+        "length": 6,
+        "offset": 245724,
+        "scale": 0.0003972646954935044,
+        "shape": [
+          6
+        ]
+      },
+      "state.weight": {
+        "length": 1032,
+        "offset": 244692,
+        "scale": 0.004853180143982172,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "voice.bias": {
+        "length": 5,
+        "offset": 243644,
+        "scale": 0.0007275795796886086,
+        "shape": [
+          5
+        ]
+      },
+      "voice.weight": {
+        "length": 860,
+        "offset": 242784,
+        "scale": 0.0027596864383667707,
+        "shape": [
+          5,
+          172
+        ]
+      }
+    },
+    "trainingParameters": 245699,
+    "verificationDigest": "2be66495b748add4ba7190823adc33e468e8873f5cc162128bbd9d3c3b43a5cc",
+    "vocabulary": [
+      "__pad__",
+      "ء",
+      "آ",
+      "أ",
+      "ؤ",
+      "إ",
+      "ئ",
+      "ا",
+      "ب",
+      "ة",
+      "ت",
+      "ث",
+      "ج",
+      "ح",
+      "خ",
+      "د",
+      "ذ",
+      "ر",
+      "ز",
+      "س",
+      "ش",
+      "ص",
+      "ض",
+      "ط",
+      "ظ",
+      "ع",
+      "غ",
+      "ف",
+      "ق",
+      "ك",
+      "ل",
+      "م",
+      "ن",
+      "ه",
+      "و",
+      "ي",
+      "ى"
+    ],
+    "width": 172
+  },
+  "baselineModel": {
+    "dilations": [
+      1,
+      2,
+      4
+    ],
+    "embedding": 32,
+    "floatBinarySha256": "816422af1132ca566d303dd1cb39025375181210a91e923f7da4571e4329dabd",
+    "floatSha256": "e619078e5b4c29f683c3e60b8922e2dee206376a25e4faa18afebd64c505d568",
+    "format": "cnn-v1",
+    "id": "20260911T191243.077466Z-250000",
+    "labels": {
+      "heads": {
+        "aspect": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "perfective",
+          "imperfective",
+          "imperative"
+        ],
+        "case": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "nominative",
+          "accusative",
+          "genitive"
+        ],
+        "gender": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "masculine",
+          "feminine"
+        ],
+        "mood": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "indicative",
+          "subjunctive",
+          "jussive"
+        ],
+        "number": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "singular",
+          "dual",
+          "plural"
+        ],
+        "pattern": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "فَعَل",
+          "فَعْل",
+          "فاعِل",
+          "فَعَّل",
+          "أَفْعَل",
+          "فَعِيل",
+          "ٌطWص+ِيّ",
+          "فَعّال",
+          "مَفْعُول",
+          "فِعال",
+          "فُعْل",
+          "تَفْعِيل",
+          "فُعُول",
+          "فِعْل",
+          "مَفاعِل",
+          "مُفَعَّل",
+          "فاعَل",
+          "تَفَعُّل",
+          "مُفَعِّل",
+          "ٱِفْتِعال",
+          "فَعال",
+          "فَعالِل",
+          "مُفْعِل",
+          "فَعْلَل",
+          "فَعائِل",
+          "مَفْعَل",
+          "تَفَعّل",
+          "مُتَفَعِّل",
+          "فَواعِل",
+          "فَعِل",
+          "مُفْتَعِل",
+          "فُعّال",
+          "فَعالِيل",
+          "مُفاعِل",
+          "فَعُول",
+          "فُعال",
+          "فِعال+ِيّ",
+          "فَعْل+ِيّ",
+          "فِعَل",
+          "مِفْعَل",
+          "فَعْلاء",
+          "مُفْعَل",
+          "ٱِفْتَعَل",
+          "مُفْتَعَل",
+          "مُتَفاعِل",
+          "فَعَل+ِيّ",
+          "ٱِسْتِفْعال",
+          "ٱِنْفِعال",
+          "مِفْعال",
+          "فُعَلاء",
+          "تَفاعُل",
+          "مَفاعِيل",
+          "فُعْل+ِيّ",
+          "فُعَل",
+          "فاعِل+ِيّ",
+          "فِعْل+ِيّ",
+          "فُعْلان",
+          "فَعِيل+ِيّ",
+          "فُعُل",
+          "فِعْلان",
+          "مَفْعِل",
+          "ٱِسْتَفْعَل",
+          "فاعُول",
+          "تَفاعَل"
+        ],
+        "person": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "first",
+          "second",
+          "third"
+        ],
+        "pos": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "noun",
+          "proper_noun",
+          "numeral",
+          "adjective",
+          "verb",
+          "adverb",
+          "preposition",
+          "conjunction",
+          "interjection",
+          "pronoun",
+          "particle"
+        ],
+        "root0": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root1": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root2": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root3": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "state": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "definite",
+          "indefinite",
+          "construct"
+        ],
+        "voice": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "active",
+          "passive"
+        ]
+      },
+      "segmentation": [
+        "conjunction",
+        "particle",
+        "preposition",
+        "article",
+        "stem",
+        "derivational_suffix",
+        "inflectional_suffix",
+        "pronominal_enclitic"
+      ]
+    },
+    "maxLength": 32,
+    "normalizationVersion": "arabic-v1",
+    "packedWeightsBytes": 245732,
+    "quantization": "symmetric-per-tensor-int8",
+    "reachableWeights": 245667,
+    "schemaVersion": 1,
+    "sha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
+    "status": "experimental-unpromoted",
+    "tensors": {
+      "aspect.bias": {
+        "length": 6,
+        "offset": 241736,
+        "scale": 0.0008982828003354371,
+        "shape": [
+          6
+        ]
+      },
+      "aspect.weight": {
+        "length": 1032,
+        "offset": 240704,
+        "scale": 0.00455059576779604,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "case.bias": {
+        "length": 6,
+        "offset": 244684,
+        "scale": 0.0008581824949942529,
+        "shape": [
+          6
+        ]
+      },
+      "case.weight": {
+        "length": 1032,
+        "offset": 243652,
+        "scale": 0.007890579290688038,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "conv0.bias": {
+        "length": 172,
+        "offset": 18720,
+        "scale": 0.0018964497139677405,
+        "shape": [
+          172
+        ]
+      },
+      "conv0.weight": {
+        "length": 16512,
+        "offset": 2208,
+        "scale": 0.0043164584785699844,
+        "shape": [
+          172,
+          3,
+          32
+        ]
+      },
+      "conv1.bias": {
+        "length": 172,
+        "offset": 107644,
+        "scale": 0.0006516575231216848,
+        "shape": [
+          172
+        ]
+      },
+      "conv1.weight": {
+        "length": 88752,
+        "offset": 18892,
+        "scale": 0.004955793730914593,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "conv2.bias": {
+        "length": 172,
+        "offset": 196568,
+        "scale": 0.0011922874255105853,
+        "shape": [
+          172
+        ]
+      },
+      "conv2.weight": {
+        "length": 88752,
+        "offset": 107816,
+        "scale": 0.005055295303463936,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "embedding": {
+        "length": 1184,
+        "offset": 0,
+        "scale": 0.02600051648914814,
+        "shape": [
+          37,
+          32
+        ]
+      },
+      "gender.bias": {
+        "length": 5,
+        "offset": 239656,
+        "scale": 0.00122736650519073,
+        "shape": [
+          5
+        ]
+      },
+      "gender.weight": {
+        "length": 860,
+        "offset": 238796,
+        "scale": 0.004492000211030245,
+        "shape": [
+          5,
+          172
+        ]
+      },
+      "mood.bias": {
+        "length": 6,
+        "offset": 242776,
+        "scale": 0.0004823975032195449,
+        "shape": [
+          6
+        ]
+      },
+      "mood.weight": {
+        "length": 1032,
+        "offset": 241744,
+        "scale": 0.004531926475465298,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "number.bias": {
+        "length": 6,
+        "offset": 240696,
+        "scale": 0.001153977820649743,
+        "shape": [
+          6
+        ]
+      },
+      "number.weight": {
+        "length": 1032,
+        "offset": 239664,
+        "scale": 0.004564363043755293,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pattern.bias": {
+        "length": 67,
+        "offset": 237688,
+        "scale": 0.001367977587506175,
+        "shape": [
+          67
+        ]
+      },
+      "pattern.weight": {
+        "length": 11524,
+        "offset": 226164,
+        "scale": 0.008518285118043423,
+        "shape": [
+          67,
+          172
+        ]
+      },
+      "person.bias": {
+        "length": 6,
+        "offset": 238788,
+        "scale": 0.0006815318483859301,
+        "shape": [
+          6
+        ]
+      },
+      "person.weight": {
+        "length": 1032,
+        "offset": 237756,
+        "scale": 0.0050756367854774,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pos.bias": {
+        "length": 14,
+        "offset": 200532,
+        "scale": 0.0013052545255050063,
+        "shape": [
+          14
+        ]
+      },
+      "pos.weight": {
+        "length": 2408,
+        "offset": 198124,
+        "scale": 0.005701378453522921,
+        "shape": [
+          14,
+          172
+        ]
+      },
+      "position": {
+        "length": 1024,
+        "offset": 1184,
+        "scale": 0.029511356726288795,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      "root0.bias": {
+        "length": 37,
+        "offset": 206912,
+        "scale": 0.0012769013410434127,
+        "shape": [
+          37
+        ]
+      },
+      "root0.weight": {
+        "length": 6364,
+        "offset": 200548,
+        "scale": 0.005650089122354984,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root1.bias": {
+        "length": 37,
+        "offset": 213316,
+        "scale": 0.0011855042539536953,
+        "shape": [
+          37
+        ]
+      },
+      "root1.weight": {
+        "length": 6364,
+        "offset": 206952,
+        "scale": 0.005082467570900917,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root2.bias": {
+        "length": 37,
+        "offset": 219720,
+        "scale": 0.0011456395732238889,
+        "shape": [
+          37
+        ]
+      },
+      "root2.weight": {
+        "length": 6364,
+        "offset": 213356,
+        "scale": 0.004992933943867683,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root3.bias": {
+        "length": 37,
+        "offset": 226124,
+        "scale": 0.0010689018527045846,
+        "shape": [
+          37
+        ]
+      },
+      "root3.weight": {
+        "length": 6364,
+        "offset": 219760,
+        "scale": 0.007890173234045506,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "segmentation.bias": {
+        "length": 8,
+        "offset": 198116,
+        "scale": 0.0010151041205972433,
+        "shape": [
+          8
+        ]
+      },
+      "segmentation.weight": {
+        "length": 1376,
+        "offset": 196740,
+        "scale": 0.0048494720831513405,
+        "shape": [
+          8,
+          172
+        ]
+      },
+      "state.bias": {
+        "length": 6,
+        "offset": 245724,
+        "scale": 0.00034476048313081264,
+        "shape": [
+          6
+        ]
+      },
+      "state.weight": {
+        "length": 1032,
+        "offset": 244692,
+        "scale": 0.00715420488268137,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "voice.bias": {
+        "length": 5,
+        "offset": 243644,
+        "scale": 0.000998991192318499,
+        "shape": [
+          5
+        ]
+      },
+      "voice.weight": {
+        "length": 860,
+        "offset": 242784,
+        "scale": 0.004018800333142281,
+        "shape": [
+          5,
+          172
+        ]
+      }
+    },
+    "trainingParameters": 245699,
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "vocabulary": [
+      "__pad__",
+      "ء",
+      "آ",
+      "أ",
+      "ؤ",
+      "إ",
+      "ئ",
+      "ا",
+      "ب",
+      "ة",
+      "ت",
+      "ث",
+      "ج",
+      "ح",
+      "خ",
+      "د",
+      "ذ",
+      "ر",
+      "ز",
+      "س",
+      "ش",
+      "ص",
+      "ض",
+      "ط",
+      "ظ",
+      "ع",
+      "غ",
+      "ف",
+      "ق",
+      "ك",
+      "ل",
+      "م",
+      "ن",
+      "ه",
+      "و",
+      "ي",
+      "ى"
+    ],
+    "width": 172
+  },
+  "runtime": {
+    "sha256": "83e148332947365172b88b8ceddc300e813d18a93497469ca97ddd5e4670f85f"
+  },
+  "data": {
+    "datasetId": "teacher-corrected-pilot-v1",
+    "verificationDigest": "2be66495b748add4ba7190823adc33e468e8873f5cc162128bbd9d3c3b43a5cc",
+    "checkpointVerificationDigest": "2be66495b748add4ba7190823adc33e468e8873f5cc162128bbd9d3c3b43a5cc",
+    "crossDatasetEvaluation": false,
+    "splitManifest": "packages/training/data/generated/teacher-corrected-pilot-v1/manifest.json",
+    "evaluationRole": "verification",
+    "evaluationDigest": "2be66495b748add4ba7190823adc33e468e8873f5cc162128bbd9d3c3b43a5cc",
+    "goldDigest": null,
+    "trainDigest": "08cd7e160e50a2e04cc6a34c8e6f775e0d1be5bbeb4275856ee7142020954edb",
+    "normalizationVersion": "arabic-v1"
+  },
+  "inputs": [
+    {
+      "file": "packages/benchmark/results/comparison-correctness-2026-09-11T210747647Z.json",
+      "sha256": "5dadf62fe607800402ceab6620224a5a8044436e9a5d73c14d9d4ed7953aeac6"
+    },
+    {
+      "file": "packages/benchmark/results/comparison-correctness-2026-09-11T210922607Z.json",
+      "sha256": "4c491e9f8fb6a2698a4a09c13410bb6cee1f7144707daef0f69dfb39126c7160"
+    }
+  ],
+  "metrics": {
+    "segmentationExactMatch": {
+      "baseline": {
+        "numerator": 921,
+        "denominator": 1094,
+        "value": 0.8418647166361974,
+        "ci95": {
+          "low": 0.819926873857404,
+          "high": 0.8638025594149908,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      },
+      "candidate": {
+        "numerator": 952,
+        "denominator": 1094,
+        "value": 0.870201096892139,
+        "ci95": {
+          "low": 0.850091407678245,
+          "high": 0.8893967093235832,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      }
+    },
+    "rootExactMatch": {
+      "baseline": {
+        "numerator": 496,
+        "denominator": 1094,
+        "value": 0.453382084095064,
+        "ci95": {
+          "low": 0.42413162705667273,
+          "high": 0.48171846435100546,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      },
+      "candidate": {
+        "numerator": 380,
+        "denominator": 1094,
+        "value": 0.3473491773308958,
+        "ci95": {
+          "low": 0.31992687385740404,
+          "high": 0.37477148080438755,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      }
+    },
+    "patternExactMatch": {
+      "baseline": {
+        "numerator": 698,
+        "denominator": 1094,
+        "value": 0.6380255941499086,
+        "ci95": {
+          "low": 0.6096892138939671,
+          "high": 0.6663619744058501,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      },
+      "candidate": {
+        "numerator": 659,
+        "denominator": 1094,
+        "value": 0.6023765996343693,
+        "ci95": {
+          "low": 0.573126142595978,
+          "high": 0.6316270566727605,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      }
+    },
+    "posAccuracy": {
+      "baseline": {
+        "numerator": 869,
+        "denominator": 1094,
+        "value": 0.7943327239488117,
+        "ci95": {
+          "low": 0.7705438756855576,
+          "high": 0.8171846435100548,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      },
+      "candidate": {
+        "numerator": 867,
+        "denominator": 1094,
+        "value": 0.7925045703839122,
+        "ci95": {
+          "low": 0.7687157221206582,
+          "high": 0.8153793418647165,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      }
+    },
+    "fullAnalysisTop1": {
+      "baseline": {
+        "numerator": 111,
+        "denominator": 1094,
+        "value": 0.10146252285191956,
+        "ci95": {
+          "low": 0.08409506398537477,
+          "high": 0.1206581352833638,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      },
+      "candidate": {
+        "numerator": 84,
+        "denominator": 1094,
+        "value": 0.07678244972577697,
+        "ci95": {
+          "low": 0.061243144424131625,
+          "high": 0.0923217550274223,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      }
+    },
+    "fullAnalysisTop3": {
+      "baseline": {
+        "numerator": 164,
+        "denominator": 1094,
+        "value": 0.14990859232175502,
+        "ci95": {
+          "low": 0.12888482632541134,
+          "high": 0.17093235831809872,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      },
+      "candidate": {
+        "numerator": 125,
+        "denominator": 1094,
+        "value": 0.11425959780621572,
+        "ci95": {
+          "low": 0.09506398537477148,
+          "high": 0.13254113345521024,
+          "seed": 42,
+          "resamples": 2000,
+          "unit": "word"
+        }
+      }
+    }
+  },
+  "deltas": {
+    "segmentationExactMatch": {
+      "difference": 0.0283363802559415,
+      "ci95": {
+        "low": 0.009140767824497258,
+        "high": 0.04661791590493602,
+        "seed": 42,
+        "resamples": 2000,
+        "unit": "word"
+      }
+    },
+    "rootExactMatch": {
+      "difference": -0.10603290676416818,
+      "ci95": {
+        "low": -0.1343692870201097,
+        "high": -0.07861060329067641,
+        "seed": 42,
+        "resamples": 2000,
+        "unit": "word"
+      }
+    },
+    "patternExactMatch": {
+      "difference": -0.0356489945155393,
+      "ci95": {
+        "low": -0.061243144424131625,
+        "high": -0.008226691042047532,
+        "seed": 42,
+        "resamples": 2000,
+        "unit": "word"
+      }
+    },
+    "posAccuracy": {
+      "difference": -0.0018281535648994515,
+      "ci95": {
+        "low": -0.024680073126142597,
+        "high": 0.020132541133455088,
+        "seed": 42,
+        "resamples": 2000,
+        "unit": "word"
+      }
+    },
+    "fullAnalysisTop1": {
+      "difference": -0.024680073126142597,
+      "ci95": {
+        "low": -0.04296160877513711,
+        "high": -0.007312614259597806,
+        "seed": 42,
+        "resamples": 2000,
+        "unit": "word"
+      }
+    },
+    "fullAnalysisTop3": {
+      "difference": -0.0356489945155393,
+      "ci95": {
+        "low": -0.05758683729433273,
+        "high": -0.014625228519195612,
+        "seed": 42,
+        "resamples": 2000,
+        "unit": "word"
+      }
+    }
+  },
+  "slices": {
+    "weak-root": {
+      "comparable": true,
+      "count": 427,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 356,
+            "denominator": 427,
+            "value": 0.8337236533957846
+          },
+          "candidate": {
+            "numerator": 364,
+            "denominator": 427,
+            "value": 0.8524590163934426
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 181,
+            "denominator": 427,
+            "value": 0.4238875878220141
+          },
+          "candidate": {
+            "numerator": 160,
+            "denominator": 427,
+            "value": 0.3747072599531616
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 286,
+            "denominator": 427,
+            "value": 0.6697892271662763
+          },
+          "candidate": {
+            "numerator": 273,
+            "denominator": 427,
+            "value": 0.639344262295082
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 337,
+            "denominator": 427,
+            "value": 0.7892271662763466
+          },
+          "candidate": {
+            "numerator": 333,
+            "denominator": 427,
+            "value": 0.7798594847775175
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 40,
+            "denominator": 427,
+            "value": 0.0936768149882904
+          },
+          "candidate": {
+            "numerator": 24,
+            "denominator": 427,
+            "value": 0.05620608899297424
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 60,
+            "denominator": 427,
+            "value": 0.1405152224824356
+          },
+          "candidate": {
+            "numerator": 41,
+            "denominator": 427,
+            "value": 0.09601873536299765
+          }
+        }
+      }
+    },
+    "hamzated": {
+      "comparable": true,
+      "count": 53,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 44,
+            "denominator": 53,
+            "value": 0.8301886792452831
+          },
+          "candidate": {
+            "numerator": 49,
+            "denominator": 53,
+            "value": 0.9245283018867925
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 14,
+            "denominator": 53,
+            "value": 0.2641509433962264
+          },
+          "candidate": {
+            "numerator": 13,
+            "denominator": 53,
+            "value": 0.24528301886792453
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 34,
+            "denominator": 53,
+            "value": 0.6415094339622641
+          },
+          "candidate": {
+            "numerator": 33,
+            "denominator": 53,
+            "value": 0.6226415094339622
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 42,
+            "denominator": 53,
+            "value": 0.7924528301886793
+          },
+          "candidate": {
+            "numerator": 45,
+            "denominator": 53,
+            "value": 0.8490566037735849
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 4,
+            "denominator": 53,
+            "value": 0.07547169811320754
+          },
+          "candidate": {
+            "numerator": 3,
+            "denominator": 53,
+            "value": 0.05660377358490566
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 7,
+            "denominator": 53,
+            "value": 0.1320754716981132
+          },
+          "candidate": {
+            "numerator": 3,
+            "denominator": 53,
+            "value": 0.05660377358490566
+          }
+        }
+      }
+    },
+    "seen-root": {
+      "comparable": true,
+      "count": 517,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 458,
+            "denominator": 517,
+            "value": 0.8858800773694391
+          },
+          "candidate": {
+            "numerator": 465,
+            "denominator": 517,
+            "value": 0.8994197292069632
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 247,
+            "denominator": 517,
+            "value": 0.47775628626692457
+          },
+          "candidate": {
+            "numerator": 179,
+            "denominator": 517,
+            "value": 0.34622823984526113
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 343,
+            "denominator": 517,
+            "value": 0.6634429400386848
+          },
+          "candidate": {
+            "numerator": 336,
+            "denominator": 517,
+            "value": 0.6499032882011605
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 436,
+            "denominator": 517,
+            "value": 0.8433268858800773
+          },
+          "candidate": {
+            "numerator": 437,
+            "denominator": 517,
+            "value": 0.8452611218568665
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 51,
+            "denominator": 517,
+            "value": 0.09864603481624758
+          },
+          "candidate": {
+            "numerator": 39,
+            "denominator": 517,
+            "value": 0.07543520309477757
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 82,
+            "denominator": 517,
+            "value": 0.15860735009671179
+          },
+          "candidate": {
+            "numerator": 57,
+            "denominator": 517,
+            "value": 0.1102514506769826
+          }
+        }
+      }
+    },
+    "unseen-lemma": {
+      "comparable": true,
+      "count": 1094,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 921,
+            "denominator": 1094,
+            "value": 0.8418647166361974
+          },
+          "candidate": {
+            "numerator": 952,
+            "denominator": 1094,
+            "value": 0.870201096892139
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 496,
+            "denominator": 1094,
+            "value": 0.453382084095064
+          },
+          "candidate": {
+            "numerator": 380,
+            "denominator": 1094,
+            "value": 0.3473491773308958
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 698,
+            "denominator": 1094,
+            "value": 0.6380255941499086
+          },
+          "candidate": {
+            "numerator": 659,
+            "denominator": 1094,
+            "value": 0.6023765996343693
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 869,
+            "denominator": 1094,
+            "value": 0.7943327239488117
+          },
+          "candidate": {
+            "numerator": 867,
+            "denominator": 1094,
+            "value": 0.7925045703839122
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 111,
+            "denominator": 1094,
+            "value": 0.10146252285191956
+          },
+          "candidate": {
+            "numerator": 84,
+            "denominator": 1094,
+            "value": 0.07678244972577697
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 164,
+            "denominator": 1094,
+            "value": 0.14990859232175502
+          },
+          "candidate": {
+            "numerator": 125,
+            "denominator": 1094,
+            "value": 0.11425959780621572
+          }
+        }
+      }
+    },
+    "non-null-root": {
+      "comparable": true,
+      "count": 964,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 827,
+            "denominator": 964,
+            "value": 0.8578838174273858
+          },
+          "candidate": {
+            "numerator": 858,
+            "denominator": 964,
+            "value": 0.8900414937759336
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 409,
+            "denominator": 964,
+            "value": 0.4242738589211618
+          },
+          "candidate": {
+            "numerator": 295,
+            "denominator": 964,
+            "value": 0.30601659751037347
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 585,
+            "denominator": 964,
+            "value": 0.6068464730290456
+          },
+          "candidate": {
+            "numerator": 560,
+            "denominator": 964,
+            "value": 0.5809128630705395
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 792,
+            "denominator": 964,
+            "value": 0.8215767634854771
+          },
+          "candidate": {
+            "numerator": 796,
+            "denominator": 964,
+            "value": 0.8257261410788381
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 81,
+            "denominator": 964,
+            "value": 0.08402489626556017
+          },
+          "candidate": {
+            "numerator": 57,
+            "denominator": 964,
+            "value": 0.05912863070539419
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 120,
+            "denominator": 964,
+            "value": 0.12448132780082988
+          },
+          "candidate": {
+            "numerator": 88,
+            "denominator": 964,
+            "value": 0.0912863070539419
+          }
+        }
+      }
+    },
+    "named-entity": {
+      "comparable": true,
+      "count": 378,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 302,
+            "denominator": 378,
+            "value": 0.798941798941799
+          },
+          "candidate": {
+            "numerator": 306,
+            "denominator": 378,
+            "value": 0.8095238095238095
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 248,
+            "denominator": 378,
+            "value": 0.656084656084656
+          },
+          "candidate": {
+            "numerator": 218,
+            "denominator": 378,
+            "value": 0.5767195767195767
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 317,
+            "denominator": 378,
+            "value": 0.8386243386243386
+          },
+          "candidate": {
+            "numerator": 292,
+            "denominator": 378,
+            "value": 0.7724867724867724
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 307,
+            "denominator": 378,
+            "value": 0.8121693121693122
+          },
+          "candidate": {
+            "numerator": 277,
+            "denominator": 378,
+            "value": 0.7328042328042328
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 54,
+            "denominator": 378,
+            "value": 0.14285714285714285
+          },
+          "candidate": {
+            "numerator": 38,
+            "denominator": 378,
+            "value": 0.10052910052910052
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 82,
+            "denominator": 378,
+            "value": 0.21693121693121692
+          },
+          "candidate": {
+            "numerator": 60,
+            "denominator": 378,
+            "value": 0.15873015873015872
+          }
+        }
+      }
+    },
+    "undiacritized": {
+      "comparable": true,
+      "count": 1094,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 921,
+            "denominator": 1094,
+            "value": 0.8418647166361974
+          },
+          "candidate": {
+            "numerator": 952,
+            "denominator": 1094,
+            "value": 0.870201096892139
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 496,
+            "denominator": 1094,
+            "value": 0.453382084095064
+          },
+          "candidate": {
+            "numerator": 380,
+            "denominator": 1094,
+            "value": 0.3473491773308958
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 698,
+            "denominator": 1094,
+            "value": 0.6380255941499086
+          },
+          "candidate": {
+            "numerator": 659,
+            "denominator": 1094,
+            "value": 0.6023765996343693
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 869,
+            "denominator": 1094,
+            "value": 0.7943327239488117
+          },
+          "candidate": {
+            "numerator": 867,
+            "denominator": 1094,
+            "value": 0.7925045703839122
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 111,
+            "denominator": 1094,
+            "value": 0.10146252285191956
+          },
+          "candidate": {
+            "numerator": 84,
+            "denominator": 1094,
+            "value": 0.07678244972577697
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 164,
+            "denominator": 1094,
+            "value": 0.14990859232175502
+          },
+          "candidate": {
+            "numerator": 125,
+            "denominator": 1094,
+            "value": 0.11425959780621572
+          }
+        }
+      }
+    },
+    "length-1-5": {
+      "comparable": true,
+      "count": 693,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 615,
+            "denominator": 693,
+            "value": 0.8874458874458875
+          },
+          "candidate": {
+            "numerator": 624,
+            "denominator": 693,
+            "value": 0.9004329004329005
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 324,
+            "denominator": 693,
+            "value": 0.4675324675324675
+          },
+          "candidate": {
+            "numerator": 246,
+            "denominator": 693,
+            "value": 0.354978354978355
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 451,
+            "denominator": 693,
+            "value": 0.6507936507936508
+          },
+          "candidate": {
+            "numerator": 444,
+            "denominator": 693,
+            "value": 0.6406926406926406
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 552,
+            "denominator": 693,
+            "value": 0.7965367965367965
+          },
+          "candidate": {
+            "numerator": 552,
+            "denominator": 693,
+            "value": 0.7965367965367965
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 67,
+            "denominator": 693,
+            "value": 0.09668109668109669
+          },
+          "candidate": {
+            "numerator": 48,
+            "denominator": 693,
+            "value": 0.06926406926406926
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 96,
+            "denominator": 693,
+            "value": 0.13852813852813853
+          },
+          "candidate": {
+            "numerator": 72,
+            "denominator": 693,
+            "value": 0.1038961038961039
+          }
+        }
+      }
+    },
+    "ambiguity-11+": {
+      "comparable": true,
+      "count": 658,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 592,
+            "denominator": 658,
+            "value": 0.8996960486322189
+          },
+          "candidate": {
+            "numerator": 605,
+            "denominator": 658,
+            "value": 0.9194528875379939
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 349,
+            "denominator": 658,
+            "value": 0.5303951367781155
+          },
+          "candidate": {
+            "numerator": 279,
+            "denominator": 658,
+            "value": 0.42401215805471126
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 454,
+            "denominator": 658,
+            "value": 0.6899696048632219
+          },
+          "candidate": {
+            "numerator": 439,
+            "denominator": 658,
+            "value": 0.6671732522796353
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 554,
+            "denominator": 658,
+            "value": 0.8419452887537994
+          },
+          "candidate": {
+            "numerator": 553,
+            "denominator": 658,
+            "value": 0.8404255319148937
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 97,
+            "denominator": 658,
+            "value": 0.1474164133738602
+          },
+          "candidate": {
+            "numerator": 73,
+            "denominator": 658,
+            "value": 0.11094224924012158
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 137,
+            "denominator": 658,
+            "value": 0.20820668693009117
+          },
+          "candidate": {
+            "numerator": 106,
+            "denominator": 658,
+            "value": 0.16109422492401215
+          }
+        }
+      }
+    },
+    "ambiguity-4-10": {
+      "comparable": true,
+      "count": 204,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 142,
+            "denominator": 204,
+            "value": 0.696078431372549
+          },
+          "candidate": {
+            "numerator": 163,
+            "denominator": 204,
+            "value": 0.7990196078431373
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 79,
+            "denominator": 204,
+            "value": 0.3872549019607843
+          },
+          "candidate": {
+            "numerator": 60,
+            "denominator": 204,
+            "value": 0.29411764705882354
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 113,
+            "denominator": 204,
+            "value": 0.553921568627451
+          },
+          "candidate": {
+            "numerator": 105,
+            "denominator": 204,
+            "value": 0.5147058823529411
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 151,
+            "denominator": 204,
+            "value": 0.7401960784313726
+          },
+          "candidate": {
+            "numerator": 146,
+            "denominator": 204,
+            "value": 0.7156862745098039
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 12,
+            "denominator": 204,
+            "value": 0.058823529411764705
+          },
+          "candidate": {
+            "numerator": 7,
+            "denominator": 204,
+            "value": 0.03431372549019608
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 19,
+            "denominator": 204,
+            "value": 0.09313725490196079
+          },
+          "candidate": {
+            "numerator": 13,
+            "denominator": 204,
+            "value": 0.06372549019607843
+          }
+        }
+      }
+    },
+    "unseen-root": {
+      "comparable": true,
+      "count": 577,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 463,
+            "denominator": 577,
+            "value": 0.8024263431542461
+          },
+          "candidate": {
+            "numerator": 487,
+            "denominator": 577,
+            "value": 0.8440207972270364
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 249,
+            "denominator": 577,
+            "value": 0.43154246100519933
+          },
+          "candidate": {
+            "numerator": 201,
+            "denominator": 577,
+            "value": 0.3483535528596187
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 355,
+            "denominator": 577,
+            "value": 0.6152512998266898
+          },
+          "candidate": {
+            "numerator": 323,
+            "denominator": 577,
+            "value": 0.5597920277296361
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 433,
+            "denominator": 577,
+            "value": 0.7504332755632582
+          },
+          "candidate": {
+            "numerator": 430,
+            "denominator": 577,
+            "value": 0.7452339688041595
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 60,
+            "denominator": 577,
+            "value": 0.10398613518197573
+          },
+          "candidate": {
+            "numerator": 45,
+            "denominator": 577,
+            "value": 0.0779896013864818
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 82,
+            "denominator": 577,
+            "value": 0.14211438474870017
+          },
+          "candidate": {
+            "numerator": 68,
+            "denominator": 577,
+            "value": 0.11785095320623917
+          }
+        }
+      }
+    },
+    "ambiguity-1": {
+      "comparable": true,
+      "count": 87,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 68,
+            "denominator": 87,
+            "value": 0.7816091954022989
+          },
+          "candidate": {
+            "numerator": 66,
+            "denominator": 87,
+            "value": 0.7586206896551724
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 25,
+            "denominator": 87,
+            "value": 0.28735632183908044
+          },
+          "candidate": {
+            "numerator": 14,
+            "denominator": 87,
+            "value": 0.16091954022988506
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 54,
+            "denominator": 87,
+            "value": 0.6206896551724138
+          },
+          "candidate": {
+            "numerator": 45,
+            "denominator": 87,
+            "value": 0.5172413793103449
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 59,
+            "denominator": 87,
+            "value": 0.6781609195402298
+          },
+          "candidate": {
+            "numerator": 58,
+            "denominator": 87,
+            "value": 0.6666666666666666
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 87,
+            "value": 0
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 87,
+            "value": 0
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 87,
+            "value": 0
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 87,
+            "value": 0
+          }
+        }
+      }
+    },
+    "ambiguity-2-3": {
+      "comparable": true,
+      "count": 145,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 119,
+            "denominator": 145,
+            "value": 0.8206896551724138
+          },
+          "candidate": {
+            "numerator": 118,
+            "denominator": 145,
+            "value": 0.8137931034482758
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 43,
+            "denominator": 145,
+            "value": 0.296551724137931
+          },
+          "candidate": {
+            "numerator": 27,
+            "denominator": 145,
+            "value": 0.18620689655172415
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 77,
+            "denominator": 145,
+            "value": 0.5310344827586206
+          },
+          "candidate": {
+            "numerator": 70,
+            "denominator": 145,
+            "value": 0.4827586206896552
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 105,
+            "denominator": 145,
+            "value": 0.7241379310344828
+          },
+          "candidate": {
+            "numerator": 110,
+            "denominator": 145,
+            "value": 0.7586206896551724
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 2,
+            "denominator": 145,
+            "value": 0.013793103448275862
+          },
+          "candidate": {
+            "numerator": 4,
+            "denominator": 145,
+            "value": 0.027586206896551724
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 8,
+            "denominator": 145,
+            "value": 0.05517241379310345
+          },
+          "candidate": {
+            "numerator": 6,
+            "denominator": 145,
+            "value": 0.041379310344827586
+          }
+        }
+      }
+    },
+    "doubled": {
+      "comparable": true,
+      "count": 191,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 156,
+            "denominator": 191,
+            "value": 0.8167539267015707
+          },
+          "candidate": {
+            "numerator": 154,
+            "denominator": 191,
+            "value": 0.806282722513089
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 111,
+            "denominator": 191,
+            "value": 0.581151832460733
+          },
+          "candidate": {
+            "numerator": 101,
+            "denominator": 191,
+            "value": 0.5287958115183246
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 148,
+            "denominator": 191,
+            "value": 0.774869109947644
+          },
+          "candidate": {
+            "numerator": 131,
+            "denominator": 191,
+            "value": 0.6858638743455497
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 154,
+            "denominator": 191,
+            "value": 0.806282722513089
+          },
+          "candidate": {
+            "numerator": 160,
+            "denominator": 191,
+            "value": 0.837696335078534
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 18,
+            "denominator": 191,
+            "value": 0.09424083769633508
+          },
+          "candidate": {
+            "numerator": 14,
+            "denominator": 191,
+            "value": 0.07329842931937172
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 30,
+            "denominator": 191,
+            "value": 0.15706806282722513
+          },
+          "candidate": {
+            "numerator": 25,
+            "denominator": 191,
+            "value": 0.13089005235602094
+          }
+        }
+      }
+    },
+    "length-6-8": {
+      "comparable": true,
+      "count": 362,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 273,
+            "denominator": 362,
+            "value": 0.7541436464088398
+          },
+          "candidate": {
+            "numerator": 294,
+            "denominator": 362,
+            "value": 0.8121546961325967
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 152,
+            "denominator": 362,
+            "value": 0.4198895027624309
+          },
+          "candidate": {
+            "numerator": 114,
+            "denominator": 362,
+            "value": 0.3149171270718232
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 218,
+            "denominator": 362,
+            "value": 0.6022099447513812
+          },
+          "candidate": {
+            "numerator": 186,
+            "denominator": 362,
+            "value": 0.5138121546961326
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 285,
+            "denominator": 362,
+            "value": 0.787292817679558
+          },
+          "candidate": {
+            "numerator": 285,
+            "denominator": 362,
+            "value": 0.787292817679558
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 33,
+            "denominator": 362,
+            "value": 0.09116022099447514
+          },
+          "candidate": {
+            "numerator": 26,
+            "denominator": 362,
+            "value": 0.0718232044198895
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 52,
+            "denominator": 362,
+            "value": 0.143646408839779
+          },
+          "candidate": {
+            "numerator": 41,
+            "denominator": 362,
+            "value": 0.1132596685082873
+          }
+        }
+      }
+    },
+    "null-root-only": {
+      "comparable": true,
+      "count": 130,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 94,
+            "denominator": 130,
+            "value": 0.7230769230769231
+          },
+          "candidate": {
+            "numerator": 94,
+            "denominator": 130,
+            "value": 0.7230769230769231
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 87,
+            "denominator": 130,
+            "value": 0.6692307692307692
+          },
+          "candidate": {
+            "numerator": 85,
+            "denominator": 130,
+            "value": 0.6538461538461539
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 113,
+            "denominator": 130,
+            "value": 0.8692307692307693
+          },
+          "candidate": {
+            "numerator": 99,
+            "denominator": 130,
+            "value": 0.7615384615384615
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 77,
+            "denominator": 130,
+            "value": 0.5923076923076923
+          },
+          "candidate": {
+            "numerator": 71,
+            "denominator": 130,
+            "value": 0.5461538461538461
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 30,
+            "denominator": 130,
+            "value": 0.23076923076923078
+          },
+          "candidate": {
+            "numerator": 27,
+            "denominator": 130,
+            "value": 0.2076923076923077
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 44,
+            "denominator": 130,
+            "value": 0.3384615384615385
+          },
+          "candidate": {
+            "numerator": 37,
+            "denominator": 130,
+            "value": 0.2846153846153846
+          }
+        }
+      }
+    },
+    "length-9-16": {
+      "comparable": true,
+      "count": 39,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 33,
+            "denominator": 39,
+            "value": 0.8461538461538461
+          },
+          "candidate": {
+            "numerator": 34,
+            "denominator": 39,
+            "value": 0.8717948717948718
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 20,
+            "denominator": 39,
+            "value": 0.5128205128205128
+          },
+          "candidate": {
+            "numerator": 20,
+            "denominator": 39,
+            "value": 0.5128205128205128
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 29,
+            "denominator": 39,
+            "value": 0.7435897435897436
+          },
+          "candidate": {
+            "numerator": 29,
+            "denominator": 39,
+            "value": 0.7435897435897436
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 32,
+            "denominator": 39,
+            "value": 0.8205128205128205
+          },
+          "candidate": {
+            "numerator": 30,
+            "denominator": 39,
+            "value": 0.7692307692307693
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 11,
+            "denominator": 39,
+            "value": 0.28205128205128205
+          },
+          "candidate": {
+            "numerator": 10,
+            "denominator": 39,
+            "value": 0.2564102564102564
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 16,
+            "denominator": 39,
+            "value": 0.41025641025641024
+          },
+          "candidate": {
+            "numerator": 12,
+            "denominator": 39,
+            "value": 0.3076923076923077
+          }
+        }
+      }
+    },
+    "clitic-stack": {
+      "comparable": true,
+      "count": 350,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 253,
+            "denominator": 350,
+            "value": 0.7228571428571429
+          },
+          "candidate": {
+            "numerator": 275,
+            "denominator": 350,
+            "value": 0.7857142857142857
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 161,
+            "denominator": 350,
+            "value": 0.46
+          },
+          "candidate": {
+            "numerator": 136,
+            "denominator": 350,
+            "value": 0.38857142857142857
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 224,
+            "denominator": 350,
+            "value": 0.64
+          },
+          "candidate": {
+            "numerator": 202,
+            "denominator": 350,
+            "value": 0.5771428571428572
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 280,
+            "denominator": 350,
+            "value": 0.8
+          },
+          "candidate": {
+            "numerator": 270,
+            "denominator": 350,
+            "value": 0.7714285714285715
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 30,
+            "denominator": 350,
+            "value": 0.08571428571428572
+          },
+          "candidate": {
+            "numerator": 27,
+            "denominator": 350,
+            "value": 0.07714285714285714
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 53,
+            "denominator": 350,
+            "value": 0.15142857142857144
+          },
+          "candidate": {
+            "numerator": 43,
+            "denominator": 350,
+            "value": 0.12285714285714286
+          }
+        }
+      }
+    },
+    "quadriliteral": {
+      "comparable": true,
+      "count": 59,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 51,
+            "denominator": 59,
+            "value": 0.864406779661017
+          },
+          "candidate": {
+            "numerator": 54,
+            "denominator": 59,
+            "value": 0.9152542372881356
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 11,
+            "denominator": 59,
+            "value": 0.1864406779661017
+          },
+          "candidate": {
+            "numerator": 11,
+            "denominator": 59,
+            "value": 0.1864406779661017
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 28,
+            "denominator": 59,
+            "value": 0.4745762711864407
+          },
+          "candidate": {
+            "numerator": 18,
+            "denominator": 59,
+            "value": 0.3050847457627119
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 53,
+            "denominator": 59,
+            "value": 0.8983050847457628
+          },
+          "candidate": {
+            "numerator": 55,
+            "denominator": 59,
+            "value": 0.9322033898305084
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 1,
+            "denominator": 59,
+            "value": 0.01694915254237288
+          },
+          "candidate": {
+            "numerator": 1,
+            "denominator": 59,
+            "value": 0.01694915254237288
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 1,
+            "denominator": 59,
+            "value": 0.01694915254237288
+          },
+          "candidate": {
+            "numerator": 1,
+            "denominator": 59,
+            "value": 0.01694915254237288
+          }
+        }
+      }
+    },
+    "broken-plural": {
+      "comparable": true,
+      "count": 0,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        }
+      }
+    },
+    "diacritized": {
+      "comparable": true,
+      "count": 0,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        }
+      }
+    },
+    "foreign": {
+      "comparable": true,
+      "count": 0,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        }
+      }
+    },
+    "malformed": {
+      "comparable": true,
+      "count": 0,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        }
+      }
+    },
+    "non-MSA": {
+      "comparable": true,
+      "count": 0,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        }
+      }
+    },
+    "seen-lemma": {
+      "comparable": true,
+      "count": 0,
+      "metrics": {
+        "segmentationExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "rootExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "patternExactMatch": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "posAccuracy": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop1": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        },
+        "fullAnalysisTop3": {
+          "baseline": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "candidate": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          }
+        }
+      }
+    }
+  },
+  "protocol": {
+    "comparison": "Same words and corrected teacher mapping; current reference and a separately trained pilot",
+    "humanGold": false,
+    "finalTestOpened": false,
+    "selectionEligible": false,
+    "bootstrap": {
+      "resamples": 2000,
+      "seed": 42,
+      "unit": "word"
+    }
+  },
+  "limitations": [
+    "Corrected-label agreement is not directly comparable to the legacy-label headline score.",
+    "Pilot changes label mapping, training coverage and target sampling together; this is not a controlled single-factor ablation.",
+    "No automatic model selection or promotion is performed. Human gold and release gates remain mandatory."
+  ]
+}

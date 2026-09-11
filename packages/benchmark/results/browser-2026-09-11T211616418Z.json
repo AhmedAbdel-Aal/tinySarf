@@ -1,0 +1,1864 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-09-11T211616418Z",
+  "git": {
+    "commit": "ed05bed7990e01cb4237f9cb022fb79fad6c3277",
+    "dirty": false
+  },
+  "createdAt": "2026-09-11T21:16:16.429Z",
+  "commands": [
+    "/Users/ahmed/.hermes/node/bin/node /Users/ahmed/Desktop/tinySarf/packages/benchmark/src/browser.ts --smoke --local"
+  ],
+  "environment": {
+    "os": "darwin 23.5.0",
+    "architecture": "arm64",
+    "cpu": "Apple M2",
+    "ramBytes": 8589934592,
+    "node": "v22.23.0",
+    "browser": "152.0.7977.83",
+    "webgpuAdapter": null,
+    "deviceModel": "Mac14,2",
+    "osVersion": "14.5",
+    "browserExecutable": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+    "headless": true,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "secureContext": true,
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "device": "",
+      "description": "",
+      "isFallbackAdapter": false
+    },
+    "visibility": "visible",
+    "devicePixelRatio": 1,
+    "screen": {
+      "width": 1366,
+      "height": 768
+    },
+    "heap": {
+      "usedBytes": 27876208,
+      "totalBytes": 85145884,
+      "limitBytes": 4395630592,
+      "api": "performance.memory (Chromium-specific)"
+    },
+    "powerState": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=7667811)\t63%; charging; 2:33 remaining present: true",
+    "pluggedIn": true,
+    "measureUserAgentSpecificMemory": null
+  },
+  "kind": "browser",
+  "runtime": {
+    "sha256": "83e148332947365172b88b8ceddc300e813d18a93497469ca97ddd5e4670f85f",
+    "modelModuleSha256": "7592e9fb5784dbe94419d330694a5f5141da7dec142862ac7ae4fbb5f780f092"
+  },
+  "status": "experimental-unpromoted",
+  "model": {
+    "dilations": [
+      1,
+      2,
+      4
+    ],
+    "embedding": 32,
+    "floatBinarySha256": "816422af1132ca566d303dd1cb39025375181210a91e923f7da4571e4329dabd",
+    "floatSha256": "e619078e5b4c29f683c3e60b8922e2dee206376a25e4faa18afebd64c505d568",
+    "format": "cnn-v1",
+    "id": "20260911T191243.077466Z-250000",
+    "labels": {
+      "heads": {
+        "aspect": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "perfective",
+          "imperfective",
+          "imperative"
+        ],
+        "case": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "nominative",
+          "accusative",
+          "genitive"
+        ],
+        "gender": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "masculine",
+          "feminine"
+        ],
+        "mood": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "indicative",
+          "subjunctive",
+          "jussive"
+        ],
+        "number": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "singular",
+          "dual",
+          "plural"
+        ],
+        "pattern": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "فَعَل",
+          "فَعْل",
+          "فاعِل",
+          "فَعَّل",
+          "أَفْعَل",
+          "فَعِيل",
+          "ٌطWص+ِيّ",
+          "فَعّال",
+          "مَفْعُول",
+          "فِعال",
+          "فُعْل",
+          "تَفْعِيل",
+          "فُعُول",
+          "فِعْل",
+          "مَفاعِل",
+          "مُفَعَّل",
+          "فاعَل",
+          "تَفَعُّل",
+          "مُفَعِّل",
+          "ٱِفْتِعال",
+          "فَعال",
+          "فَعالِل",
+          "مُفْعِل",
+          "فَعْلَل",
+          "فَعائِل",
+          "مَفْعَل",
+          "تَفَعّل",
+          "مُتَفَعِّل",
+          "فَواعِل",
+          "فَعِل",
+          "مُفْتَعِل",
+          "فُعّال",
+          "فَعالِيل",
+          "مُفاعِل",
+          "فَعُول",
+          "فُعال",
+          "فِعال+ِيّ",
+          "فَعْل+ِيّ",
+          "فِعَل",
+          "مِفْعَل",
+          "فَعْلاء",
+          "مُفْعَل",
+          "ٱِفْتَعَل",
+          "مُفْتَعَل",
+          "مُتَفاعِل",
+          "فَعَل+ِيّ",
+          "ٱِسْتِفْعال",
+          "ٱِنْفِعال",
+          "مِفْعال",
+          "فُعَلاء",
+          "تَفاعُل",
+          "مَفاعِيل",
+          "فُعْل+ِيّ",
+          "فُعَل",
+          "فاعِل+ِيّ",
+          "فِعْل+ِيّ",
+          "فُعْلان",
+          "فَعِيل+ِيّ",
+          "فُعُل",
+          "فِعْلان",
+          "مَفْعِل",
+          "ٱِسْتَفْعَل",
+          "فاعُول",
+          "تَفاعَل"
+        ],
+        "person": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "first",
+          "second",
+          "third"
+        ],
+        "pos": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "noun",
+          "proper_noun",
+          "numeral",
+          "adjective",
+          "verb",
+          "adverb",
+          "preposition",
+          "conjunction",
+          "interjection",
+          "pronoun",
+          "particle"
+        ],
+        "root0": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root1": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root2": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "root3": [
+          "__blank__",
+          "ء",
+          "آ",
+          "أ",
+          "ؤ",
+          "إ",
+          "ئ",
+          "ا",
+          "ب",
+          "ة",
+          "ت",
+          "ث",
+          "ج",
+          "ح",
+          "خ",
+          "د",
+          "ذ",
+          "ر",
+          "ز",
+          "س",
+          "ش",
+          "ص",
+          "ض",
+          "ط",
+          "ظ",
+          "ع",
+          "غ",
+          "ف",
+          "ق",
+          "ك",
+          "ل",
+          "م",
+          "ن",
+          "ه",
+          "و",
+          "ي",
+          "ى"
+        ],
+        "state": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "definite",
+          "indefinite",
+          "construct"
+        ],
+        "voice": [
+          "__missing__",
+          "__unknown__",
+          "__na__",
+          "active",
+          "passive"
+        ]
+      },
+      "segmentation": [
+        "conjunction",
+        "particle",
+        "preposition",
+        "article",
+        "stem",
+        "derivational_suffix",
+        "inflectional_suffix",
+        "pronominal_enclitic"
+      ]
+    },
+    "maxLength": 32,
+    "normalizationVersion": "arabic-v1",
+    "packedWeightsBytes": 245732,
+    "quantization": "symmetric-per-tensor-int8",
+    "reachableWeights": 245667,
+    "schemaVersion": 1,
+    "sha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
+    "status": "experimental-unpromoted",
+    "tensors": {
+      "aspect.bias": {
+        "length": 6,
+        "offset": 241736,
+        "scale": 0.0008982828003354371,
+        "shape": [
+          6
+        ]
+      },
+      "aspect.weight": {
+        "length": 1032,
+        "offset": 240704,
+        "scale": 0.00455059576779604,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "case.bias": {
+        "length": 6,
+        "offset": 244684,
+        "scale": 0.0008581824949942529,
+        "shape": [
+          6
+        ]
+      },
+      "case.weight": {
+        "length": 1032,
+        "offset": 243652,
+        "scale": 0.007890579290688038,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "conv0.bias": {
+        "length": 172,
+        "offset": 18720,
+        "scale": 0.0018964497139677405,
+        "shape": [
+          172
+        ]
+      },
+      "conv0.weight": {
+        "length": 16512,
+        "offset": 2208,
+        "scale": 0.0043164584785699844,
+        "shape": [
+          172,
+          3,
+          32
+        ]
+      },
+      "conv1.bias": {
+        "length": 172,
+        "offset": 107644,
+        "scale": 0.0006516575231216848,
+        "shape": [
+          172
+        ]
+      },
+      "conv1.weight": {
+        "length": 88752,
+        "offset": 18892,
+        "scale": 0.004955793730914593,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "conv2.bias": {
+        "length": 172,
+        "offset": 196568,
+        "scale": 0.0011922874255105853,
+        "shape": [
+          172
+        ]
+      },
+      "conv2.weight": {
+        "length": 88752,
+        "offset": 107816,
+        "scale": 0.005055295303463936,
+        "shape": [
+          172,
+          3,
+          172
+        ]
+      },
+      "embedding": {
+        "length": 1184,
+        "offset": 0,
+        "scale": 0.02600051648914814,
+        "shape": [
+          37,
+          32
+        ]
+      },
+      "gender.bias": {
+        "length": 5,
+        "offset": 239656,
+        "scale": 0.00122736650519073,
+        "shape": [
+          5
+        ]
+      },
+      "gender.weight": {
+        "length": 860,
+        "offset": 238796,
+        "scale": 0.004492000211030245,
+        "shape": [
+          5,
+          172
+        ]
+      },
+      "mood.bias": {
+        "length": 6,
+        "offset": 242776,
+        "scale": 0.0004823975032195449,
+        "shape": [
+          6
+        ]
+      },
+      "mood.weight": {
+        "length": 1032,
+        "offset": 241744,
+        "scale": 0.004531926475465298,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "number.bias": {
+        "length": 6,
+        "offset": 240696,
+        "scale": 0.001153977820649743,
+        "shape": [
+          6
+        ]
+      },
+      "number.weight": {
+        "length": 1032,
+        "offset": 239664,
+        "scale": 0.004564363043755293,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pattern.bias": {
+        "length": 67,
+        "offset": 237688,
+        "scale": 0.001367977587506175,
+        "shape": [
+          67
+        ]
+      },
+      "pattern.weight": {
+        "length": 11524,
+        "offset": 226164,
+        "scale": 0.008518285118043423,
+        "shape": [
+          67,
+          172
+        ]
+      },
+      "person.bias": {
+        "length": 6,
+        "offset": 238788,
+        "scale": 0.0006815318483859301,
+        "shape": [
+          6
+        ]
+      },
+      "person.weight": {
+        "length": 1032,
+        "offset": 237756,
+        "scale": 0.0050756367854774,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "pos.bias": {
+        "length": 14,
+        "offset": 200532,
+        "scale": 0.0013052545255050063,
+        "shape": [
+          14
+        ]
+      },
+      "pos.weight": {
+        "length": 2408,
+        "offset": 198124,
+        "scale": 0.005701378453522921,
+        "shape": [
+          14,
+          172
+        ]
+      },
+      "position": {
+        "length": 1024,
+        "offset": 1184,
+        "scale": 0.029511356726288795,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      "root0.bias": {
+        "length": 37,
+        "offset": 206912,
+        "scale": 0.0012769013410434127,
+        "shape": [
+          37
+        ]
+      },
+      "root0.weight": {
+        "length": 6364,
+        "offset": 200548,
+        "scale": 0.005650089122354984,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root1.bias": {
+        "length": 37,
+        "offset": 213316,
+        "scale": 0.0011855042539536953,
+        "shape": [
+          37
+        ]
+      },
+      "root1.weight": {
+        "length": 6364,
+        "offset": 206952,
+        "scale": 0.005082467570900917,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root2.bias": {
+        "length": 37,
+        "offset": 219720,
+        "scale": 0.0011456395732238889,
+        "shape": [
+          37
+        ]
+      },
+      "root2.weight": {
+        "length": 6364,
+        "offset": 213356,
+        "scale": 0.004992933943867683,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "root3.bias": {
+        "length": 37,
+        "offset": 226124,
+        "scale": 0.0010689018527045846,
+        "shape": [
+          37
+        ]
+      },
+      "root3.weight": {
+        "length": 6364,
+        "offset": 219760,
+        "scale": 0.007890173234045506,
+        "shape": [
+          37,
+          172
+        ]
+      },
+      "segmentation.bias": {
+        "length": 8,
+        "offset": 198116,
+        "scale": 0.0010151041205972433,
+        "shape": [
+          8
+        ]
+      },
+      "segmentation.weight": {
+        "length": 1376,
+        "offset": 196740,
+        "scale": 0.0048494720831513405,
+        "shape": [
+          8,
+          172
+        ]
+      },
+      "state.bias": {
+        "length": 6,
+        "offset": 245724,
+        "scale": 0.00034476048313081264,
+        "shape": [
+          6
+        ]
+      },
+      "state.weight": {
+        "length": 1032,
+        "offset": 244692,
+        "scale": 0.00715420488268137,
+        "shape": [
+          6,
+          172
+        ]
+      },
+      "voice.bias": {
+        "length": 5,
+        "offset": 243644,
+        "scale": 0.000998991192318499,
+        "shape": [
+          5
+        ]
+      },
+      "voice.weight": {
+        "length": 860,
+        "offset": 242784,
+        "scale": 0.004018800333142281,
+        "shape": [
+          5,
+          172
+        ]
+      }
+    },
+    "trainingParameters": 245699,
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "vocabulary": [
+      "__pad__",
+      "ء",
+      "آ",
+      "أ",
+      "ؤ",
+      "إ",
+      "ئ",
+      "ا",
+      "ب",
+      "ة",
+      "ت",
+      "ث",
+      "ج",
+      "ح",
+      "خ",
+      "د",
+      "ذ",
+      "ر",
+      "ز",
+      "س",
+      "ش",
+      "ص",
+      "ض",
+      "ط",
+      "ظ",
+      "ع",
+      "غ",
+      "ف",
+      "ق",
+      "ك",
+      "ل",
+      "م",
+      "ن",
+      "ه",
+      "و",
+      "ي",
+      "ى"
+    ],
+    "width": 172
+  },
+  "data": {
+    "verificationDigest": "132424b3f1d57b52b9c7d3e97eb56083dbfa96d7f05b3167c3e22cf711da6176",
+    "goldDigest": null,
+    "performanceCorpusDigest": "b66439ceb76ed6f901e85fade62a0758410ba0d60c9cf4787e4d334cc2b9f98b",
+    "normalizationVersion": "arabic-v1"
+  },
+  "protocol": {
+    "coldRuns": 3,
+    "warmups": 3,
+    "iterations": 5,
+    "repeats": 1,
+    "seed": 42,
+    "mode": "smoke",
+    "releaseQualifying": false,
+    "shaderCompilationIncluded": true,
+    "cacheState": "Fresh contexts for cold runs; HTTP no-store; driver shader cache not controlled",
+    "networkScope": "Loopback static server, not internet transfer latency",
+    "devToolsOpen": false,
+    "warmupStabilityAssessed": false,
+    "warmupStabilityPassed": false,
+    "warmupRule": "Two consecutive windows of 10 calls: median shift <=5%, CV <=10%; minimum20, maximum100",
+    "workloadSubset": false,
+    "availableWorkloads": [
+      "single-short",
+      "single-median",
+      "single-clitic",
+      "batch-8",
+      "batch-32",
+      "batch-128",
+      "batch-512",
+      "batch-2048",
+      "uniform-128",
+      "maximum-shape"
+    ],
+    "workloadRotation": "Seeded shuffle per repeat; backend order alternates across repeats"
+  },
+  "cold": {
+    "raw": {
+      "webgpu": [
+        {
+          "run": 0,
+          "importMs": 4.2950000166893005,
+          "apiMs": 24.240000009536743,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 3.064999997615814,
+              "transferBytes": 22182,
+              "encodedBodyBytes": 21882,
+              "decodedBodyBytes": 21882
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 2.3950000405311584,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 28.535000026226044
+        },
+        {
+          "run": 1,
+          "importMs": 5.705000042915344,
+          "apiMs": 23.77999997138977,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 1.4449999928474426,
+              "transferBytes": 22182,
+              "encodedBodyBytes": 21882,
+              "decodedBodyBytes": 21882
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 2.199999988079071,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 29.485000014305115
+        },
+        {
+          "run": 2,
+          "importMs": 5.560000002384186,
+          "apiMs": 24.194999992847443,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 1.5149999856948853,
+              "transferBytes": 22182,
+              "encodedBodyBytes": 21882,
+              "decodedBodyBytes": 21882
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 2.040000021457672,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 29.75499999523163
+        }
+      ],
+      "cpu": [
+        {
+          "run": 0,
+          "importMs": 2.415000021457672,
+          "apiMs": 25.044999957084656,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 1.1700000166893005,
+              "transferBytes": 22182,
+              "encodedBodyBytes": 21882,
+              "decodedBodyBytes": 21882
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 1.0550000071525574,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 27.459999978542328
+        },
+        {
+          "run": 1,
+          "importMs": 2.9549999833106995,
+          "apiMs": 25.74500000476837,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 1.5899999737739563,
+              "transferBytes": 22182,
+              "encodedBodyBytes": 21882,
+              "decodedBodyBytes": 21882
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 1.0049999952316284,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 28.69999998807907
+        },
+        {
+          "run": 2,
+          "importMs": 6.2950000166893005,
+          "apiMs": 25.394999980926514,
+          "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+          "resources": [
+            {
+              "url": "/tinysarf/index.js",
+              "durationMs": 1.3849999904632568,
+              "transferBytes": 22182,
+              "encodedBodyBytes": 21882,
+              "decodedBodyBytes": 21882
+            },
+            {
+              "url": "/tinysarf/checkpoint.js",
+              "durationMs": 1.6500000357627869,
+              "transferBytes": 337290,
+              "encodedBodyBytes": 336990,
+              "decodedBodyBytes": 336990
+            }
+          ],
+          "totalImportAndAPI": 31.689999997615814
+        }
+      ]
+    },
+    "summary": {
+      "webgpu": {
+        "apiMs": {
+          "count": 3,
+          "p50": 24.194999992847443,
+          "p95": 24.235500007867813,
+          "mean": 24.071666657924652,
+          "standardDeviation": 0.2070560993244536,
+          "min": 23.77999997138977,
+          "max": 24.240000009536743
+        },
+        "moduleImportMs": {
+          "count": 3,
+          "p50": 5.560000002384186,
+          "p95": 5.690500038862228,
+          "mean": 5.18666668732961,
+          "standardDeviation": 0.6332763175668739,
+          "min": 4.2950000166893005,
+          "max": 5.705000042915344
+        },
+        "totalMs": {
+          "count": 3,
+          "p50": 29.485000014305115,
+          "p95": 29.727999997138976,
+          "mean": 29.25833334525426,
+          "standardDeviation": 0.5232165359500554,
+          "min": 28.535000026226044,
+          "max": 29.75499999523163
+        }
+      },
+      "cpu": {
+        "apiMs": {
+          "count": 3,
+          "p50": 25.394999980926514,
+          "p95": 25.710000002384184,
+          "mean": 25.394999980926514,
+          "standardDeviation": 0.2857738227914996,
+          "min": 25.044999957084656,
+          "max": 25.74500000476837
+        },
+        "moduleImportMs": {
+          "count": 3,
+          "p50": 2.9549999833106995,
+          "p95": 5.96100001335144,
+          "mean": 3.888333340485891,
+          "standardDeviation": 1.7159901626488216,
+          "min": 2.415000021457672,
+          "max": 6.2950000166893005
+        },
+        "totalMs": {
+          "count": 3,
+          "p50": 28.69999998807907,
+          "p95": 31.39099999666214,
+          "mean": 29.283333321412403,
+          "standardDeviation": 1.7754686468035714,
+          "min": 27.459999978542328,
+          "max": 31.689999997615814
+        }
+      }
+    }
+  },
+  "warm": [
+    {
+      "id": "single-short",
+      "batch": 1,
+      "characters": 3,
+      "lengthClass": 8,
+      "paddingWaste": 0.625,
+      "synthetic": false,
+      "inputDigest": "9fe4329cc3464629f03b2b1f8e95020f29cfce8a204b6576c142dab13a0d913e",
+      "webgpu": {
+        "count": 5,
+        "p50": 1.1050000190734863,
+        "p95": 2.248999977111816,
+        "mean": 1.38400000333786,
+        "standardDeviation": 0.5732573431096202,
+        "min": 1.0750000476837158,
+        "max": 2.5299999713897705
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 4.489999949932098,
+        "p95": 4.598000013828278,
+        "mean": 3.795999991893768,
+        "standardDeviation": 1.4301866985756069,
+        "min": 0.9399999976158142,
+        "max": 4.605000019073486
+      },
+      "speedup": 4.06334830084152,
+      "webgpuWordsPerSecond": 904.97735994473,
+      "webgpuCharactersPerSecond": 2714.93207983419,
+      "outputHashesMatch": true,
+      "outputHash": "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583"
+    },
+    {
+      "id": "single-median",
+      "batch": 1,
+      "characters": 7,
+      "lengthClass": 8,
+      "paddingWaste": 0.125,
+      "synthetic": false,
+      "inputDigest": "b2629dc5f1de177cf43556006d5f6aee29075cd40b2482109af170697de40933",
+      "webgpu": {
+        "count": 5,
+        "p50": 1.1850000023841858,
+        "p95": 2.3109999895095825,
+        "mean": 1.4550000190734864,
+        "standardDeviation": 0.5656942430464592,
+        "min": 1.1300000548362732,
+        "max": 2.584999978542328
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 1.7900000214576721,
+        "p95": 1.793999969959259,
+        "mean": 1.7879999995231628,
+        "standardDeviation": 0.00678230769623001,
+        "min": 1.7750000357627869,
+        "max": 1.7949999570846558
+      },
+      "speedup": 1.5105485382753112,
+      "webgpuWordsPerSecond": 843.8818548422184,
+      "webgpuCharactersPerSecond": 5907.172983895529,
+      "outputHashesMatch": true,
+      "outputHash": "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0"
+    },
+    {
+      "id": "single-clitic",
+      "batch": 1,
+      "characters": 8,
+      "lengthClass": 8,
+      "paddingWaste": 0,
+      "synthetic": false,
+      "inputDigest": "02762ad4ba07c7754310a2a64f731d7913565e3f112ad2e6fc761436804d992f",
+      "webgpu": {
+        "count": 5,
+        "p50": 1.2200000286102295,
+        "p95": 1.281000018119812,
+        "mean": 1.2270000100135803,
+        "standardDeviation": 0.0381575744673993,
+        "min": 1.1800000071525574,
+        "max": 1.2900000214576721
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 2.0950000286102295,
+        "p95": 2.1050000190734863,
+        "mean": 2.0820000171661377,
+        "standardDeviation": 0.028213469981913604,
+        "min": 2.0300000309944153,
+        "max": 2.1050000190734863
+      },
+      "speedup": 1.7172130979347284,
+      "webgpuWordsPerSecond": 819.6721119254039,
+      "webgpuCharactersPerSecond": 6557.376895403231,
+      "outputHashesMatch": true,
+      "outputHash": "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a"
+    },
+    {
+      "id": "batch-8",
+      "batch": 8,
+      "characters": 37,
+      "lengthClass": 8,
+      "paddingWaste": 0.421875,
+      "synthetic": false,
+      "inputDigest": "618133dd0aa5fb020be0e6d06776086c12dbfb4216707273b8124b39e7edc5eb",
+      "webgpu": {
+        "count": 5,
+        "p50": 5.600000023841858,
+        "p95": 5.833999991416931,
+        "mean": 5.646000003814697,
+        "standardDeviation": 0.12310157638659251,
+        "min": 5.540000021457672,
+        "max": 5.884999990463257
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 9.840000033378601,
+        "p95": 9.98400000333786,
+        "mean": 9.82300000190735,
+        "standardDeviation": 0.12921301547960254,
+        "min": 9.669999957084656,
+        "max": 10
+      },
+      "speedup": 1.7571428556223305,
+      "webgpuWordsPerSecond": 1428.571422489322,
+      "webgpuCharactersPerSecond": 6607.142829013114,
+      "outputHashesMatch": true,
+      "outputHash": "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296"
+    },
+    {
+      "id": "batch-32",
+      "batch": 32,
+      "characters": 166,
+      "lengthClass": 8,
+      "paddingWaste": 0.3515625,
+      "synthetic": false,
+      "inputDigest": "6e465bdaebae62a43a16761a82045f479aff6d1ce84d5d71e90895ec68f92445",
+      "webgpu": {
+        "count": 5,
+        "p50": 25.389999985694885,
+        "p95": 25.86299999952316,
+        "mean": 25.084999990463256,
+        "standardDeviation": 1.0723199047276086,
+        "min": 22.985000014305115,
+        "max": 25.87000000476837
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 48.610000014305115,
+        "p95": 48.688999998569486,
+        "mean": 48.60600000619888,
+        "standardDeviation": 0.08272847922609719,
+        "min": 48.4549999833107,
+        "max": 48.69499999284744
+      },
+      "speedup": 1.9145332824613128,
+      "webgpuWordsPerSecond": 1260.3387167400272,
+      "webgpuCharactersPerSecond": 6538.0070930888905,
+      "outputHashesMatch": true,
+      "outputHash": "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834"
+    },
+    {
+      "id": "batch-128",
+      "batch": 128,
+      "characters": 673,
+      "lengthClass": 16,
+      "paddingWaste": 0.67138671875,
+      "synthetic": false,
+      "inputDigest": "4732ea33587864dd9ffacbd0f6bf1980cbf34d8633d71df6b609e83cbbde1776",
+      "webgpu": {
+        "count": 5,
+        "p50": 89.25499999523163,
+        "p95": 89.62600003480911,
+        "mean": 88.57200001478195,
+        "standardDeviation": 1.4501330830779768,
+        "min": 85.7600000500679,
+        "max": 89.64000004529953
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 176.89999997615814,
+        "p95": 178.5130000114441,
+        "mean": 176.45599999427796,
+        "standardDeviation": 1.9838281100917792,
+        "min": 172.98500001430511,
+        "max": 178.66000002622604
+      },
+      "speedup": 1.981961794696195,
+      "webgpuWordsPerSecond": 1434.0933281814832,
+      "webgpuCharactersPerSecond": 7540.193827079204,
+      "outputHashesMatch": true,
+      "outputHash": "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706"
+    },
+    {
+      "id": "batch-512",
+      "batch": 512,
+      "characters": 2630,
+      "lengthClass": 16,
+      "paddingWaste": 0.678955078125,
+      "synthetic": false,
+      "inputDigest": "9921bc5631c2ceac80bea578f7fdb23eaf98602add11ef3e7b1cfc72a1d71916",
+      "webgpu": {
+        "count": 5,
+        "p50": 341.5199999809265,
+        "p95": 345.777999997139,
+        "mean": 341.277999997139,
+        "standardDeviation": 3.945834017612166,
+        "min": 336.35499995946884,
+        "max": 345.8899999856949
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 775.4499999880791,
+        "p95": 783.2170000195504,
+        "mean": 778.1769999861717,
+        "standardDeviation": 4.064586831022811,
+        "min": 774.0749999880791,
+        "max": 783.2800000309944
+      },
+      "speedup": 2.2705844460979945,
+      "webgpuWordsPerSecond": 1499.1801359469273,
+      "webgpuCharactersPerSecond": 7700.8667139461295,
+      "outputHashesMatch": true,
+      "outputHash": "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c"
+    },
+    {
+      "id": "batch-2048",
+      "batch": 2048,
+      "characters": 10520,
+      "lengthClass": 16,
+      "paddingWaste": 0.678955078125,
+      "synthetic": false,
+      "inputDigest": "ec750b7c1da9cfa0ecc63445288c8b01a0e2cc125655370b0376206b83b7b7d6",
+      "webgpu": {
+        "count": 5,
+        "p50": 1180.6550000309944,
+        "p95": 1192.318999993801,
+        "mean": 1182.3039999961852,
+        "standardDeviation": 6.98036990621771,
+        "min": 1173.2599999904633,
+        "max": 1194.7450000047684
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 2755.0750000476837,
+        "p95": 2765.5539999842645,
+        "mean": 2756.6009999990465,
+        "standardDeviation": 5.909843818063727,
+        "min": 2751.4249999523163,
+        "max": 2767.7699999809265
+      },
+      "speedup": 2.3335140239742835,
+      "webgpuWordsPerSecond": 1734.6303534446865,
+      "webgpuCharactersPerSecond": 8910.308260858448,
+      "outputHashesMatch": true,
+      "outputHash": "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0"
+    },
+    {
+      "id": "uniform-128",
+      "batch": 128,
+      "characters": 640,
+      "lengthClass": 8,
+      "paddingWaste": 0.375,
+      "synthetic": false,
+      "inputDigest": "07199059837887bc07a5faa04a89dfd18bc5766575dc8f9b3c7b7fce4458fcf5",
+      "webgpu": {
+        "count": 5,
+        "p50": 84.27499997615814,
+        "p95": 87.47100001573563,
+        "mean": 84.6579999923706,
+        "standardDeviation": 2.072304533650351,
+        "min": 81.84999996423721,
+        "max": 87.86000001430511
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 165.87999999523163,
+        "p95": 166.48900001049043,
+        "mean": 165.62700001001357,
+        "standardDeviation": 0.7247937677490216,
+        "min": 164.5,
+        "max": 166.625
+      },
+      "speedup": 1.9683180070265203,
+      "webgpuWordsPerSecond": 1518.837140744134,
+      "webgpuCharactersPerSecond": 7594.18570372067,
+      "outputHashesMatch": true,
+      "outputHash": "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a"
+    },
+    {
+      "id": "maximum-shape",
+      "batch": 2048,
+      "characters": 65536,
+      "lengthClass": 32,
+      "paddingWaste": 0,
+      "synthetic": true,
+      "inputDigest": "ec42ae4236201cc4cac9fdb32f9703c2f2fd997fc869fbad60ae7d02f78b6ee9",
+      "webgpu": {
+        "count": 5,
+        "p50": 2456.1349999904633,
+        "p95": 2478.3960000038146,
+        "mean": 2458.3569999933243,
+        "standardDeviation": 14.12260408324572,
+        "min": 2439.4950000047684,
+        "max": 2482.9300000071526
+      },
+      "cpu": {
+        "count": 5,
+        "p50": 16722.209999978542,
+        "p95": 17665.634999990463,
+        "mean": 16769.053999996184,
+        "standardDeviation": 676.2280414499007,
+        "min": 15805.894999980927,
+        "max": 17793.764999985695
+      },
+      "speedup": 6.808343189622505,
+      "webgpuWordsPerSecond": 833.8303879908685,
+      "webgpuCharactersPerSecond": 26682.572415707793,
+      "outputHashesMatch": true,
+      "outputHash": "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05"
+    }
+  ],
+  "raw": [
+    {
+      "repeat": 0,
+      "workload": "single-short",
+      "backend": "webgpu",
+      "samples": [
+        1.0750000476837158,
+        1.125,
+        2.5299999713897705,
+        1.0849999785423279,
+        1.1050000190734863
+      ],
+      "hashes": [
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583"
+      ],
+      "warmupSamples": [
+        1.39000004529953,
+        1.2400000095367432,
+        1.2850000262260437
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "single-short",
+      "backend": "cpu",
+      "samples": [
+        0.9399999976158142,
+        4.569999992847443,
+        4.605000019073486,
+        4.375,
+        4.489999949932098
+      ],
+      "hashes": [
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583",
+        "0cd7367c15e617ebf54e59af595bc072482313751e4fab77c671c7f42a5fa583"
+      ],
+      "warmupSamples": [
+        3.6399999856948853,
+        3.0450000166893005,
+        1.324999988079071
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-2048",
+      "backend": "webgpu",
+      "samples": [
+        1180.6550000309944,
+        1180.2450000047684,
+        1173.2599999904633,
+        1194.7450000047684,
+        1182.614999949932
+      ],
+      "hashes": [
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0",
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0",
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0",
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0",
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0"
+      ],
+      "warmupSamples": [
+        1196.0449999570847,
+        1210.5200000405312,
+        1194.8849999904633
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-2048",
+      "backend": "cpu",
+      "samples": [
+        2767.7699999809265,
+        2752.0450000166893,
+        2751.4249999523163,
+        2755.0750000476837,
+        2756.689999997616
+      ],
+      "hashes": [
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0",
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0",
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0",
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0",
+        "7e6dd73f2e71d3ee97f3b08b217cb35496fb5073d1d2f48b072895fa73f363e0"
+      ],
+      "warmupSamples": [
+        2778.5849999785423,
+        2770.814999997616,
+        2795.225000023842
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-8",
+      "backend": "webgpu",
+      "samples": [
+        5.540000021457672,
+        5.884999990463257,
+        5.629999995231628,
+        5.600000023841858,
+        5.574999988079071
+      ],
+      "hashes": [
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296",
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296",
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296",
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296",
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296"
+      ],
+      "warmupSamples": [
+        8.730000019073486,
+        5.939999997615814,
+        5.599999964237213
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-8",
+      "backend": "cpu",
+      "samples": [
+        9.669999957084656,
+        9.685000002384186,
+        9.840000033378601,
+        9.9200000166893,
+        10
+      ],
+      "hashes": [
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296",
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296",
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296",
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296",
+        "17e302cfc69e80931c15d1eef1a2eaa6f2ae80421fbd3f72d1a60e76b42f5296"
+      ],
+      "warmupSamples": [
+        10.049999952316284,
+        9.739999949932098,
+        9.910000026226044
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-128",
+      "backend": "webgpu",
+      "samples": [
+        88.63499999046326,
+        89.64000004529953,
+        89.25499999523163,
+        89.56999999284744,
+        85.7600000500679
+      ],
+      "hashes": [
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706",
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706",
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706",
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706",
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706"
+      ],
+      "warmupSamples": [
+        91.37000000476837,
+        85.07499998807907,
+        89.22499996423721
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-128",
+      "backend": "cpu",
+      "samples": [
+        172.98500001430511,
+        177.92499995231628,
+        176.89999997615814,
+        178.66000002622604,
+        175.8100000023842
+      ],
+      "hashes": [
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706",
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706",
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706",
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706",
+        "142712179c6081ef180de88a95ffa809699a4f6b8bc74c0e5f05645b804f5706"
+      ],
+      "warmupSamples": [
+        178.23500001430511,
+        178.40499997138977,
+        175.3499999642372
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "single-clitic",
+      "backend": "webgpu",
+      "samples": [
+        1.2450000047683716,
+        1.199999988079071,
+        1.2200000286102295,
+        1.1800000071525574,
+        1.2900000214576721
+      ],
+      "hashes": [
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a"
+      ],
+      "warmupSamples": [
+        2.274999976158142,
+        1.2850000262260437,
+        2.949999988079071
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "single-clitic",
+      "backend": "cpu",
+      "samples": [
+        2.0300000309944153,
+        2.1050000190734863,
+        2.1050000190734863,
+        2.0950000286102295,
+        2.074999988079071
+      ],
+      "hashes": [
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a",
+        "a518c5f37be8cc58c65ba2280189abb080a434bb8f1557a50e0e13ac30010f2a"
+      ],
+      "warmupSamples": [
+        2.1299999952316284,
+        2.0899999737739563,
+        2.1050000190734863
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "single-median",
+      "backend": "webgpu",
+      "samples": [
+        1.1600000262260437,
+        1.1300000548362732,
+        1.215000033378601,
+        2.584999978542328,
+        1.1850000023841858
+      ],
+      "hashes": [
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0",
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0",
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0",
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0",
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0"
+      ],
+      "warmupSamples": [
+        1.3899999856948853,
+        1.1949999928474426,
+        1.3149999976158142
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "single-median",
+      "backend": "cpu",
+      "samples": [
+        1.7900000214576721,
+        1.7949999570846558,
+        1.7899999618530273,
+        1.7750000357627869,
+        1.7900000214576721
+      ],
+      "hashes": [
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0",
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0",
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0",
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0",
+        "df73419052ac1c18745aad065ef33d9c81b033e2f3e9265aadf8b4100a79eeb0"
+      ],
+      "warmupSamples": [
+        1.824999988079071,
+        1.7900000214576721,
+        1.7699999809265137
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "uniform-128",
+      "backend": "webgpu",
+      "samples": [
+        81.84999996423721,
+        84.27499997615814,
+        83.38999998569489,
+        85.91500002145767,
+        87.86000001430511
+      ],
+      "hashes": [
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a",
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a",
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a",
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a",
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a"
+      ],
+      "warmupSamples": [
+        85.31999999284744,
+        84.10999995470047,
+        87.375
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "uniform-128",
+      "backend": "cpu",
+      "samples": [
+        164.5,
+        165.87999999523163,
+        166.625,
+        165.1850000023842,
+        165.9450000524521
+      ],
+      "hashes": [
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a",
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a",
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a",
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a",
+        "6f39eddd3d9c88e6bf1e2bd20363faf161d409d657e63d96c02efe7dc4fc308a"
+      ],
+      "warmupSamples": [
+        168.83999997377396,
+        163.88999998569489,
+        166.33500003814697
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "maximum-shape",
+      "backend": "webgpu",
+      "samples": [
+        2439.4950000047684,
+        2452.964999973774,
+        2460.2599999904633,
+        2456.1349999904633,
+        2482.9300000071526
+      ],
+      "hashes": [
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05",
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05",
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05",
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05",
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05"
+      ],
+      "warmupSamples": [
+        2437.225000023842,
+        2430.489999949932,
+        2449.310000002384
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "maximum-shape",
+      "backend": "cpu",
+      "samples": [
+        15805.894999980927,
+        16370.285000026226,
+        16722.209999978542,
+        17153.115000009537,
+        17793.764999985695
+      ],
+      "hashes": [
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05",
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05",
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05",
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05",
+        "ab50510d8d0cd88943136b230af25acfd1b6d3a9f06d2b81ec0e543acc542a05"
+      ],
+      "warmupSamples": [
+        15841.40499997139,
+        15874.175000011921,
+        15862.45499998331
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-32",
+      "backend": "webgpu",
+      "samples": [
+        22.985000014305115,
+        25.87000000476837,
+        25.344999969005585,
+        25.389999985694885,
+        25.834999978542328
+      ],
+      "hashes": [
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834",
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834",
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834",
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834",
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834"
+      ],
+      "warmupSamples": [
+        28.339999973773956,
+        23.759999990463257,
+        23.685000002384186
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-32",
+      "backend": "cpu",
+      "samples": [
+        48.66500002145767,
+        48.69499999284744,
+        48.4549999833107,
+        48.610000014305115,
+        48.605000019073486
+      ],
+      "hashes": [
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834",
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834",
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834",
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834",
+        "086c8ba841c2cc60785f87f511abf3cc03bcdf2282f44a6e94404398158a3834"
+      ],
+      "warmupSamples": [
+        89.44999998807907,
+        79.68999999761581,
+        49.02000004053116
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-512",
+      "backend": "webgpu",
+      "samples": [
+        336.35499995946884,
+        341.5199999809265,
+        337.2950000166893,
+        345.33000004291534,
+        345.8899999856949
+      ],
+      "hashes": [
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c",
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c",
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c",
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c",
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c"
+      ],
+      "warmupSamples": [
+        334.5450000166893,
+        339.14500004053116,
+        335.7450000047684
+      ],
+      "stable": false
+    },
+    {
+      "repeat": 0,
+      "workload": "batch-512",
+      "backend": "cpu",
+      "samples": [
+        783.2800000309944,
+        775.1149999499321,
+        775.4499999880791,
+        782.964999973774,
+        774.0749999880791
+      ],
+      "hashes": [
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c",
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c",
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c",
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c",
+        "3293e6ddc5252ee125155127d64832e7ec44809355894cc09d8fd6d3fb6a721c"
+      ],
+      "warmupSamples": [
+        777.4499999880791,
+        782.1899999976158,
+        784.1850000023842
+      ],
+      "stable": false
+    }
+  ],
+  "diagnostic": {
+    "backend": "webgpu",
+    "adapter": {
+      "vendor": "apple",
+      "architecture": "metal-3",
+      "device": null,
+      "description": null,
+      "isFallbackAdapter": false
+    },
+    "pipelineCount": 6,
+    "internalBatchLimit": 256,
+    "residentGPUBytes": 12814328,
+    "peakAllocatedGPUBytes": 12814328,
+    "initialization": {
+      "deviceAcquisitionMs": 1.6200000047683716,
+      "shaderCompilationMs": 3.2350000143051147,
+      "weightUploadMs": 0.24500000476837158
+    },
+    "lastTimings": {
+      "packingMs": 0.17000001668930054,
+      "inputUploadMs": 0.205000102519989,
+      "encodingMs": 0.4249998927116394,
+      "readbackAndExecutionMs": 759.4299999475479,
+      "backendTotalMs": 760.914999961853
+    }
+  },
+  "parityArtifact": "parity-2026-09-11T211237232Z.json",
+  "errors": [],
+  "limitations": [
+    "One headless Chromium browser on one integrated GPU",
+    "Independent discrete GPU, Android, Safari and Firefox measurements are unavailable",
+    "Warmup stability was not established for all workload/backend pairs",
+    "Reference CPU is straightforward JavaScript, not optimized WASM",
+    "Timing runs are experimental; a controlled release-device run is still required"
+  ]
+}

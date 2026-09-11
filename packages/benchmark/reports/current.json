@@ -5,30 +5,30 @@
   "modelSha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
   "artifacts": {
     "correctness": {
-      "file": "packages/benchmark/results/correctness-2026-09-11T204315462Z.json",
-      "sha256": "24e1c81aa13c61474c6584ed5f2e72ac6d222c186daa292bfd85bcf4de12ec06"
+      "file": "packages/benchmark/results/correctness-2026-09-11T210703100Z.json",
+      "sha256": "7fbc84c806d3bd616df2d3946c4469065fa0f96c8ba921641892b2403d955367"
     },
     "size": {
-      "file": "packages/benchmark/results/size-2026-09-11T204318231Z.json",
-      "sha256": "269e85c15caa367351a791d4d42015546cce43305ad076ac70f882ed9584799b"
+      "file": "packages/benchmark/results/size-2026-09-11T210707831Z.json",
+      "sha256": "c6eda2e30ab74f8889ca39e6e1ba1f11c4bc64ba5f38c3600dc52aa08822ae45"
     },
     "browser": {
-      "file": "packages/benchmark/results/browser-2026-09-11T201749461Z.json",
-      "sha256": "f986ff7c373ea64932c04aca26ea806d284b888e2a41c6312c888eb18af9f714"
+      "file": "packages/benchmark/results/browser-2026-09-11T211921285Z.json",
+      "sha256": "1b93cde939c4670bb773ab24718677dd26ca313313462078a98ce19cde609a6a"
     },
     "parity": {
-      "file": "packages/benchmark/results/parity-2026-09-11T204320309Z.json",
-      "sha256": "234c200555dfa368a3c43059fdfc631729cbb84b62245c5e71e620452c6579b9"
+      "file": "packages/benchmark/results/parity-2026-09-11T211618054Z.json",
+      "sha256": "788e1a9c3431ea729165542758e8071692e47bb9d4821aa87af7638416e9ec56"
     }
   },
   "supplemental": {
-    "reproduction": {
-      "file": "packages/benchmark/results/reproduction-2026-09-11T204137633Z.json",
-      "sha256": "3d6a7cb53fa734d24e26f66491a531201b9e511f7929aec99b0d2c377deee9e0"
-    },
     "ai-review": {
-      "file": "packages/benchmark/results/ai-review-2026-09-11T204325925Z.json",
-      "sha256": "d529a777e0b927ffa6de2f72d718c4c79785879e0f849cc14ab79b54b4cb3fa5"
+      "file": "packages/benchmark/results/ai-review-2026-09-11T210704853Z.json",
+      "sha256": "1a2e1e0351f7934df115d9909cbe45e51da6d9e1301e315005cea70484d02763"
+    },
+    "corrected-comparison": {
+      "file": "packages/benchmark/results/corrected-comparison-2026-09-11T211224679Z.json",
+      "sha256": "544a2b81c9de7e8316dfde50529e89ad84100fa6d40882ed46574b54fd1deab2"
     },
     "eligibility": {
       "file": "packages/training/promotions/20260911T201128.904550Z.json",

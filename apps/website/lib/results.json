@@ -7,7 +7,7 @@
     },
     {
       "label": "Teacher segmentation agreement",
-      "value": "87.11%",
+      "value": "87.02%",
       "note": "1,094 teacher-sampled verification words"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "label": "WebGPU batch advantage",
-      "value": "2.03×",
+      "value": "2.05×",
       "note": "Batch 128 vs JavaScript reference · full"
     }
   ],
