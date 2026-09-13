@@ -6,9 +6,9 @@ Experimental Modern Standard Arabic morphology, executed locally through a small
 
 [Try TinySarf in your browser](https://tinysarf-lab.ahmedabdouuu.chatgpt.site). Enter an Arabic word and select **Analyze word**. The demo defaults to CPU, with optional WebGPU acceleration. No installation or account is needed.
 
-[![Watch TinySarf's 30-second explainer: Arabic characters flow through two CNNs to produce word parts, roots and grammar.](docs/media/tinysarf-two-cnn-poster.png)](https://github.com/AhmedAbdel-Aal/tinySarf/raw/refs/heads/main/docs/media/tinysarf-two-cnn.mp4)
+https://github.com/user-attachments/assets/7b75a2ca-be23-4ea4-8e7d-67fec3d81d2c
 
-**[Watch the 30-second explainer](https://github.com/AhmedAbdel-Aal/tinySarf/raw/refs/heads/main/docs/media/tinysarf-two-cnn.mp4).** Follow one Arabic word through character embeddings, two CNNs (220K parameters for parts and grammar; 25K for roots), score maps and the final analysis. The animation uses captured values from the current experimental checkpoint; movement illustrates connections, not execution time.
+**30-second explainer.** Follow one Arabic word through character embeddings, two CNNs (220K parameters for parts and grammar; 25K for roots), score maps and the final analysis. The animation uses captured values from the current experimental checkpoint; movement illustrates connections, not execution time.
 
 For your own JavaScript or TypeScript project, install the self-contained experimental package. It includes the checkpoint; no Python, separate model download, account, or API key is needed for inference.
 
