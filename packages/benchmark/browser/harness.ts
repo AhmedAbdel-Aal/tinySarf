@@ -54,7 +54,7 @@ async function parity(words:string[],capture=false) {
   const pending:{name:string;buffer:GPUBuffer;batch:number;length:number;elements:number}[]=[];
   if(capture && words.length>256) throw new Error('Tensor trace is limited to one physical batch');
   if(capture) gpu.onStage=(encoder,name,source,elements,batch,length)=>{
-    if(name==='heads')return;
+    if(name==='heads'||name==='root.heads')return;
     const buffer=gpu.device.createBuffer({size:elements*4,usage:GPUBufferUsage.COPY_DST|GPUBufferUsage.MAP_READ});encoder.copyBufferToBuffer(source,0,buffer,0,elements*4);pending.push({name,buffer,batch,length,elements});
   };
   let gr;
@@ -62,12 +62,13 @@ async function parity(words:string[],capture=false) {
   const cr=await cpu.run(prepared,capture),tensors:Record<string,ReturnType<typeof compare>>={};
   for(const item of pending) {
     await item.buffer.mapAsync(GPUMapMode.READ);const padded=new Float32Array(item.buffer.getMappedRange());
-    const values:number[]=[],channels=item.name==='embedding'?m.embedding:m.width;
+    const root=item.name.startsWith('root.'),architecture=root?m.rootArchitecture!:m;
+    const values:number[]=[],channels=item.name.endsWith('embedding')?architecture.embedding:architecture.width;
     for(let b=0;b<item.batch;b++) {
-      if(item.name==='pool') values.push(...padded.slice(b*channels,(b+1)*channels));
+      if(item.name==='pool'||item.name==='root.pool') values.push(...padded.slice(b*channels,(b+1)*channels));
       else for(let p=0;p<prepared[b].text.length;p++) values.push(...padded.slice((b*item.length+p)*channels,(b*item.length+p+1)*channels));
     }
-    const name=item.name==='pool'?'pooled':item.name;tensors[name]=compare(cr.trace![name],Float32Array.from(values),channels);item.buffer.unmap();item.buffer.destroy();
+    const name=item.name.endsWith('pool')?item.name+'ed':item.name;tensors[name]=compare(cr.trace![name],Float32Array.from(values),channels);item.buffer.unmap();item.buffer.destroy();
   }
   for(const [name,classes] of Object.entries({segmentation:m.labels.segmentation,...m.labels.heads})) {
     const field=(x:Logits)=>name==='segmentation'?x.segmentation:x.heads[name];

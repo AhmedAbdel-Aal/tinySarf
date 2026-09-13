@@ -2,6 +2,7 @@ import type {Logits} from "./cpu";
 import type {NormalizedWord} from "./normalize";
 import type {ModelManifest} from "./model";
 import {SPAN_TYPES, FEATURE_VALUES, type MorphAnalysis, type MorphSpan, type MorphFeatures} from "./schema";
+import {constrainRoots} from './root-decode';
 function logSoftmax(values:ArrayLike<number>):number[] {
   const v=Array.from(values); if(v.some(x=>!Number.isFinite(x))) throw new Error("Non-finite model output");
   const max=Math.max(...v),z=max+Math.log(v.reduce((s,x)=>s+Math.exp(x-max),0)); return v.map(x=>x-z);
@@ -71,7 +72,8 @@ function constrainedFeatures(pos:string,features:Record<string,string>,spans:Mor
 /** Approximate constrained beam decoding. Scores are ranking scores, never calibrated probabilities. */
 export function decode(word:NormalizedWord,logits:Logits,m:ModelManifest,topK:number,threshold=-Infinity):MorphAnalysis[] {
   const scores=Object.fromEntries(Object.entries(logits.heads).map(([k,v])=>[k,logSoftmax(v)]));
-  const segments=segmentationCandidates(word.text,logits.segmentation),roots=rootCandidates(scores,m);
+  const segments=segmentationCandidates(word.text,logits.segmentation);
+  let roots=rootCandidates(scores,m);
   let beam:{values:Record<string,string>;score:number}[]=[{values:{},score:0}];
   const names=["pos","pattern",...Object.keys(FEATURE_VALUES)];
   for(const name of names) {
@@ -95,6 +97,19 @@ export function decode(word:NormalizedWord,logits:Logits,m:ModelManifest,topK:nu
     return result;
   };
   const spanCache=segments.map(seg=>spansFromTags(word,seg.tags));
+  if(m.rootDecoder) {
+    // Root constraints use the same best valid segmentation as the public
+    // analysis. Roots do not alter the ranking of non-root fields.
+    let best=-Infinity,bestSegment=0;
+    for(let s=0;s<segments.length;s++) {
+      if(segments[s].score+beam[0].score<=best)break;
+      for(const b of beam) {
+        const score=segments[s].score+b.score;if(score<=best)break;
+        if(constrainedFeatures(publicValue(b.values.pos)??"unknown",b.values,spanCache[s])){best=score;bestSegment=s;break;}
+      }
+    }
+    roots=constrainRoots(word.text,segments[bestSegment]?.tags??[],scores,m,roots);
+  }
   push(0,0,0);
   while(heap.length && result.length<topK) {
     const node=pop(),score=node.score/(word.text.length+names.length+4);if(score<threshold)break;

@@ -1,4 +1,5 @@
 import type {ModelManifest} from "./model";
+import {rootShaders} from './root-shaders';
 const f=(n:number)=>`${n.toExponential(9)}f`;
 export function shaders(m:ModelManifest):Record<string,string> {
   const prelude=`
@@ -58,6 +59,7 @@ fn weight(offset: u32, scale: f32) -> f32 {
   const heads=Object.entries(m.labels.heads),total=heads.reduce((s,[,v])=>s+v.length,0);let base=0;
   const branches=heads.map(([name,labels])=>{
     const wt=t[`${name}.weight`],bias=t[`${name}.bias`],start=base;base+=labels.length;
+    if(m.rootArchitecture&&name.startsWith('root'))return `if(head>=${start}u && head<${base}u) { destination[index]=0.0f; return; }`;
     return `if(head>=${start}u && head<${base}u) { channel=head-${start}u; weightOffset=${wt.offset}u; biasOffset=${bias.offset}u; weightScale=${f(wt.scale)}; biasScale=${f(bias.scale)}; }`;
   }).join("\n");
   const seg=t['segmentation.weight'],segBias=t['segmentation.bias'];
@@ -83,5 +85,5 @@ fn weight(offset: u32, scale: f32) -> f32 {
   }
   destination[index]=sum+weight(biasOffset+channel,biasScale);
 }`;
-  return code;
+  return {...code,...rootShaders(m,prelude)};
 }

@@ -24,12 +24,15 @@ def export_model(model,path,model_id,data_digest):
         spec=tensors[name];float_packed[spec['offset']:spec['offset']+spec['length']]=array.reshape(-1)
     (path/'float.weights.bin').write_bytes(float_packed.tobytes())
     parameters=sum(a.size for a in arrays.values())
-    manifest={'schemaVersion':1,'format':'cnn-v1','id':model_id,'status':'experimental-unpromoted',
+    root=model.root_model
+    manifest={'schemaVersion':1,'format':'cnn-root-v2' if root is not None else 'cnn-v1','id':model_id,'status':'experimental-unpromoted',
       'normalizationVersion':'arabic-v1','quantization':'symmetric-per-tensor-int8','labels':model.labels,
       'vocabulary':['__pad__']+list(LETTERS),'maxLength':32,'embedding':32,'width':model.width,
-      'dilations':[1,2,4],'trainingParameters':parameters,'reachableWeights':parameters-model.embedding_width,
+      'dilations':[1,2,4],'trainingParameters':parameters,'reachableWeights':parameters-model.embedding_width-(root.embedding_width if root is not None else 0),
       'packedWeightsBytes':len(packed),'sha256':sha(path/'weights.bin'),'floatSha256':sha(path/'float.npz'),
       'floatBinarySha256':sha(path/'float.weights.bin'),'verificationDigest':data_digest,'tensors':tensors}
+    if root is not None: manifest['rootArchitecture']={'format':'copy-cnn-v1','embedding':root.embedding_width,'width':root.width,'dilations':[1,2,4]}
+    if model.root_decoder is not None: manifest['rootDecoder']=model.root_decoder
     write_json(path/'manifest.json',manifest)
     return manifest,arrays,quant_arrays
 

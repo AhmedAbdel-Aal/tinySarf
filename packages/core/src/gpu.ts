@@ -93,9 +93,10 @@ export class GPUBackend implements Backend {
     this.lastTimings.packingMs+=performance.now()-start;
     const storage=GPUBufferUsage.STORAGE|GPUBufferUsage.COPY_SRC;
     this.ensure("input",packed.byteLength,GPUBufferUsage.STORAGE|GPUBufferUsage.COPY_DST);
-    this.ensure("a",capacity*length*Math.max(m.width,m.embedding)*4,storage);
-    this.ensure("b",capacity*length*m.width*4,storage);
-    this.ensure("pool",capacity*m.width*4,storage);
+    const width=Math.max(m.width,m.rootArchitecture?.width??0);
+    this.ensure("a",capacity*length*Math.max(width,m.embedding)*4,storage);
+    this.ensure("b",capacity*length*width*4,storage);
+    this.ensure("pool",capacity*width*4,storage);
     this.ensure("output",capacity*stride*4,storage);
     this.ensure("readback",capacity*stride*4,GPUBufferUsage.MAP_READ|GPUBufferUsage.COPY_DST);
     const upload=performance.now();device.queue.writeBuffer(this.buffer("input"),0,packed);
@@ -112,6 +113,15 @@ export class GPUBackend implements Backend {
     dispatch("conv2","a","b",batch*length*m.width);
     dispatch("pool","b","pool",batch*m.width);
     dispatch("heads","b","output",batch*stride,"pool");
+    if(m.rootArchitecture) {
+      const root=m.rootArchitecture;
+      dispatch("root.embedding","dummy","a",batch*length*root.embedding);
+      dispatch("root.conv0","a","b",batch*length*root.width);
+      dispatch("root.conv1","b","a",batch*length*root.width);
+      dispatch("root.conv2","a","b",batch*length*root.width);
+      dispatch("root.pool","b","pool",batch*root.width);
+      dispatch("root.heads","b","output",batch*4,"pool");
+    }
     encoder.copyBufferToBuffer(this.buffer("output"),0,this.buffer("readback"),0,batch*stride*4);
     device.queue.submit([encoder.finish()]);this.lastTimings.encodingMs+=performance.now()-encoding;
     const wait=performance.now(),readback=this.buffer("readback");

@@ -4,10 +4,14 @@ Experimental Modern Standard Arabic morphology, executed locally through a small
 
 **Status: experimental, unpromoted.** No independent human gold evaluation is available. This repository implements the research and deployment pipeline; it does not claim that the blueprint's scientific or public-release success criteria have been met.
 
-Install the self-contained experimental package from [GitHub Releases](https://github.com/AhmedAbdel-Aal/tinySarf/releases/tag/v0.1.0-experimental.0). It includes the checkpoint; no Python, model download, account, or API key is needed for inference.
+Build the current self-contained experimental package from this checkout. It includes the checkpoint; no Python, separate model download, account, or API key is needed for inference.
 
 ```sh
-npm install https://github.com/AhmedAbdel-Aal/tinySarf/releases/download/v0.1.0-experimental.0/tinysarf-0.1.0-experimental.0.tgz
+pnpm install --frozen-lockfile
+pnpm build:core
+npm pack ./packages/core
+# In your application:
+npm install /path/to/tinysarf-0.1.0-experimental.1.tgz
 ```
 
 In a browser application:
@@ -18,7 +22,7 @@ const alternatives = await analyze('وبكتابهم', { topK: 3 });
 const batch = await analyze.batch(['كتاب', 'يكتبون'], { topK: 3 });
 ```
 
-WebGPU requires a secure browser context. `{ backend: 'cpu' }` explicitly chooses the local reference. There is no remote inference or automatic backend fallback. The package is distributed through a GitHub prerelease; it has not been published to the npm registry.
+WebGPU requires a secure browser context. `{ backend: 'cpu' }` explicitly chooses the local reference. There is no remote inference or automatic backend fallback. The [historical GitHub prerelease](https://github.com/AhmedAbdel-Aal/tinySarf/releases/tag/v0.1.0-experimental.0) predates this root redesign. The current package has not been published to the npm registry.
 
 Try the CPU backend in Node 22+ immediately after installing:
 
@@ -33,15 +37,16 @@ See [the contract](docs/CONTRACT.md), [architecture](architecture.md), [model ca
 [Report a morphology error](https://github.com/AhmedAbdel-Aal/tinySarf/issues/new?template=morphology.yml) with the word, returned JSON and a proposed correction. Reviewed cases can enter the guarded replay bank described in the model card.
 
 <!-- GENERATED:RESULTS:START -->
-Experimental checkpoint `20260911T191243.077466Z-250000` — **unpromoted**. [Model card](MODEL_CARD.md), [result index](packages/benchmark/reports/current.json).
+Experimental checkpoint `root-rethink-20260913` — **unpromoted**. [Model card](MODEL_CARD.md), [result index](packages/benchmark/reports/current.json).
 
 | Measured item | Result | Evidence |
 | --- | --- | --- |
-| Reachable deployed weights | 245,667 | [size-2026-09-11T212226866Z.json](packages/benchmark/results/size-2026-09-11T212226866Z.json) |
-| Complete package Brotli | 228,025 bytes | [size-2026-09-11T212226866Z.json](packages/benchmark/results/size-2026-09-11T212226866Z.json) |
-| Teacher segmentation agreement | 87.02% (1094 verification words) | [correctness-2026-09-11T212223821Z.json](packages/benchmark/results/correctness-2026-09-11T212223821Z.json) |
-| Gold segmentation / root / top-3 | TBD — not measured; no gold samples | [correctness-2026-09-11T212223821Z.json](packages/benchmark/results/correctness-2026-09-11T212223821Z.json) |
-| Reference batch throughput | 1,342.6 words/s at batch 128 (full; JS-reference comparison) | [browser-2026-09-11T211921285Z.json](packages/benchmark/results/browser-2026-09-11T211921285Z.json) |
+| Reachable deployed weights | 245,063 | [size-2026-09-13T183853714Z.json](packages/benchmark/results/size-2026-09-13T183853714Z.json) |
+| Complete package Brotli | 239,894 bytes | [size-2026-09-13T183853714Z.json](packages/benchmark/results/size-2026-09-13T183853714Z.json) |
+| Teacher segmentation agreement | 87.02% (1094 verification words) | [correctness-2026-09-13T183855624Z.json](packages/benchmark/results/correctness-2026-09-13T183855624Z.json) |
+| Teacher root agreement | 78.24% (1094 verification words) | [correctness-2026-09-13T183855624Z.json](packages/benchmark/results/correctness-2026-09-13T183855624Z.json) |
+| Gold segmentation / root / top-3 | TBD — not measured; no gold samples | [correctness-2026-09-13T183855624Z.json](packages/benchmark/results/correctness-2026-09-13T183855624Z.json) |
+| Reference batch throughput | 1,314.47 words/s at batch 128 (full; JS-reference comparison) | [browser-2026-09-13T184740542Z.json](packages/benchmark/results/browser-2026-09-13T184740542Z.json) |
 <!-- GENERATED:RESULTS:END -->
 
 Development requires Node 22+, pnpm 11, and Python 3.11. Use `pnpm install`, then the setup and reproduction instructions in the model card. The website is a separate package under `apps/website`.

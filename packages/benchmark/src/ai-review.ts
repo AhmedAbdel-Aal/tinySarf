@@ -54,6 +54,18 @@ export async function evaluateAI(file:string,local=false){
  const split=await json(path.join(ROOT,'packages/training/data/split-manifest.json'));
  const identities:Record<string,Set<string>>={};let training:EvaluationWord[]=[];
  for(const role of ['train','verification','mining']){const data=await readFile(path.join(ROOT,'packages/training/data',split.directory,`${role}.json`));if(hash(data)!==split.roles[role].sha256)throw new Error('Split identity audit digest changed');const records=JSON.parse(data.toString()).records;identities[role]=new Set(records.map((r:AIRecord)=>normalize(r.word).text));if(role==='train')training=records.map((r:any)=>({...r,analyses:r.analyses.map((a:any)=>({...a,features:Object.fromEntries(Object.entries(a.features).filter(([,v])=>!(v as string).startsWith('__')))}))}));}
+ let rootTrainingAudit:any=null;
+ if(manifest.rootArchitecture){
+  const config=await json(path.join(selected.directory,'config.json')),root=config.rootTraining;
+  const pools=config.rootTrainingPools??[{directory:root.datasetDirectory,sha256:root.dataset.train.sha256}];identities.rootTrain=new Set();
+  for(const pool of pools){
+   const directory=path.resolve(ROOT,pool.directory);
+   if(!directory.startsWith(path.join(ROOT,'packages/training/data/generated')+path.sep))throw new Error('Root dataset path escapes generated data');
+   const bytes=await readFile(path.join(directory,'train.json'));if(hash(bytes)!==pool.sha256)throw new Error('Root training digest mismatch');
+   for(const r of JSON.parse(bytes.toString()).records)identities.rootTrain.add(r.word);
+  }
+  rootTrainingAudit={pools,labelsUsedForTraining:false,developmentExposed:true};
+ }
  const predictions=[];
  for(const row of dataset.records){
   if(row.expectedError){let rejected=false;try{await analyze(row.word,{backend:'cpu'});}catch{rejected=true;}predictions.push({word:row.word,expectedError:true,rejected,confidence:row.confidence});continue;}
@@ -69,7 +81,7 @@ export async function evaluateAI(file:string,local=false){
  const rejected=predictions.filter(p=>p.expectedError);
  const artifact={...provenance(),kind:'ai-review',runtime:{sha256:hash(await readFile(path.join(ROOT,'packages/core/dist/index.js')))},status:'diagnostic-only-not-human-gold',model:manifest,data:{aiReviewDigest:hash(bytes),inputDigest:hash(inputBytes),verificationDigest:manifest.verificationDigest,goldDigest:null},
   protocol:{labelOrigin:'ai-reviewed',distribution:inputs.distribution,humanReviewed:false,finalTestOpened:false,bootstrap:{seed:42,resamples:2000,unit:'word'},rootCanonicalization:'Seated hamza أإؤئ maps to ء only in the secondary canonical-root metric; exact-root agreement also retained',scoring:'Accepted values scored separately by field; top-3 means at least one candidate matches that field. No full-analysis or gold accuracy claim.'},
-  annotation:dataset.annotation,metrics:{all:summarize(accepted),highConfidence:summarize(accepted.filter(r=>r.confidence==='high')),unseenTrainingSurface:summarize(accepted.filter(r=>!r.overlap?.train)),inputRejection:rate(rejected.map(r=>Number(r.rejected)))},
+  rootTrainingAudit,annotation:dataset.annotation,metrics:{all:summarize(accepted),highConfidence:summarize(accepted.filter(r=>r.confidence==='high')),unseenTrainingSurface:summarize(accepted.filter(r=>!r.overlap?.train)),inputRejection:rate(rejected.map(r=>Number(r.rejected)))},
   counts:{inputs:dataset.records.length,valid:accepted.length,rejections:rejected.length,highConfidence:accepted.filter(r=>r.confidence==='high').length,lowConfidence:accepted.filter(r=>r.confidence==='low').length,overlap:Object.fromEntries(Object.keys(identities).map(role=>[role,accepted.filter(r=>r.overlap?.[role]).length]))},predictions,baselines,
   limitations:[...dataset.limitations,'Same-family AI annotators have correlated knowledge and errors; multiple agents are not independent humans.','Curated inputs can overlap training and verification; surface-disjoint does not establish lemma-family disjointness.','Field-level accepted sets omit pattern/features and may be incomplete or permissive. This report cannot satisfy human-gold promotion gates.']};
  const output=await writeArtifact('ai-review',artifact,local?'packages/benchmark/local':'packages/benchmark/results');console.log(JSON.stringify({file:output,counts:artifact.counts,metrics:artifact.metrics}));return output;

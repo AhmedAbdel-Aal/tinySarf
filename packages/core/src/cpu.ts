@@ -1,5 +1,6 @@
 import type {LoadedModel} from "./model";
 import type {NormalizedWord} from "./normalize";
+import {rootCPU} from './root-cpu';
 export interface Logits {segmentation:Float32Array;heads:Record<string,Float32Array>}
 export interface InferenceResult {words:Logits[];trace?:Record<string,Float32Array>}
 export interface Backend {
@@ -33,6 +34,7 @@ export class CPUBackend implements Backend {
       record("pooled",pooled);
       const heads:Logits["heads"]={}; let segmentation=new Float32Array(0);
       for(const [name,labels] of Object.entries({segmentation:m.labels.segmentation,...m.labels.heads})) {
+        if(m.rootArchitecture&&name.startsWith('root'))continue;
         const rows=name==="segmentation"?length:1,weight=t[`${name}.weight`],bias=t[`${name}.bias`],input=name==="segmentation"?x:pooled;
         const out=new Float32Array(rows*labels.length);
         for(let p=0;p<rows;p++) for(let o=0;o<labels.length;o++) { let sum=0;
@@ -41,6 +43,7 @@ export class CPUBackend implements Backend {
         }
         record(name,out); if(name==="segmentation") segmentation=out; else heads[name]=out;
       }
+      if(m.rootArchitecture)Object.assign(heads,rootCPU(word,this.model,record));
       results.push({segmentation,heads});
     }
     return {words:results,...(debug?{trace:Object.fromEntries(Object.entries(traces).map(([k,v])=>[k,Float32Array.from(v)]))}:{})};

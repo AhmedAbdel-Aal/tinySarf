@@ -24,6 +24,20 @@ export async function correctness(modelDirectory?:string,local=false,goldFiles:s
   if((manifest.verificationDigest!==split.roles.verification.sha256&&!crossDataset) || hash(verificationBytes)!==split.roles[role].sha256 || hash(trainBytes)!==split.roles.train.sha256) throw new Error("Frozen dataset/checkpoint digest mismatch; evaluating an explicitly different verification mapping requires --cross-dataset");
   if(role==='final-test'){const audit=path.join(ROOT,'packages/training/data/generated/audit');await mkdir(audit,{recursive:true});await appendFile(path.join(audit,'final-test-access.jsonl'),JSON.stringify({createdAt:new Date().toISOString(),role,model:manifest.id,digest:hash(verificationBytes),purpose:'explicit release-candidate evaluation'})+'\n');}
   const rawRows=JSON.parse(verificationBytes.toString()).records,rawTrain=JSON.parse(trainBytes.toString()).records;
+  let rootTrain=rawTrain,rootTrainDigest=hash(trainBytes),rootDatasetId=split.datasetId;
+  if(manifest.rootArchitecture) {
+    const config=await json(path.join(dir,'config.json')),training=config.rootTraining;
+    if(!training?.datasetDirectory||!training.dataset?.train?.sha256)throw new Error('Missing root training provenance');
+    const pools=config.rootTrainingPools??[{directory:training.datasetDirectory,sha256:training.dataset.train.sha256}];
+    rootTrain=[];const digests:string[]=[],ids:string[]=[];
+    for(const pool of pools){
+      const rootPath=path.resolve(ROOT,pool.directory,'train.json');
+      if(!rootPath.startsWith(path.join(ROOT,'packages/training/data/generated')+path.sep))throw new Error('Root training path escapes generated datasets');
+      const bytes=await readFile(rootPath);if(hash(bytes)!==pool.sha256)throw new Error('Root training digest mismatch');
+      rootTrain.push(...JSON.parse(bytes.toString()).records);digests.push(hash(bytes));ids.push(path.basename(path.dirname(rootPath)));
+    }
+    rootTrainDigest=digests.length===1?digests[0]:hash(JSON.stringify(digests));rootDatasetId=ids.join('+');
+  }
   const rows=publicRows(rawRows),train=publicRows(rawTrain);
   for(const row of rows) for(const a of row.analyses) validateAnalysis(row.word,a);
   const floatBytes=await readFile(path.join(dir,"float.weights.bin"));
@@ -40,7 +54,7 @@ export async function correctness(modelDirectory?:string,local=false,goldFiles:s
   };
   const floatPredictions=await predict(floatModel),quantizedPredictions=await predict(model);
   const fp=evaluate(rows,floatPredictions),qp=evaluate(rows,quantizedPredictions);
-  const seenRoots=new Set(rawTrain.flatMap((r:any)=>r.analyses.map((a:any)=>a.root)).filter(Boolean));
+  const seenRoots=new Set(rootTrain.flatMap((r:any)=>r.analyses.map((a:any)=>a.root)).filter(Boolean));
   const seenLemmas=new Set(rawTrain.flatMap((r:any)=>r.analyses.map((a:any)=>a.lemmaFamily)));
   const gold:Record<string,unknown>={},goldDigests:Record<string,string>={};
   for(const file of goldFiles) {
@@ -64,6 +78,8 @@ export async function correctness(modelDirectory?:string,local=false,goldFiles:s
     add(row.analyses.some((a:any)=>seenRoots.has(a.root))?'seen-root':'unseen-root',i);
     add(row.analyses.some((a:any)=>seenLemmas.has(a.lemmaFamily))?'seen-lemma':'unseen-lemma',i);
     add(row.analyses.some((a:any)=>a.root!==null)?'non-null-root':'null-root-only',i);
+    if(row.analyses.every((a:any)=>a.root!==null))add('root-required',i);
+    else if(row.analyses.some((a:any)=>a.root!==null))add('root-optional',i);
     if(row.analyses.some((a:any)=>a.pos==='proper_noun')) add('named-entity',i);
     add('undiacritized',i);
     add(`length-${row.word.length<=5?'1-5':row.word.length<=8?'6-8':row.word.length<=16?'9-16':'17-32'}`,i);
@@ -73,8 +89,8 @@ export async function correctness(modelDirectory?:string,local=false,goldFiles:s
   const breakdowns=Object.fromEntries(Object.entries(slices).map(([name,indices])=>[name,{count:indices.length,digest:hash(JSON.stringify(indices.map(i=>rows[i].word))),metrics:subset(rows,quantizedPredictions,indices)}]));
   const deltas=Object.fromEntries(Object.keys(fp.perWord).map(k=>[k,pairedBootstrap(qp.perWord[k as keyof typeof qp.perWord],fp.perWord[k as keyof typeof fp.perWord])]));
   const outputDifferences=rows.flatMap((row,i)=>JSON.stringify(quantizedPredictions[i].map(analysisKey))===JSON.stringify(floatPredictions[i].map(analysisKey))?[]:[{word:row.word,float:floatPredictions[i],int8:quantizedPredictions[i]}]);
-  const artifact={...provenance(),kind:"correctness",runtime:{sha256:hash(await readFile(path.join(ROOT,'packages/core/dist/index.js')))},status:"experimental-unpromoted",model:manifest,data:{datasetId:split.datasetId,verificationDigest:split.roles.verification.sha256,checkpointVerificationDigest:manifest.verificationDigest,crossDatasetEvaluation:crossDataset,splitManifest:splitManifest??'packages/training/data/split-manifest.json',evaluationRole:role,evaluationDigest:hash(verificationBytes),goldDigest:goldFiles.length?goldDigests:null,trainDigest:hash(trainBytes),normalizationVersion:"arabic-v1"},
-    protocol:{labelOrigin:"teacher-generated",distribution:"teacher-sampled lexical surfaces; not natural text",seenSlicesAndFrequencyBaseline:'Reference training pool from the evaluation split; cross-dataset comparisons may differ from the checkpoint training pool',scoreSemantics:"ranking",threshold:null,bootstrap:{seed:42,resamples:2000,unit:"word"},finalTestOpened:role==='final-test'||goldFiles.length>0},
+  const artifact={...provenance(),kind:"correctness",runtime:{sha256:hash(await readFile(path.join(ROOT,'packages/core/dist/index.js')))},status:"experimental-unpromoted",model:manifest,data:{datasetId:split.datasetId,verificationDigest:split.roles.verification.sha256,checkpointVerificationDigest:manifest.verificationDigest,crossDatasetEvaluation:crossDataset,splitManifest:splitManifest??'packages/training/data/split-manifest.json',evaluationRole:role,evaluationDigest:hash(verificationBytes),goldDigest:goldFiles.length?goldDigests:null,trainDigest:hash(trainBytes),rootTrainDigest,rootDatasetId,normalizationVersion:"arabic-v1"},
+    protocol:{labelOrigin:"teacher-generated",distribution:"teacher-sampled lexical surfaces; not natural text",seenSlicesAndFrequencyBaseline:manifest.rootArchitecture?'Root seen/unseen uses the dedicated root training pool; lemma slices and frequency baseline use the legacy multi-task training pool':'Reference training pool from the evaluation split; cross-dataset comparisons may differ from the checkpoint training pool',scoreSemantics:"ranking",threshold:null,bootstrap:{seed:42,resamples:2000,unit:"word"},finalTestOpened:role==='final-test'||goldFiles.length>0},
     correctness:{teacherAgreement:qp,goldNatural:gold['gold-natural']??null,goldBalanced:gold['gold-balanced']??null,float:fp,floatToQuantizedDeltas:deltas,completeLabelAgreement:{numerator:rows.length-outputDifferences.length,denominator:rows.length,value:(rows.length-outputDifferences.length)/rows.length},slices:breakdowns,
       baselines:{rules:evaluate(rows,rulesBaseline(rows)),frequency:evaluate(rows,frequencyBaseline(train,rows))}},outputDifferences,predictions:quantizedPredictions.map((analyses,i)=>({word:rows[i].word,analyses})),
     limitations:[...(!goldFiles.length?["No independent gold annotation","No final-test evaluation"]:[]),"Teacher verification is not a natural text-distribution sample","Missing challenge slices remain unmeasured","Macro-F1 includes the explicit absent-feature class; per-class support is retained"]};

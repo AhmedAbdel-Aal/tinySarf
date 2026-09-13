@@ -6,8 +6,8 @@ The blueprint's release definition is not met. These external or research requir
 
 - Independent human review of the 50 contract fixtures and the teacher mapping audit.
 - Licensed natural-text sampling and independent gold-natural / gold-balanced annotation, with the required challenge slices.
-- Better root, POS and full-analysis quality. Current teacher agreement and baselines are reported in the model card; they are not gold results.
+- Better POS and full-analysis quality, plus independent validation of the redesigned root branch. Root teacher agreement rose from 45.34% to 78.24% on the same verification words. These are development results, not gold accuracy; see [the root experiment](ROOT_EXPERIMENT.md).
 - A complete controlled reference benchmark plus discrete-GPU, Android and additional browser evidence. The implemented full protocol is available; recorded runs are marked according to their actual scope.
-- Promotion of an eligible checkpoint, public source hosting and npm publication. The working demo is a private experimental preview. No npm package or active model is claimed.
+- Promotion of an eligible checkpoint and npm publication. Public historical source and prereleases are separate from the current local experimental candidate. No npm registry package or active model is claimed.
 
 The sealed teacher final-test labels have not been used for model selection or scored. Missing measurements are null / “TBD — not measured”. A clean-clone reproduction validates the frozen checkpoint and runtime; it cannot retroactively establish clean provenance for the original exploratory training session.

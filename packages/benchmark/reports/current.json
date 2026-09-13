@@ -1,42 +1,34 @@
 {
   "schemaVersion": 1,
   "status": "experimental-unpromoted",
-  "modelId": "20260911T191243.077466Z-250000",
-  "modelSha256": "dcf5b696bf925b5576850d33acc7c2688a419aec2858152bcf40464ab91c0864",
+  "modelId": "root-rethink-20260913",
+  "modelSha256": "705690244fd7a29b4c23635dec578b80b90b01035585211bcbc9d84f8f5ed305",
   "artifacts": {
     "correctness": {
-      "file": "packages/benchmark/results/correctness-2026-09-11T212223821Z.json",
-      "sha256": "c771f07375a10cd4061b8252d4f7cd1c2ff41154abf28eb810d2a690d4cde822"
+      "file": "packages/benchmark/results/correctness-2026-09-13T183855624Z.json",
+      "sha256": "a00bf16a4ee227264ea7f1d6f2bbccb4ecdf0def18c998920923ecd9c623bf4c"
     },
     "size": {
-      "file": "packages/benchmark/results/size-2026-09-11T212226866Z.json",
-      "sha256": "0c75f492db2d56b6229bd2f46fd7ebb6acbf51d63e81903475d7d18781a558ef"
+      "file": "packages/benchmark/results/size-2026-09-13T183853714Z.json",
+      "sha256": "12ac93cab7f1daa509e2a83abf4116093782328740d9bb5bcf3a7e2469e9b667"
     },
     "browser": {
-      "file": "packages/benchmark/results/browser-2026-09-11T211921285Z.json",
-      "sha256": "1b93cde939c4670bb773ab24718677dd26ca313313462078a98ce19cde609a6a"
+      "file": "packages/benchmark/results/browser-2026-09-13T184740542Z.json",
+      "sha256": "e73fe59499e49cc95f79642b24ae8aa507cd79266edc3388ec074b9ec7c20b8f"
     },
     "parity": {
-      "file": "packages/benchmark/results/parity-2026-09-11T212227895Z.json",
-      "sha256": "ea81f65a71d23f517fb9912f8d197260d5fd6b9626802750d5bc7b4a33ae6708"
+      "file": "packages/benchmark/results/parity-2026-09-13T184417380Z.json",
+      "sha256": "e534f85c14f5dd1a4c8ceccf4d64bc59105b9499a22524bf79bc3f92a3af9e32"
     }
   },
   "supplemental": {
-    "reproduction": {
-      "file": "packages/benchmark/results/reproduction-2026-09-11T212039305Z.json",
-      "sha256": "9fb4b4418844cb3dedc6783c83ca11b3062d727a8376cc06f7110166c7fee9b1"
-    },
     "ai-review": {
-      "file": "packages/benchmark/results/ai-review-2026-09-11T212233259Z.json",
-      "sha256": "c432f79d549fe17b67290c25bebac73a9b796ff554694a4d763df24bfb80a7c3"
+      "file": "packages/benchmark/results/ai-review-2026-09-13T183856172Z.json",
+      "sha256": "1013691b9ae2a51d120a495990fde6ec79b76e2fa0dd986da2899bc7a34ee2a7"
     },
-    "corrected-comparison": {
-      "file": "packages/benchmark/results/corrected-comparison-2026-09-11T211224679Z.json",
-      "sha256": "544a2b81c9de7e8316dfde50529e89ad84100fa6d40882ed46574b54fd1deab2"
-    },
-    "eligibility": {
-      "file": "packages/training/promotions/20260911T201128.904550Z.json",
-      "sha256": "0717227e66e27037f55b92e99ce65d087035eb50386d6f164749e48c0c28a411"
+    "root-comparison": {
+      "file": "packages/benchmark/results/root-comparison-2026-09-13T183909338Z.json",
+      "sha256": "9c7738dfdfbca4da427637bcfb90dc63bb05a24333db582077d88772f9fd7b38"
     }
   }
 }

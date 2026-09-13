@@ -15,13 +15,18 @@ def make_labels(rows):
     return {'segmentation':SPAN_TYPES,'heads':heads}
 
 class Student(nn.Module):
-    def __init__(self,width,labels,embedding=32):
+    def __init__(self,width,labels,embedding=32,root_width=None):
         super().__init__(); self.width=width; self.labels=labels; self.embedding_width=embedding
         self.embedding=nn.Embedding(len(LETTERS)+1,embedding,padding_idx=0)
         self.position=nn.Embedding(32,embedding)
         self.convs=nn.ModuleList([nn.Conv1d(embedding,width,3,padding=1),nn.Conv1d(width,width,3,padding=2,dilation=2),nn.Conv1d(width,width,3,padding=4,dilation=4)])
         self.segmentation=nn.Linear(width,len(SPAN_TYPES))
-        self.heads=nn.ModuleDict({k:nn.Linear(width,len(v)) for k,v in labels['heads'].items()})
+        self.heads=nn.ModuleDict({k:nn.Linear(width,len(v)) for k,v in labels['heads'].items() if root_width is None or not k.startswith('root')})
+        self.root_model=None
+        self.root_decoder=None
+        if root_width is not None:
+            from .root_model import RootModel
+            self.root_model=RootModel(root_width)
     def forward(self,ids,trace=False):
         mask=(ids!=0).float().unsqueeze(-1)
         embedded=(self.embedding(ids)+self.position(torch.arange(ids.shape[1],device=ids.device)))*mask
@@ -30,6 +35,10 @@ class Student(nn.Module):
             x=torch.relu(conv(x))*mask.transpose(1,2); states[f'conv{i}']=x.transpose(1,2)
         h=x.transpose(1,2); pooled=h.sum(1)/mask.sum(1).clamp(min=1)
         outputs={'segmentation':self.segmentation(h),**{k:head(pooled) for k,head in self.heads.items()}}
+        if self.root_model is not None:
+            roots,root_states=self.root_model(ids,trace=True)
+            outputs.update({f'root{i}':roots[:,i] for i in range(4)})
+            states.update(root_states)
         if trace: return {'embedding':embedded,**states,'pooled':pooled,**outputs}
         return outputs
 
@@ -64,6 +73,9 @@ def export_float(model):
     for name,head in [('segmentation',model.segmentation),*model.heads.items()]:
         arrays[f'{name}.weight']=head.weight.detach().cpu().numpy()
         arrays[f'{name}.bias']=head.bias.detach().cpu().numpy()
+    if model.root_model is not None:
+        from .root_model import export_root
+        arrays.update(export_root(model.root_model))
     return arrays
 
 def numpy_reference(ids,arrays,trace=False):
@@ -81,7 +93,11 @@ def numpy_reference(ids,arrays,trace=False):
         x=np.maximum(y+arrays[f'conv{layer}.bias'],0)*mask
         tensors[f'conv{layer}']=x.copy()
     pooled=x.sum(1)/np.maximum(mask.sum(1),1); tensors['pooled']=pooled
-    for name in [n[:-7] for n in arrays if n.endswith('.weight') and not n.startswith('conv')]:
+    root_model='root.embedding' in arrays
+    for name in [n[:-7] for n in arrays if n.endswith('.weight') and not n.startswith(('conv','root.')) and not (root_model and n.startswith('root'))]:
         h=x if name=='segmentation' else pooled
         tensors[name]=h@arrays[f'{name}.weight'].T+arrays[f'{name}.bias']
-    return tensors if trace else {k:v for k,v in tensors.items() if k not in ('embedding','conv0','conv1','conv2','pooled')}
+    if root_model:
+        from .root_model import numpy_root
+        tensors.update(numpy_root(ids,arrays))
+    return tensors if trace else {k:v for k,v in tensors.items() if k not in ('embedding','conv0','conv1','conv2','pooled') and not k.startswith('root.')}

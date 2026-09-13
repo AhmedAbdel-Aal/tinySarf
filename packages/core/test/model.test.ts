@@ -14,3 +14,13 @@ test('architecture, class order, packed ranges and finite scales fail closed',()
   const m=structuredClone(manifest);mutate(m);assert.throws(()=>validateManifest(m,bytes.length));
  }
 });
+test('root transform metadata rejects unsupported copies, memorized exceptions and invalid priors',()=>{
+ const decoder={format:'learned-transforms-v1',priorWeight:.25,unsupportedPenalty:4,nullPenalty:0,minimumDistinctRoots:3,whole:[],stem:[{surface:'**ا*',output:[0,1,3],distinctRoots:3}]};
+ const clean={...structuredClone(manifest),rootDecoder:decoder};validateManifest(clean,bytes.length);
+ for(const mutate of [(d:any)=>d.priorWeight=NaN,(d:any)=>d.stem[0].output[2]=20,(d:any)=>d.stem[0].output=['ك','ت','ب'],(d:any)=>d.stem[0].distinctRoots=1,(d:any)=>d.stem.push(structuredClone(d.stem[0]))]){
+  const m=structuredClone(clean);mutate(m.rootDecoder);assert.throws(()=>validateManifest(m,bytes.length));
+ }
+ if(manifest.rootArchitecture)for(const mutate of [(m:any)=>m.rootArchitecture.width=0,(m:any)=>m.rootArchitecture.embedding=32,(m:any)=>m.format='cnn-v1']){
+  const m=structuredClone(manifest);mutate(m);assert.throws(()=>validateManifest(m,bytes.length));
+ }
+});

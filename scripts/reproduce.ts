@@ -33,7 +33,9 @@ try {
  // Reuse only downloaded upstream source bytes, still checked against the pinned SHA-256 by the compiler.
  const cache=path.join(ROOT,'packages/training/data/downloads'),destination=path.join(checkout,'packages/training/data/downloads');await mkdir(destination,{recursive:true});
  for(const file of ['camel_morph_msa_v1.0.db.gz','camel-tools.tar.gz']){try{await copyFile(path.join(cache,file),path.join(destination,file));}catch{ /* compiler downloads any missing source */ }}
- await run(['pnpm','data:prepare']);await run(['pnpm','test']);await run(['pnpm','build:core']);await run(['pnpm','check:package']);
+ await run(['pnpm','data:prepare']);
+ await run(['.venv/bin/python','-m','tinysarf_training.root_data','--selected']);
+ await run(['pnpm','test']);await run(['pnpm','build:core']);await run(['pnpm','check:package']);
  await run(['node','--import','tsx','packages/benchmark/src/correctness.ts','--local']);
  await run(['node','--import','tsx','packages/benchmark/src/size.ts','--local']);
  await run(['node','--import','tsx','packages/benchmark/src/browser.ts','--local','--parity-only']);

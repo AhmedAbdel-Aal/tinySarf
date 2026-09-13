@@ -1,6 +1,6 @@
 {
   "name": "tinysarf",
-  "version": "0.1.0-experimental.0",
+  "version": "0.1.0-experimental.1",
   "type": "module",
   "description": "Experimental local Arabic morphology with a tiny learned WebGPU model",
   "repository": { "type": "git", "url": "https://github.com/AhmedAbdel-Aal/tinySarf.git", "directory": "packages/core" },

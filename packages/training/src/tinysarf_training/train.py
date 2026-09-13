@@ -36,6 +36,7 @@ def run(target=50000,epochs=12,batch_size=128,seed=42,resume=None,replay=None):
     width=choose_width(target,labels); model=Student(width,labels)
     if resume:
         checkpoint=torch.load(resume,map_location='cpu',weights_only=True)
+        if checkpoint.get('rootWidth') is not None: raise ValueError('Generic multi-task continuation does not preserve root-only supervision; use tinysarf_training.root_experiment and root_export')
         if checkpoint['labels']!=labels or checkpoint['width']!=width: raise ValueError('Resume architecture/label mismatch')
         model.load_state_dict(checkpoint['state'])
     optimizer=torch.optim.AdamW(model.parameters(),lr=.003,weight_decay=.0001)

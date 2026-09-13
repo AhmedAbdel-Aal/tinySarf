@@ -2,8 +2,8 @@
   "entries": [
     {
       "label": "Reachable weights",
-      "value": "245,667",
-      "note": "Int8 · 245,732 packed bytes"
+      "value": "245,063",
+      "note": "Int8 · 245,144 packed bytes"
     },
     {
       "label": "Teacher segmentation agreement",
@@ -11,16 +11,16 @@
       "note": "1,094 teacher-sampled verification words"
     },
     {
-      "label": "Independent gold accuracy",
-      "value": "Not measured",
-      "note": "Independent human annotation is required"
+      "label": "Teacher root agreement",
+      "value": "78.24%",
+      "note": "Exact teacher root strings; independent human gold is absent"
     },
     {
       "label": "WebGPU batch advantage",
-      "value": "2.05×",
+      "value": "2.34×",
       "note": "Batch 128 vs JavaScript reference · full"
     }
   ],
-  "note": "Experimental, unpromoted. Root and full-analysis quality remain below release targets. One headless Chromium / Apple M2 measurement; not a cross-browser claim. An additional 82-input challenge was independently annotated by two AI agents and adjudicated by a third; see the model card for AI agreement and its limitations.",
+  "note": "Experimental, unpromoted. Full-analysis and POS quality remain below release targets; independent human gold is absent. One headless Chromium / Apple M2 measurement; not a cross-browser claim. An additional 82-input challenge was independently annotated by two AI agents and adjudicated by a third; see the model card for AI agreement and its limitations.",
   "artifact": "/results/current.json"
 }
