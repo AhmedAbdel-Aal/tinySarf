@@ -2,6 +2,8 @@
 import argparse
 import collections
 import random
+import subprocess
+import sys
 from pathlib import Path
 
 from .artifacts import DATA, ROOT, read_json, write_json, sha, provenance
@@ -170,8 +172,7 @@ def prepare_selected():
     config = read_json(ROOT / selected['directory'] / 'config.json')
     if not config.get('rootTraining'): return
     if not (DATA / 'generated/teacher-corrected-pilot-v1/manifest.json').exists():
-        from .corrected import prepare as prepare_corrected
-        prepare_corrected()
+        subprocess.run([sys.executable, '-m', 'tinysarf_training.corrected', 'prepare'], cwd=ROOT, check=True)
     root = config['rootTraining']
     pools = config.get('rootTrainingPools', [{'directory': root['datasetDirectory'], 'sha256': root['dataset']['train']['sha256']}])
     for pool in pools:
@@ -179,8 +180,12 @@ def prepare_selected():
         if not directory.is_relative_to(DATA / 'generated'): raise ValueError('Root data path escapes generated datasets')
         if not directory.exists():
             audit = read_json(DATA / 'audits' / (directory.name + '-manifest.json'))
-            actual = prepare(audit['candidateLimit'], audit['seed'], directory.name.startswith('teacher-roots-v2-'))
-            if actual != directory: raise ValueError('Reconstructed the wrong root dataset')
+            # The teacher loader intentionally rejects reused imported modules:
+            # each pinned archive must be loaded inside a fresh interpreter.
+            command = [sys.executable, '-m', 'tinysarf_training.root_data',
+                       '--limit', str(audit['candidateLimit']), '--seed', str(audit['seed'])]
+            if directory.name.startswith('teacher-roots-v2-'): command.append('--paradigms')
+            subprocess.run(command, cwd=ROOT, check=True)
         load(directory)
         if sha(directory / 'train.json') != pool['sha256']: raise ValueError('Reconstructed root training bytes differ')
 

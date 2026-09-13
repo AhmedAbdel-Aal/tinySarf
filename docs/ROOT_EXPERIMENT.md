@@ -81,7 +81,7 @@ Each output directory must be new. Training and export do not change the selecte
 
 ## Runtime cost
 
-The local `0.1.0-experimental.1` tarball is 258,057 bytes; complete-package Brotli is 239,894 bytes. Float/NumPy, JavaScript CPU and real WebGPU checks pass, including irregular and maximum input sizes, device recovery and repeated-call determinism. All 54 tests and TypeScript checks pass. [Package measurements](../packages/benchmark/results/size-2026-09-13T183853714Z.json), [hardware parity](../packages/benchmark/results/parity-2026-09-13T184417380Z.json).
+The local `0.1.0-experimental.1` tarball is 258,057 bytes; complete-package Brotli is 239,894 bytes. Float/NumPy, JavaScript CPU and real WebGPU checks pass, including irregular and maximum input sizes, device recovery and repeated-call determinism. All 55 tests and TypeScript checks pass. [Package measurements](../packages/benchmark/results/size-2026-09-13T183853714Z.json), [hardware parity](../packages/benchmark/results/parity-2026-09-13T184417380Z.json).
 
 Fresh original and candidate timing runs were executed sequentially with model training stopped, on the same Apple M2 / headless Chromium device. Both runs reported battery power. Each uses 20 cold calls per backend and 100 warm calls per workload across three repetitions. The root redesign adds latency; these local measurements are not a broad hardware or release qualification.
 
