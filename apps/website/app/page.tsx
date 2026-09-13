@@ -15,7 +15,7 @@ const humanize = (value:string) => value.replaceAll('_', ' ');
 export default function Home() {
   const [mode,setMode] = useState('word');
   const [input,setInput] = useState(examples[0]);
-  const [backend,setBackend] = useState('webgpu');
+  const [backend,setBackend] = useState('cpu');
   const [topK,setTopK] = useState('3');
   const [results,setResults] = useState<Result[]>([]);
   const [rank,setRank] = useState(0);
@@ -101,6 +101,6 @@ export default function Home() {
       <section className="evidence-section" aria-labelledby="evidence-title"><div className="evidence-heading"><div><p className="eyebrow">THE EVIDENCE</p><h2 id="evidence-title">Measured, with the gaps visible.</h2></div><a href="/docs/MODEL_CARD.md">Read the full model card ↗</a></div><div className="evidence-grid">{report.entries.map(entry=><div className="evidence-item" key={entry.label}><p>{entry.label}</p><strong>{entry.value}</strong><span>{entry.note}</span></div>)}</div><p className="evidence-caption">{report.note} {report.artifact?<a href={report.artifact}>View result artifact ↗</a>:null}</p></section>
       <section className="limitations"><h2>Know its limits.</h2><p>TinySarf analyzes isolated MSA words. Dialects, names, rare roots, and spelling variants may fail. The current experiment has no independently human-labelled gold evaluation. Do not use it for grading or religious, legal, medical, or security decisions.</p></section>
     </main>
-    <footer><span>TinySarf <span lang="ar">· صرف صغير</span></span><span>Small model. Open methods. Local inference.</span><a href="/docs/architecture.md">Architecture ↗</a></footer>
+    <footer><span>TinySarf <span lang="ar">· صرف صغير</span></span><a href="https://github.com/AhmedAbdel-Aal/tinySarf">Source & installation ↗</a><a href="/docs/architecture.md">Architecture ↗</a></footer>
   </div>;
 }

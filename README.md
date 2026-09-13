@@ -2,16 +2,14 @@
 
 Experimental Modern Standard Arabic morphology, executed locally through a small learned WebGPU model. One function returns morpheme spans, roots, patterns, POS and features, with explicit top-k ambiguity.
 
-**Status: experimental, unpromoted.** No independent human gold evaluation is available. This repository implements the research and deployment pipeline; it does not claim that the blueprint's scientific or public-release success criteria have been met.
+**Status: public experimental release, unpromoted.** No independent human gold evaluation is available. The blueprint's scientific release criteria have not been met.
 
-Build the current self-contained experimental package from this checkout. It includes the checkpoint; no Python, separate model download, account, or API key is needed for inference.
+[Try TinySarf in your browser](https://tinysarf-lab.ahmedabdouuu.chatgpt.site). Enter an Arabic word and select **Analyze word**. The demo defaults to CPU, with optional WebGPU acceleration. No installation or account is needed.
+
+For your own JavaScript or TypeScript project, install the self-contained experimental package. It includes the checkpoint; no Python, separate model download, account, or API key is needed for inference.
 
 ```sh
-pnpm install --frozen-lockfile
-pnpm build:core
-npm pack ./packages/core
-# In your application:
-npm install /path/to/tinysarf-0.1.0-experimental.1.tgz
+npm install https://github.com/AhmedAbdel-Aal/tinySarf/releases/download/v0.1.0-experimental.1/tinysarf-0.1.0-experimental.1.tgz
 ```
 
 In a browser application:
@@ -22,7 +20,7 @@ const alternatives = await analyze('وبكتابهم', { topK: 3 });
 const batch = await analyze.batch(['كتاب', 'يكتبون'], { topK: 3 });
 ```
 
-WebGPU requires a secure browser context. `{ backend: 'cpu' }` explicitly chooses the local reference. There is no remote inference or automatic backend fallback. The [historical GitHub prerelease](https://github.com/AhmedAbdel-Aal/tinySarf/releases/tag/v0.1.0-experimental.0) predates this root redesign. The current package has not been published to the npm registry.
+WebGPU requires a secure browser context. `{ backend: 'cpu' }` explicitly chooses the local reference. There is no remote inference or automatic backend fallback. The [GitHub release](https://github.com/AhmedAbdel-Aal/tinySarf/releases/tag/v0.1.0-experimental.1) includes checksums and validation evidence. Use the full installation URL above; this package is not on the npm registry.
 
 Try the CPU backend in Node 22+ immediately after installing:
 
