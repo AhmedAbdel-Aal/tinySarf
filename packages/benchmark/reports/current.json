@@ -5,26 +5,30 @@
   "modelSha256": "705690244fd7a29b4c23635dec578b80b90b01035585211bcbc9d84f8f5ed305",
   "artifacts": {
     "correctness": {
-      "file": "packages/benchmark/results/correctness-2026-09-13T183855624Z.json",
-      "sha256": "a00bf16a4ee227264ea7f1d6f2bbccb4ecdf0def18c998920923ecd9c623bf4c"
+      "file": "packages/benchmark/results/correctness-2026-09-13T185802812Z.json",
+      "sha256": "f2ae1dc6cfa0cf2c94200cd6963b348f4e403eadf78916807600566618e08fa4"
     },
     "size": {
-      "file": "packages/benchmark/results/size-2026-09-13T183853714Z.json",
-      "sha256": "12ac93cab7f1daa509e2a83abf4116093782328740d9bb5bcf3a7e2469e9b667"
+      "file": "packages/benchmark/results/size-2026-09-13T185806696Z.json",
+      "sha256": "0663b96f3033d06d78a410f4a04afefc33772ade642ef5e81bb9462da5c3766f"
     },
     "browser": {
       "file": "packages/benchmark/results/browser-2026-09-13T184740542Z.json",
       "sha256": "e73fe59499e49cc95f79642b24ae8aa507cd79266edc3388ec074b9ec7c20b8f"
     },
     "parity": {
-      "file": "packages/benchmark/results/parity-2026-09-13T184417380Z.json",
-      "sha256": "e534f85c14f5dd1a4c8ceccf4d64bc59105b9499a22524bf79bc3f92a3af9e32"
+      "file": "packages/benchmark/results/parity-2026-09-13T185808828Z.json",
+      "sha256": "3bfb38e21743530a0ce9f7b4de6839aa525227e4f655a61970f4a3f2cafe8fc2"
     }
   },
   "supplemental": {
+    "reproduction": {
+      "file": "packages/benchmark/results/reproduction-2026-09-13T185523137Z.json",
+      "sha256": "de9183dbed3037df911714250db2283572f5f808fec2c241fada7de9f98b1dc8"
+    },
     "ai-review": {
-      "file": "packages/benchmark/results/ai-review-2026-09-13T183856172Z.json",
-      "sha256": "1013691b9ae2a51d120a495990fde6ec79b76e2fa0dd986da2899bc7a34ee2a7"
+      "file": "packages/benchmark/results/ai-review-2026-09-13T185814856Z.json",
+      "sha256": "950e848d52079c791da6cfef88f01e7fc7135d450706166bd18877cc736b5dbb"
     },
     "root-comparison": {
       "file": "packages/benchmark/results/root-comparison-2026-09-13T183909338Z.json",

@@ -41,11 +41,11 @@ Experimental checkpoint `root-rethink-20260913` — **unpromoted**. [Model card]
 
 | Measured item | Result | Evidence |
 | --- | --- | --- |
-| Reachable deployed weights | 245,063 | [size-2026-09-13T183853714Z.json](packages/benchmark/results/size-2026-09-13T183853714Z.json) |
-| Complete package Brotli | 239,894 bytes | [size-2026-09-13T183853714Z.json](packages/benchmark/results/size-2026-09-13T183853714Z.json) |
-| Teacher segmentation agreement | 87.02% (1094 verification words) | [correctness-2026-09-13T183855624Z.json](packages/benchmark/results/correctness-2026-09-13T183855624Z.json) |
-| Teacher root agreement | 78.24% (1094 verification words) | [correctness-2026-09-13T183855624Z.json](packages/benchmark/results/correctness-2026-09-13T183855624Z.json) |
-| Gold segmentation / root / top-3 | TBD — not measured; no gold samples | [correctness-2026-09-13T183855624Z.json](packages/benchmark/results/correctness-2026-09-13T183855624Z.json) |
+| Reachable deployed weights | 245,063 | [size-2026-09-13T185806696Z.json](packages/benchmark/results/size-2026-09-13T185806696Z.json) |
+| Complete package Brotli | 239,894 bytes | [size-2026-09-13T185806696Z.json](packages/benchmark/results/size-2026-09-13T185806696Z.json) |
+| Teacher segmentation agreement | 87.02% (1094 verification words) | [correctness-2026-09-13T185802812Z.json](packages/benchmark/results/correctness-2026-09-13T185802812Z.json) |
+| Teacher root agreement | 78.24% (1094 verification words) | [correctness-2026-09-13T185802812Z.json](packages/benchmark/results/correctness-2026-09-13T185802812Z.json) |
+| Gold segmentation / root / top-3 | TBD — not measured; no gold samples | [correctness-2026-09-13T185802812Z.json](packages/benchmark/results/correctness-2026-09-13T185802812Z.json) |
 | Reference batch throughput | 1,314.47 words/s at batch 128 (full; JS-reference comparison) | [browser-2026-09-13T184740542Z.json](packages/benchmark/results/browser-2026-09-13T184740542Z.json) |
 <!-- GENERATED:RESULTS:END -->
 

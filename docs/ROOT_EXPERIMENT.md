@@ -33,7 +33,7 @@ There are **402 fixes and 42 regressions**, reducing root errors by **60.20%**. 
 
 [Paired report and changed words](../packages/benchmark/results/root-comparison-2026-09-13T183909338Z.json), [complete float/int8 results and predictions](../packages/benchmark/results/correctness-2026-09-13T183855624Z.json), [selected configuration and frozen-tensor audit](../packages/training/candidates/root-rethink-20260913/config.json).
 
-The comparison's unseen-root slices use the original training-root set for both models. Ordinary correctness slices use the selected root training pool. These different definitions are explicit and must not be compared as if they were the same population.
+The comparison's unseen-root slices use the original training-root set for both models. Ordinary correctness slices use the selected root training pool. These different definitions are explicit and must not be compared as if they were the same population. The unseen-root word slices also include null-only cases because no non-null training root matches; null-only and root-required results are reported separately.
 
 ## Experiments retained
 
@@ -60,7 +60,7 @@ Int8 changes the selected combined result from 855 to 856 correct words. The lar
 
 Held-out surfaces and complete raw teacher lemma identities are excluded from new root training, including connected ambiguity aliases. This also excludes the curated AI challenge identities and contract fixture identities. Only protected identities are used for exclusion; final-test labels and AI annotation labels are not used as training targets. The inherited non-root encoder retains its original data provenance.
 
-A fresh training run reproduced the selected epoch-12 tensors **exactly**, and all losses and root metrics through epoch 12 match. The original 40-epoch history remains available. [Training reproduction audit](../packages/training/data/audits/root-training-reproduction.json).
+A fresh training run reproduced the selected epoch-12 tensors **exactly**, and all losses and root metrics through epoch 12 match. The original 40-epoch history remains available. [Training reproduction audit](../packages/training/data/audits/root-training-reproduction.json). A separate clean checkout of source commit `50e47c25cb6d6e505d22c3b722d82d5696417a16` reconstructed identical training data, CPU predictions and tarball bytes, and passed real WebGPU parity. [Clean-checkout evidence](../packages/benchmark/results/reproduction-2026-09-13T185523137Z.json).
 
 From the repository root:
 
